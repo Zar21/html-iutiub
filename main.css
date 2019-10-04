@@ -19,3 +19,17 @@ table {
 #register h1 {
     text-align: center;
 }
+
+.blue {
+    color: blue;
+    font-weight: bold;
+}
+
+.left {
+    text-align: left;
+}
+
+.thumbnails {
+    width: inherit;
+    height: inherit;
+}
