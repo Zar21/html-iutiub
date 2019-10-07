@@ -8,17 +8,17 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <table id="mainTable">
+        <table id="mainTable" style="height:100%">
             <thead>
                 <tr>
-                    <th style="background: #00f; width:15%"><h1>Iutiub</h1></th>
+                    <th style="background: rgb(21, 130, 255); width:15%; color:white"><h1>Iutiub</h1></th>
                     <th style="width:55%" colspan="4"></th>
-                    <th style="width:15%"><img src="img/new-user.svg" alt="search_icon" style="width: 15px;height: 15px;">Nuevo Usuario</th>
-                    <th style="width:15%"><img src="img/login.svg" alt="search_icon" style="width: 15px;height: 15px;">Iniciar Sesion</th>
+                    <th class="top-navbar" style="width:15%"><img src="img/new-user.svg" alt="search_icon" style="width: 15px;height: 15px;">Nuevo Usuario</th>
+                    <th class="top-navbar" style="width:15%"><img src="img/login.svg" alt="search_icon" style="width: 15px;height: 15px;">Iniciar Sesión</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="left-navbar">
                     <!--Pàgina principal-->
                     <td>
                     <!-- https://www.flaticon.com -->
@@ -26,29 +26,39 @@
                     <input type="text" placeholder="Video a buscar"></td>
                     <td rowspan="6" colspan="6" id="pageContent">
                         <table id="contentTable">
-                            
+                            <tr>
+                                <td class="left" colspan="5"><p>Bienvenido a <span class="blue">Iutiub</span></p></td>
+                            </tr>
+                            <tr>
+                                <td class="left" colspan="5">Te presentamos las características del nuevo <span class="blue">Iutiub</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p></p>
+                                </td>
+                            </tr>
                         </table>
                     </td>
                 </tr>
-                <tr>
+                <tr class="left-navbar">
                     <td>asdf</td>
                 </tr>
-                <tr>
+                <tr class="left-navbar">
                     <td>asdf</td>
                 </tr>
-                <tr>
+                <tr class="left-navbar">
                     <td>asdf</td>
                 </tr>
-                <tr>
+                <tr class="left-navbar">
                     <td>asdf</td>
                 </tr>
-                <tr>
+                <tr class="left-navbar">
                     <td>asdf</td>
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="6">Designed by Ethan, Raül, Iván and Jordi</td>
+                    <td colspan="7">Diseñado por Ethan, Raül, Iván and Jordi</td>
                 </tr>
             </tfoot>
         </table>

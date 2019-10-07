@@ -10,14 +10,51 @@
 <body id="register">
     <h1>Register</h1>
     <table id="registerTable">
-        <tr>
-            <th>New User</th>
-        </tr>
-        <tr>
-            <td>
-                Name: <input type="text" required placeholder="Enter your name...">
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th>
+                    <img src="img/new-user.svg" alt="search_icon" style="width: 15px;height: 15px;">
+                    Nuevo usuario
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="registerName">Nombre:</label> <input id="registerName" type="text" required placeholder="Introduce tu nombre...">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="registerEmail">Correo:</label> <input id="registerEmail" type="email" required placeholder="Correo Electronico">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="registerPassword">Contraseña:</label> <input id="registerPassword" type="password" required placeholder="Contraseña">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="registerRepeatPassword">Repite la contraseña:</label> <input id="registerRepeatPassword" type="password" required placeholder="Repite Contraseña">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Selecciona el tipo de usuario</p>
+                    <select>
+                        <option>Publicador</option>
+                        <option>Espectador</option>
+                        <option>Administrador</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Registro</button>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
