@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>iUTiUB</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-<body>
+<body id="login">
     <h1>Login</h1>
-    <table>
-        <tr style="background-color: lightgray">
-            <p>Introduce tus datos</p>
-        </tr>
-        <tr>
-            <img src="img/candidate.svg" alt="search_icon" style="width: 50px;height: 50px;">
-        </tr>
-        <tr>
-            <img src="img/candidate.svg" alt="search_icon" style="width: 15px;height: 15px;">
-        </tr>
+    <a class="index-return" href="index.html"><i class="fas fa-home"></i></a>
+    <table id="loginTable">
+        <thead>
+            <tr>
+                <th>
+                    <i class="fas fa-user"></i>
+                    Acceso a tu cuenta
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="loginEmail">Correo:</label> <input id="loginEmail" type="email" required placeholder="Correo Electronico">
+                    <div class="error hidden">
+                        El correo no es correcto
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="loginPassword">Contraseña:</label> <input id="loginPassword" type="password" required placeholder="Contraseña">
+                    <div class="error hidden">
+                        La contraseña no es correcta
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Login</button>
+                </td>
+            </tr>
+        </tbody>
     </table>
-    
 </body>
 </html>
+

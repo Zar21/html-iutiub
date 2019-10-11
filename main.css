@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: Helvetica, Arial, Sans-Serif;
 }
 
 table, td, th{ 
@@ -24,7 +25,7 @@ table {
     right: 0;
 }
 
-#register h1 {
+#register h1, #login h1 {
     text-align: center;
     background: rgb(21, 130, 255);
     color: #fff;
@@ -45,7 +46,7 @@ table {
     height: 150px;
 }
 
-#registerTable {
+#registerTable, #loginTable {
 
     width: 50px;
     margin: 0 50px;
@@ -58,16 +59,16 @@ table {
     margin-left: -250px;
 }
 
-#registerTable th {
+#registerTable th, #loginTable th {
     background: #333;
     color: #fff;
 }
 
-#registerTable td {
+#registerTable td, #loginTable td {
     padding: 20px;
 }
 
-thead {
+thead, tfoot {
     color: white;
     background-color: #333;
 }
@@ -75,6 +76,7 @@ thead {
 .left-navbar {
     color: white;
     background-color: #333;
+    cursor: pointer;
 }
 
 .left-navbar:hover {
@@ -86,6 +88,10 @@ thead {
     color: black;
 }
 
+.top-navbar {
+    cursor: pointer;
+}
+
 .top-navbar:hover {
     background-color: rgb(21, 130, 255);
 }
@@ -94,7 +100,53 @@ thead {
     background-color: rgb(5, 113, 255);
 }
 
-tfoot {
-    background-color: #eee;
-    color: black;
+
+.error {
+    color: #f00;
+}
+
+.hidden {
+    display: none;
+}
+
+.greydiv {
+    border: 1px solid black; 
+    border-radius:15px; 
+    background-color: lightgrey; 
+    margin-left: 25%; 
+    margin-right:25%;
+    padding: 10px 30px;
+}
+
+.regularWeight {
+    font-weight:normal;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.bigIcon {
+    font-size: 50px;
+}
+
+.index-return {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    color: #fff;
+    font-size: 35px;
+}
+
+fieldset {
+    border: 5px solid #ddd;
+    border-radius: 5px;
+}
+
+legend {
+    background: #ebeced;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
