@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
-        <table id="mainTable">
+        <table id="mainTable" style="height:100%">
             <thead>
                 <tr>
                     <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white"><h1>iUTiUB</h1></th>
@@ -19,13 +19,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="left-navbar">
+                <tr>
                     <!--Pàgina principal-->
-                    <td>
-                    <!-- https://www.flaticon.com -->
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Video a buscar"></td>
-                    <td rowspan="6" colspan="6" id="pageContent">
+                    <td class="left-navbar">
+                        <form type="GET" action="resultadosBusquedaGenerica.html">
+                            <input type="text" name="name" placeholder="Video a buscar">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </td>
+                    <td rowspan="7" colspan="6" id="pageContent">
                         <table id="contentTable">
                             <tr>
                                 <td class="left" colspan="5"><p>Bienvenido a <a>iUTiUB</a></p></td>
@@ -94,19 +96,22 @@
                     </td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='videos.html'"><i class="bigIcon fas fa-desktop"></i> Vídeos</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='queVer.html'"><i class="bigIcon fas fa-search-plus"></i> Qué ver</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='misVideos.html'"><i class="bigIcon fas fa-file-video"></i> Mis vídeos</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='directo.html'"><i class="bigIcon fas fa-video"></i> En directo</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='subirVideos.html'"><i class="bigIcon fas fa-upload"></i> Subir vídeos</td>
+                </tr>
+                <tr class="left-navbar">
+                    <td onclick="location.href='informacion.html'"><i class="bigIcon fas fa-info"></i> Información</td>
                 </tr>
             </tbody>
             <tfoot>

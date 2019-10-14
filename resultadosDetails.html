@@ -12,21 +12,22 @@
         <table id="mainTable" style="height:100%">
             <thead>
                 <tr>
-                    <th style="background: rgb(21, 130, 255); width:15%; color:white"><h1>iUTiUB</h1></th>
+                    <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white"><h1>iUTiUB</h1></th>
                     <th style="width:55%" colspan="4"></th>
-                    <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</th>
+                    <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</div></th>
                     <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="left-navbar">
+                <tr>
                     <!--Pàgina principal-->
-                    <td>
-                    <!-- https://www.flaticon.com -->
-                    <!--<img src="img/search.svg" alt="search_icon" style="width: 15px;height: 15px;">-->
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Video a buscar"></td>
-                    <td rowspan="6" colspan="6" id="pageContent">
+                    <td class="left-navbar">
+                        <form type="GET" action="resultadosBusquedaGenerica.html">
+                            <input type="text" name="name" placeholder="Video a buscar">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </td>
+                    <td rowspan="7" colspan="6" id="pageContent">
                         <table id="contentTable">
                             <tr>
                                 <td style="padding-left:5%;" class="left" colspan="5"><p>Bienvenido a <span class="blue">iUTiUB</span></p></td>
@@ -50,19 +51,22 @@
                     </td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='videos.html'"><i class="bigIcon fas fa-desktop"></i> Vídeos</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='queVer.html'"><i class="bigIcon fas fa-search-plus"></i> Qué ver</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='misVideos.html'"><i class="bigIcon fas fa-file-video"></i> Mis vídeos</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='directo.html'"><i class="bigIcon fas fa-video"></i> En directo</td>
                 </tr>
                 <tr class="left-navbar">
-                    <td>asdf</td>
+                    <td onclick="location.href='subirVideos.html'"><i class="bigIcon fas fa-upload"></i> Subir vídeos</td>
+                </tr>
+                <tr class="left-navbar">
+                    <td onclick="location.href='informacion.html'"><i class="bigIcon fas fa-info"></i> Información</td>
                 </tr>
             </tbody>
             <tfoot>
