@@ -1,10 +1,12 @@
-- Pàgina de "Els meus vídeos" - Easy, igual que búsquedes de vídeos.
-- Pàgina de "Els meus àudios" - Easy, igual que buscar àudios
+X - Pàgina de "Els meus vídeos" - Easy, igual que búsquedes de vídeos.
+X - Pàgina de "Els meus àudios" - Easy, igual que buscar àudios
 - Pàgina per a l'administració d'usuaris. Hi ha una semblant ací: https://youtu.be/-unwP79QbYs?t=181
 - Pàgina per a manteniment/administració de vídeos (diferent a la de pujar vídeos/àudios). https://youtu.be/-unwP79QbYs?t=181
 - Pàgina per a manteniment/administració de àudios (diferent a la de pujar vídeos/àudios). https://youtu.be/-unwP79QbYs?t=181
+
 - Menú que permetrà buscar vídeos per categoria, amb una pàgina en el resultat d'aquestes búsquedes. Supose que en açò es referirà a un botó desplegable en el apartat de vídeos amb diverse categories que duguen a la pàgina de búsqueda
 - Menú que permetrà buscar àudios per categoria, amb una pàgina en el resultat d'aquestes búsquedes. Supose que en açò es referirà a un botó desplegable en el apartat de vídeos amb diverse categories que duguen a la pàgina de búsqueda
+
 - Posar links a la pàgina de details en els elements de vídeo xicotets de la pàgina de resultats
 - Revisar que s'utilitzen tots els contiguts de la unitat
 - Documentar tot el codi font sense faltes.

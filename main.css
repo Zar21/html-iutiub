@@ -44,6 +44,8 @@ table {
 .thumbnails {
     width: 100%;
     height: 150px;
+    font-size: 150px;
+    text-align: center;
 }
 
 #registerTable, #loginTable {
@@ -149,4 +151,9 @@ legend {
     background: #ebeced;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.bluebox {
+    background: lightblue;
+    color: navy;
 }
