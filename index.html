@@ -23,7 +23,12 @@
                     <!--Pàgina principal-->
                     <td class="left-navbar">
                         <form type="GET" action="resultadosBusquedaGenerica.html">
-                            <input type="text" name="name" placeholder="Video a buscar">
+                            <input type="text" list="busquedas" name="name" placeholder="Video a buscar">
+                            <datalist id="busquedas">
+                                <option value="accion" selected>Accion</option>
+                                <option value="comedia">Comedia</option>
+                                <option value="romance">Romance</option>
+                            </datalist>
                             <button type="submit"><i class="fas fa-search"></i></button>
                         </form>
                     </td>
@@ -45,7 +50,21 @@
                     </td>
                 </tr>
                 <tr class="left-navbar">
-                    <td onclick="location.href='videos.html'"><i class="bigIcon fas fa-desktop"></i> Vídeos</td>
+                    <td>
+                        <details>
+                            <summary><i class="bigIcon fas fa-desktop"></i> Vídeos</summary>
+                            <ul>
+                                <li>Todos</li>
+                                <li>Deportes</li>
+                                <li>Educación</li>
+                                <li>Humor</li>
+                                <li>Noticias</li>
+                                <li>Tiempo libre</li>
+                                <li>Otros</li>
+                                <li>Aleatorio</li>
+                            </ul>
+                        </details>
+                    </td>
                 </tr>
                 <tr class="left-navbar">
                     <td onclick="location.href='queVer.html'"><i class="bigIcon fas fa-search-plus"></i> Qué ver</td>
