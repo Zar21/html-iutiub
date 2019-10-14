@@ -153,6 +153,29 @@ legend {
     border-radius: 5px;
 }
 
+summary::marker {
+    font-size: 0;
+}
+
+summary {
+    outline: none;
+}
+details ul {
+    list-style: none;
+}
+details li {
+    text-align: left;
+    margin-left: 20%;
+    border-left: 3px solid #1582ff;
+    border-spacing: 10px;
+    border-collapse: separate;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.left-navbar:hover details li {
+    border-color: #000;
+}
 .bluebox {
     background: lightblue;
     color: navy;
