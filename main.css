@@ -173,6 +173,11 @@ details li {
     padding-left: 5px;
 }
 
+details li a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .left-navbar:hover details li {
     border-color: #000;
 }
