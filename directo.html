@@ -5,29 +5,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>iUTiUB</title>
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!--Fichero de CSS-->
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <!--Librería para iconos-->
+        <!--La libreria tiene algunos avisos-->
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
+        <!--Raíz de la página-->
         <table id="mainTable" style="height:100%">
+            <!--Menú horizontal superior-->
             <thead>
                 <tr>
-                    <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white"><h1>iUTiUB</h1></th>
+                    <!--Nombre de página-->
+                    <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">iUTiUB</th>
+                    <!--Espacio vacío para separar los botones-->
                     <th style="width:55%" colspan="4"></th>
-                    <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</div></th>
+                    <!--Botón de registro-->
+                    <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</th>
+                    <!--Botón de iniciar sesión-->
                     <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <!--Pàgina principal-->
+                    <!--Búsqueda-->
                     <td class="left-navbar">
                         <form type="GET" action="resultadosBusquedaGenerica.html">
-                            <input type="text" name="name" placeholder="Video a buscar">
+                            <input type="text" list="busquedas" name="name" placeholder="Video a buscar">
+                            <datalist id="busquedas">
+                                <option value="accion" selected>Accion</option>
+                                <option value="comedia">Comedia</option>
+                                <option value="romance">Romance</option>
+                            </datalist>
                             <button type="submit"><i class="fas fa-search"></i></button>
                         </form>
                     </td>
-                    <td rowspan="7" colspan="6" id="pageContent">
+                    <td rowspan="8" colspan="6" id="pageContent">
+                        <!--Página principal-->
                         <table id="contentTable">
                             <tbody>
                                 <tr style="height:5%">
@@ -96,25 +111,81 @@
                         </table>
                     </td>
                 </tr>
+                <!--Menú vertical izquierdo-->
+
+                <!--Desplegable del menú de vídeos-->
                 <tr class="left-navbar">
-                    <td onclick="location.href='videos.html'"><i class="bigIcon fas fa-desktop"></i> Vídeos</td>
+                    <td>
+                        <details><!--Desplegable de categorias de video-->
+                            <summary><i class="bigIcon fas fa-desktop"></i> Vídeos</summary>
+                            <ul>
+                                <li><a href="videos.html">Todos</a></li>
+                                <li><a href="videos.html">Deportes</a></li>
+                                <li><a href="videos.html">Educación</a></li>
+                                <li><a href="videos.html">Humor</a></li>
+                                <li><a href="videos.html">Noticias</a></li>
+                                <li><a href="videos.html">Tiempo libre</a></li>
+                                <li><a href="videos.html">Otros</a></li>
+                                <li><a href="videos.html">Aleatorio</a></li>
+                            </ul>
+                        </details>
+                    </td>
                 </tr>
                 <tr class="left-navbar">
-                    <td onclick="location.href='queVer.html'"><i class="bigIcon fas fa-search-plus"></i> Qué ver</td>
+                    <td>
+                        <details>
+                            <summary><i class="fas fa-volume-up bigIcon"></i> Audios</summary>
+                            <ul>
+                                <li><a href="audios.html">Todos</a></li>
+                                <li><a href="audios.html">Deportes</a></li>
+                                <li><a href="audios.html">Educación</a></li>
+                                <li><a href="audios.html">Humor</a></li>
+                                <li><a href="audios.html">Noticias</a></li>
+                                <li><a href="audios.html">Tiempo libre</a></li>
+                                <li><a href="audios.html">Otros</a></li>
+                                <li><a href="audios.html">Aleatorio</a></li>
+                            </ul>
+                        </details>
+                    </td>
                 </tr>
+                <!--Enlace a la página de mis vídeos-->
                 <tr class="left-navbar">
-                    <td onclick="location.href='misVideos.html'"><i class="bigIcon fas fa-file-video"></i> Mis vídeos</td>
+                    <td>
+                        <details>
+                            <summary><i class="bigIcon fas fa-file-video"></i> Mi multimedia</summary>
+                            <ul>
+                                <li><a href="misVideos.html">Vídeos</a></li>
+                                <li><a href="misAudios.html">Audio</a></li>
+                            </ul>
+                        </details>
+                    </td>
                 </tr>
+                <!--Enlace a la página de en directo-->
                 <tr class="left-navbar">
                     <td onclick="location.href='directo.html'"><i class="bigIcon fas fa-video"></i> En directo</td>
                 </tr>
+                <!--Enlace a la página de subir vídeos-->
                 <tr class="left-navbar">
-                    <td onclick="location.href='subirVideos.html'"><i class="bigIcon fas fa-upload"></i> Subir vídeos</td>
+                    <td onclick="location.href='subirVideos.html'"><i class="bigIcon fas fa-upload"></i> Subir multimedia</td>
                 </tr>
+                <!--Enlace a la página de información-->
+                <tr class="left-navbar">
+                        <td>
+                            <details>
+                                <summary><i class="fas fa-wrench bigIcon"></i> Administración</summary>
+                                <ul>
+                                    <li><a href="adminUsuarios.html">Usuarios</a></li>
+                                    <li><a href="adminVideos.html">Videos</a></li>
+                                    <li><a href="adminAudios.html">Audios</a></li>
+                                </ul>
+                            </details>
+                        </td>
+                    </tr>
                 <tr class="left-navbar">
                     <td onclick="location.href='informacion.html'"><i class="bigIcon fas fa-info"></i> Información</td>
                 </tr>
             </tbody>
+            <!--Footer-->
             <tfoot>
                 <tr>
                     <td colspan="7">Diseñado por Ethan, Raül, Iván y Jordi</td>
