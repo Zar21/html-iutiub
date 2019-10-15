@@ -59,6 +59,7 @@ table {
     text-align: center;
     width: 500px;
     margin-left: -250px;
+    border: 1px solid #000;
 }
 
 #registerTable th, #loginTable th {

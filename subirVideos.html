@@ -28,23 +28,41 @@
                         </form>
                     </td>
                     <td rowspan="7" colspan="6" id="pageContent">
-                        <p>Subir vídeos</p>
+                        <p>Subir multimedia</p>
                         <fieldset>
-                            <legend>Subir vídeos</legend>
-                            <form>
-                                <p>Titulo del video</p>
-                                <input type="text"><br/>
+                            <legend>Subir multimedia</legend>
+                            <form method="POST" enctype="multipart/form-data">
+                                <p>Titulo
+                                <input type="text"></p>
+                                <div class="error hidden">
+                                    Debes introducir un titulo
+                                </div>
                                 <p>Comentarios</p>
-                                <input type="text"><br/>
-                                <p>Comentarios</p>
-                                <input type="text"><br/>
-                                <p>Categoría</p>
+                                <textarea rows="4" cols="40" placeholder="Escribe..."></textarea>
+                                <div class="error hidden">
+                                    Este comentario no esta permitido
+                                </div>
+                                <p>Categoría
                                 <select>
+                                        <option value="todos">Todos</option>
                                         <option value="deportes">Deportes</option>
-                                        <option value="asesinato">Asesinato</option>
-                                        <option value="furros">Furros</option>
-                                        <option value="videojuegos">Videojuegos</option>
-                                    </select>
+                                        <option value="educación">Educación</option>
+                                        <option value="humor">Humor</option>
+                                        <option value="noticias">Noticias</option>
+                                        <option value="tiempo-libre">Tiempo libre</option>
+                                        <option value="otros">Otros</option>
+                                        <option value="aleatorio">Aleatorio</option>
+                                </select></p>
+                                <div class="error hidden">
+                                    Debes seleccionar una categoria
+                                </div>
+                                <p>Fichero
+                                <input type="file"></p>
+                                <div class="error hidden">
+                                    Debes subir el fichero
+                                </div>
+                                <button type="submit" value="Subir">Subir</button>
+                                <button type="reset" value="Resetear">Resetear</button>
                             </form>
                         </fieldset>
                         <!--<table id="contentTable">
