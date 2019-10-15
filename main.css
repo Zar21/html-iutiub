@@ -4,7 +4,7 @@ body {
 }
 
 table, td, th{ 
-    border: 1px solid black;
+    border: 0px solid black;
     border-collapse: collapse;
 }
 
@@ -184,4 +184,9 @@ details li a {
 .bluebox {
     background: lightblue;
     color: navy;
+}
+
+.datatable thead {
+    background-color: lightgray;
+    color: black;
 }
