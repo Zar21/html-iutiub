@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>iUTiUB</title>
-        <!--Fichero de CSS-->
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <!--Librería para iconos-->
-        <!--La libreria tiene algunos avisos-->
-        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    </head>
+<head>
+    <!-- Para que la codificación de la página sea UTF-8 -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>iUTiUB</title>
+    <!-- Fichero de CSS -->
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <!-- Librería para iconos -->
+    <!-- La librería tiene algunos avisos -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+</head>
 <body id="register">
     <h1>Register</h1>
+    <!--Enlace para volver al index-->
     <a class="index-return" href="index.html"><i class="fas fa-home"></i></a>
+    <!--Tabla que contiene los campos para registrarse-->
     <table id="registerTable">
         <thead>
             <tr>
                 <th>
+                    <!--Icono de agregar usuario-->
                     <i class="fas fa-user-plus"></i>
                     Nuevo usuario
                 </th>
@@ -26,7 +30,10 @@
         <tbody>
             <tr>
                 <td>
-                    <label for="registerName">Nombre:</label> <input id="registerName" type="text" required placeholder="Introduce tu nombre...">
+                    <!--Campo de texto donde hay que introducir el nombre de la nueva cuenta de usuario-->
+                    <label for="registerName">Nombre:</label> <input id="registerName" type="text" required placeholder="Introduce tu nombre..."/>
+                    <!--La clase de error muestra el texto en color rojo y se usa de manera generica en todos los errores de la web-->
+                    <!--La clase hidden oculta el elemento ya que el error solo se debe de mostrar en caso de que el campo no sea correcto-->
                     <div class="error hidden"><!--Muestra el contenido si existe algun error-->
                         El nombre no es correcto
                     </div>
@@ -34,7 +41,8 @@
             </tr>
             <tr>
                 <td>
-                    <label for="registerEmail">Correo:</label> <input id="registerEmail" type="email" required placeholder="Correo Electronico">
+                    <!--Campo de texto donde hay que introducir el correo de la nueva cuenta de usuario-->
+                    <label for="registerEmail">Correo:</label> <input id="registerEmail" type="email" required placeholder="Correo Electronico"/>
                     <div class="error hidden">
                         El correo no es correcto
                     </div>
@@ -42,7 +50,8 @@
             </tr>
             <tr>
                 <td>
-                    <label for="registerPassword">Contraseña:</label> <input id="registerPassword" type="password" required placeholder="Contraseña">
+                    <!--Campo de texto donde hay que introducir la contraseña de la nueva cuenta de usuario-->
+                    <label for="registerPassword">Contraseña:</label> <input id="registerPassword" type="password" required placeholder="Contraseña"/>
                     <div class="error hidden">
                         La contraseña no es correcta
                     </div>
@@ -50,7 +59,8 @@
             </tr>
             <tr>
                 <td>
-                    <label for="registerRepeatPassword">Repite la contraseña:</label> <input id="registerRepeatPassword" type="password" required placeholder="Repite Contraseña">
+                    <!--Campo de texto donde hay que repetir la contraseña introducida anteriormente-->
+                    <label for="registerRepeatPassword">Repite la contraseña:</label> <input id="registerRepeatPassword" type="password" required placeholder="Repite Contraseña"/>
                     <div class="error hidden">
                         La contraseña no coincide
                     </div>
@@ -58,6 +68,7 @@
             </tr>
             <tr>
                 <td>
+                    <!--Seleccionable para elegir el tipo del nuevo usuario-->
                     <p>Selecciona el tipo de usuario</p>
                     <select>
                         <option>Publicador</option>
@@ -71,6 +82,7 @@
             </tr>
             <tr>
                 <td>
+                    <!--Botón para realizar el registro de la cuenta-->
                     <button type="submit">Registro</button>
                 </td>
             </tr>

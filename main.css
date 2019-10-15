@@ -3,7 +3,9 @@ body {
     font-family: Helvetica, Arial, Sans-Serif;
 }
 
-table, td, th{ 
+table,
+td,
+th {
     border: 0px solid black;
     border-collapse: collapse;
 }
@@ -18,14 +20,15 @@ table {
 }
 
 #mainTable {
-    position: absolute; 
-    top: 0; 
-    bottom: 0; 
-    left: 0; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
 }
 
-#register h1, #login h1 {
+#register h1,
+#login h1 {
     text-align: center;
     background: rgb(21, 130, 255);
     color: #fff;
@@ -48,8 +51,8 @@ table {
     text-align: center;
 }
 
-#registerTable, #loginTable {
-
+#registerTable,
+#loginTable {
     width: 50px;
     margin: 0 50px;
     margin-left: 25%;
@@ -62,16 +65,19 @@ table {
     border: 1px solid #000;
 }
 
-#registerTable th, #loginTable th {
+#registerTable th,
+#loginTable th {
     background: #333;
     color: #fff;
 }
 
-#registerTable td, #loginTable td {
+#registerTable td,
+#loginTable td {
     padding: 20px;
 }
 
-thead, tfoot {
+thead,
+tfoot {
     color: white;
     background-color: #333;
 }
@@ -103,7 +109,6 @@ thead, tfoot {
     background-color: rgb(5, 113, 255);
 }
 
-
 .error {
     color: #f00;
 }
@@ -113,16 +118,16 @@ thead, tfoot {
 }
 
 .greydiv {
-    border: 1px solid black; 
-    border-radius:15px; 
-    background-color: lightgrey; 
-    margin-left: 25%; 
-    margin-right:25%;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: lightgrey;
+    margin-left: 25%;
+    margin-right: 25%;
     padding: 10px 30px;
 }
 
 .regularWeight {
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .link {
@@ -157,9 +162,11 @@ legend {
 summary {
     outline: none;
 }
+
 details ul {
     list-style: none;
 }
+
 details li {
     text-align: left;
     margin-left: 20%;
@@ -178,6 +185,7 @@ details li a {
 .left-navbar:hover details li {
     border-color: #000;
 }
+
 .bluebox {
     background: lightblue;
     color: navy;
@@ -186,4 +194,16 @@ details li a {
 .datatable thead {
     background-color: lightgray;
     color: black;
+}
+
+#subir-multimedia {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 23%;
+}
+
+.table-checkbox td {
+    text-align: left;
 }

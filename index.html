@@ -1,159 +1,244 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>iUTiUB</title>
-        <!--Fichero de CSS-->
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <!--Librería para iconos-->
-        <!--La libreria tiene algunos avisos-->
-        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    </head>
-    <body>
-        <!--Raíz de la página-->
-        <table id="mainTable" style="height:100%">
-            <!--Menú horizontal superior-->
-            <thead>
-                <tr>
-                    <!--Nombre de página-->
-                    <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">iUTiUB</th>
-                    <!--Espacio vacío para separar los botones-->
-                    <th style="width:55%"></th>
-                    <!--Botón de registro-->
-                    <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</th>
-                    <!--Botón de iniciar sesión-->
-                    <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <!--Búsqueda-->
-                    <td class="left-navbar">
-                        <form method="GET" action="resultadosBusquedaGenerica.html">
-                            <input type="search" list="busquedas" name="name" placeholder="Video a buscar">
-                            <div class="error hidden">
-                                Error
-                            </div>
-                            <datalist id="busquedas">
-                                <option value="Todos">Todos</option>
-                                <option value="Deportes">Deportes</option>
-                                <option value="Educación">Educación</option>
-                                <option value="Humor">Humor</option>
-                                <option value="Noticias">Noticias</option>
-                                <option value="Tiempo libre">Tiempo libre</option>
-                                <option value="Otros">Otros</option>
-                                <option value="Aleatorio">Aleatorio</option>
-                            </datalist>
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
-                    </td>
-                    <td rowspan="8" colspan="3" id="pageContent">
-                        <!--Página principal-->
-                        <table id="contentTable">
-                            <tr>
-                                <td class="left" colspan="2"><h3>Bienvenido a <span class="blue">iUTiUB</span></h3></td>
-                            </tr>
-                            <tr>
-                                <td class="left" colspan="2"><h3>Te presentamos las características del nuevo <span class="blue">iUTiUB</span></h3></td>
-                            </tr>
-                            <!--Información de la página-->
-                            <tr>
-                                <td style="height:27%; width:50%"><h4 class="regularWeight"><i class="bigIcon fas fa-search"></i> Encuentra rápidamente los contenidos que desees</h4></td>
-                                <td style="height:27%; width:50%"><h4 class="regularWeight"><i class="bigIcon fas fa-desktop"></i> Disfruta de los mejores contenidos de vídeo bajo demanda</h4></td>
-                            </tr>
-                            <tr>
-                                <td style="height:27%; width:50%"><h4 class="regularWeight"><i class="bigIcon fas fa-broadcast-tower"></i> Disfruta de vídeo en directo</h4></td>
-                                <td style="height:27%; width:50%"><h4 class="regularWeight"><i class="bigIcon fas fa-file-upload"></i> Puedes subir achivos de áudio y vídeo y compartirlo con el resto del múndo</h4></td>
-                            </tr>
-                            <tr>
-                                <td style="height:27%; width:50%"><h4 class="regularWeight"><i class="bigIcon fas fa-file-video"></i> Usted encontrará sus propios vídeos y áudios en sus pestañas correspondientes a la izquierda de la página</h4></td>
-                                <td style="height:27%; width:50%"><h4 class="regularWeight"><i class="bigIcon fas fa-video"></i> Encuentre sus videos y audios favoritos por categoría</h4></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!--Menú vertical izquierdo-->
 
-                <!--Desplegable del menú de vídeos-->
-                <tr class="left-navbar">
-                    <td>
-                        <details><!--Desplegable de categorias de video-->
-                            <summary><i class="bigIcon fas fa-desktop"></i> Vídeos</summary>
-                            <ul>
-                                <li><a href="videos.html">Todos</a></li>
-                                <li><a href="videos.html">Deportes</a></li>
-                                <li><a href="videos.html">Educación</a></li>
-                                <li><a href="videos.html">Humor</a></li>
-                                <li><a href="videos.html">Noticias</a></li>
-                                <li><a href="videos.html">Tiempo libre</a></li>
-                                <li><a href="videos.html">Otros</a></li>
-                                <li><a href="videos.html">Aleatorio</a></li>
-                            </ul>
-                        </details>
-                    </td>
-                </tr>
-                <tr class="left-navbar">
-                    <td>
-                        <details>
-                            <summary><i class="fas fa-volume-up bigIcon"></i> Audios</summary>
-                            <ul>
-                                <li><a href="audios.html">Todos</a></li>
-                                <li><a href="audios.html">Deportes</a></li>
-                                <li><a href="audios.html">Educación</a></li>
-                                <li><a href="audios.html">Humor</a></li>
-                                <li><a href="audios.html">Noticias</a></li>
-                                <li><a href="audios.html">Tiempo libre</a></li>
-                                <li><a href="audios.html">Otros</a></li>
-                                <li><a href="audios.html">Aleatorio</a></li>
-                            </ul>
-                        </details>
-                    </td>
-                </tr>
-                <!--Enlace a la página de mis vídeos-->
-                <tr class="left-navbar">
-                    <td>
-                        <details>
-                            <summary><i class="bigIcon fas fa-file-video"></i> Mi multimedia</summary>
-                            <ul>
-                                <li><a href="misVideos.html">Vídeos</a></li>
-                                <li><a href="misAudios.html">Audio</a></li>
-                            </ul>
-                        </details>
-                    </td>
-                </tr>
-                <!--Enlace a la página de en directo-->
-                <tr class="left-navbar">
-                    <td onclick="location.href='directo.html'"><i class="bigIcon fas fa-video"></i> En directo</td>
-                </tr>
-                <!--Enlace a la página de subir vídeos-->
-                <tr class="left-navbar">
-                    <td onclick="location.href='subirVideos.html'"><i class="bigIcon fas fa-upload"></i> Subir multimedia</td>
-                </tr>
-                <!--Enlace a la página de información-->
-                <tr class="left-navbar">
-                        <td>
-                            <details>
-                                <summary><i class="fas fa-wrench bigIcon"></i> Administración</summary>
-                                <ul>
-                                    <li><a href="adminUsuarios.html">Usuarios</a></li>
-                                    <li><a href="adminVideos.html">Videos</a></li>
-                                    <li><a href="adminAudios.html">Audios</a></li>
-                                </ul>
-                            </details>
-                        </td>
-                    </tr>
-                <tr class="left-navbar">
-                    <td onclick="location.href='informacion.html'"><i class="bigIcon fas fa-info"></i> Información</td>
-                </tr>
-            </tbody>
-            <!--Footer-->
-            <tfoot>
-                <tr>
-                    <td colspan="4">Diseñado por Ethan, Raül, Iván y Jordi</td>
-                </tr>
-            </tfoot>
-        </table>
-    </body>
+<head>
+    <!-- Para que la codificación de la página sea UTF-8 -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>iUTiUB</title>
+    <!-- Fichero de CSS -->
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <!-- Librería para iconos -->
+    <!-- La librería tiene algunos avisos -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+</head>
+
+<body>
+    <!-- Raíz de la página -->
+    <table id="mainTable" style="height:100%">
+        <!-- Menú horizontal superior -->
+        <thead>
+            <tr>
+                <!-- Nombre de página -->
+                <!-- Poner un elemento h1 dentro de un th es incorrecto,
+                     asi que aplicamos un estilo para simular el tamaño de un h1,
+                     además de cambiar el color de fondo y su tamaño -->
+                <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
+                    iUTiUB</th>
+                <!-- Espacio vacío para separar los botones -->
+                <th style="width:55%"></th>
+                <!-- Botón de registro -->
+                <!-- icono de usuario utilizando la librería fontawesome -->
+                <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</th>
+                <!-- Botón de iniciar sesión-->
+                <!-- icono de sesión utilizando la librería fontawesome -->
+                <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Búsqueda -->
+                <td class="left-navbar">
+                    <!-- formulario de búsqueda del navbar en la parte izquierda -->
+                    <form method="GET" action="resultadosBusquedaGenerica.html">
+                        <!-- input text donde se introducirá la cadena de texto a buscar -->
+                        <input size="15" type="search" list="busquedas" name="name" placeholder="Buscar"/>
+                        <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
+                        <div class="error hidden">
+                            Error
+                        </div>
+                        <!-- sugerencias de las categorías que se pueden buscar -->
+                        <datalist id="busquedas">
+                            <option value="Todos">Todos</option>
+                            <option value="Deportes">Deportes</option>
+                            <option value="Educación">Educación</option>
+                            <option value="Humor">Humor</option>
+                            <option value="Noticias">Noticias</option>
+                            <option value="Tiempo libre">Tiempo libre</option>
+                            <option value="Otros">Otros</option>
+                            <option value="Aleatorio">Aleatorio</option>
+                        </datalist>
+                        <!-- boton que realizará la búsqueda -->
+                        <!-- icono de buscar utilizando la librería fontawesome -->
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </td>
+                <!-- contenido principal de la página, es una sola celda, pero combinada utlilizando las propiedades rowspan,
+                     para que combine 8 filas, y el colspan, para combinar 3 columnas -->
+                <td rowspan="8" colspan="3" id="pageContent">
+                    <!-- tabla donde va a estar el contenido de la página -->
+                    <table id="contentTable">
+                        <tr>
+                            <!-- título, texto de bienvenida -->
+                            <td class="left" colspan="2">
+                                <h3>Bienvenido a <span class="blue">iUTiUB</span></h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- subtítulo -->
+                            <td class="left" colspan="2">
+                                <h3>Te presentamos las características del nuevo <span class="blue">iUTiUB</span></h3>
+                            </td>
+                        </tr>
+                        <!-- Información de la página -->
+                        <!-- celdas de contenido. con width a 50% para que ocupe la mitad de la página de ancho, y height a 27% para determinar la altura-->
+                        <tr>
+                            <td style="height:27%; width:50%">
+                                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                                <h4 class="regularWeight">
+                                    <!-- icono de buscar utilizando la librería fontawesome -->
+                                    <i class="bigIcon fas fa-search"></i> Encuentra rápidamente los contenidos que desees
+                                </h4>
+                            </td>
+
+                            <td style="height:27%; width:50%">
+                                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                                <h4 class="regularWeight">
+                                    <!-- icono de pantalla utilizando la librería fontawesome -->
+                                    <i class="bigIcon fas fa-desktop"></i> Disfruta de los mejores contenidos de vídeo bajo demanda
+                                </h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:27%; width:50%">
+                                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                                <h4 class="regularWeight">
+                                    <!-- icono de torre utilizando la librería fontawesome -->
+                                    <i class="bigIcon fas fa-broadcast-tower"></i> Disfruta de vídeo en directo
+                                </h4>
+                            </td>
+                            <td style="height:27%; width:50%">
+                                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                                <h4 class="regularWeight">
+                                    <!-- icono de subir utilizando la librería fontawesome -->
+                                    <i class="bigIcon fas fa-file-upload"></i> Puedes subir achivos de áudio y vídeo y compartirlo con el resto del múndo
+                                </h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:27%; width:50%">
+                                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                                <h4 class="regularWeight">
+                                    <!-- icono de archivo de vídeo utilizando la librería fontawesome -->
+                                    <i class="bigIcon fas fa-file-video"></i> Usted encontrará sus propios vídeos y audios en sus pestañas correspondientes a la izquierda de la página
+                                </h4>
+                            </td>
+                            <td style="height:27%; width:50%">
+                                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                                <h4 class="regularWeight">
+                                    <!-- icono de vídeo utilizando la librería fontawesome -->
+                                    <i class="bigIcon fas fa-video"></i> Encuentre sus vídeos y audios favoritos por categoría
+                                </h4>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Fin del contenido de la página -->
+                </td>
+            </tr>
+            <!-- Menú vertical izquierdo -->
+
+            <!-- Desplegable del menú de vídeos -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                <td>
+                    <!-- Desplegable de categorias de vídeo -->
+                    <details>
+                        <!-- icono de vídeo utilizando la librería fontawesome -->
+                        <summary><i class="bigIcon fas fa-desktop"></i> Vídeos</summary>
+                        <ul>
+                            <li><a href="videos.html">Todos</a></li>
+                            <li><a href="videos.html">Deportes</a></li>
+                            <li><a href="videos.html">Educación</a></li>
+                            <li><a href="videos.html">Humor</a></li>
+                            <li><a href="videos.html">Noticias</a></li>
+                            <li><a href="videos.html">Tiempo libre</a></li>
+                            <li><a href="videos.html">Otros</a></li>
+                            <li><a href="videos.html">Aleatorio</a></li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+            <!-- Desplegable del menú de audios -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                <td>
+                    <details>
+                        <!-- icono de audio utilizando la librería fontawesome -->
+                        <summary><i class="fas fa-volume-up bigIcon"></i> Audios</summary>
+                        <ul>
+                            <li><a href="audios.html">Todos</a></li>
+                            <li><a href="audios.html">Deportes</a></li>
+                            <li><a href="audios.html">Educación</a></li>
+                            <li><a href="audios.html">Humor</a></li>
+                            <li><a href="audios.html">Noticias</a></li>
+                            <li><a href="audios.html">Tiempo libre</a></li>
+                            <li><a href="audios.html">Otros</a></li>
+                            <li><a href="audios.html">Aleatorio</a></li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+            <!-- Enlace a la página de multimedia -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                <td>
+                    <details>
+                        <!-- icono multimedia utilizando la librería fontawesome -->
+                        <summary><i class="bigIcon fas fa-file-video"></i> Mi multimedia</summary>
+                        <ul>
+                            <li><a href="misVideos.html">Vídeos</a></li>
+                            <li><a href="misAudios.html">Audio</a></li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+            <!-- Enlace a la página de en directo -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                <td onclick="location.href='directo.html'">
+                    <!-- icono de vídeo utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-video"></i> En directo
+                </td>
+            </tr>
+            <!-- Enlace a la página de subir vídeos -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                <td onclick="location.href='subirVideos.html'">
+                    <!-- icono de subir archivo utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-upload"></i> Subir multimedia
+                </td>
+            </tr>
+            <!-- Enlace a la página de administración -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                <td>
+                    <details>
+                        <!-- submenú de el panel administración -->
+                        <summary>
+                            <!-- icono de llave inglesa utilizando la librería fontawesome -->
+                            <i class="fas fa-wrench bigIcon"></i> Administración</summary>
+                        <ul>
+                            <li><a href="adminUsuarios.html">Usuarios</a></li>
+                            <li><a href="adminVideos.html">Videos</a></li>
+                            <li><a href="adminAudios.html">Audios</a></li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+            <!-- enlace a la página información -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                <td onclick="location.href='informacion.html'"><i class="bigIcon fas fa-info"></i> Información</td>
+            </tr>
+        </tbody>
+        <!-- Footer, con los nombres de los autores del proyecto -->
+        <tfoot>
+            <tr>
+                <td colspan="4">Diseñado por Ethan, Raül, Iván y Jordi</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
 </html>
