@@ -1,31 +1,18 @@
 X - Pàgina de "Els meus vídeos" - Easy, igual que búsquedes de vídeos.
 X - Pàgina de "Els meus àudios" - Easy, igual que buscar àudios
-R- Pàgina per a l'administració d'usuaris. Hi ha una semblant ací: https://youtu.be/-unwP79QbYs?t=181
-r- Pàgina per a manteniment/administració de vídeos (diferent a la de pujar vídeos/àudios). https://youtu.be/-unwP79QbYs?t=181
-r- Pàgina per a manteniment/administració de àudios (diferent a la de pujar vídeos/àudios). https://youtu.be/-unwP79QbYs?t=181
+X- Pàgina per a l'administració d'usuaris. Hi ha una semblant ací: https://youtu.be/-unwP79QbYs?t=181
+X- Pàgina per a manteniment/administració de vídeos (diferent a la de pujar vídeos/àudios). https://youtu.be/-unwP79QbYs?t=181
+X- Pàgina per a manteniment/administració de àudios (diferent a la de pujar vídeos/àudios). https://youtu.be/-unwP79QbYs?t=181
 
-I - Menú que permetrà buscar vídeos per categoria, amb una pàgina en el resultat d'aquestes búsquedes. Supose que en açò es referirà a un botó desplegable en el apartat de vídeos amb diverse categories que duguen a la pàgina de búsqueda
-I - Menú que permetrà buscar àudios per categoria, amb una pàgina en el resultat d'aquestes búsquedes. Supose que en açò es referirà a un botó desplegable en el apartat de vídeos amb diverse categories que duguen a la pàgina de búsqueda
+X - Menú que permetrà buscar vídeos per categoria, amb una pàgina en el resultat d'aquestes búsquedes. Supose que en açò es referirà a un botó desplegable en el apartat de vídeos amb diverse categories que duguen a la pàgina de búsqueda
+X - Menú que permetrà buscar àudios per categoria, amb una pàgina en el resultat d'aquestes búsquedes. Supose que en açò es referirà a un botó desplegable en el apartat de vídeos amb diverse categories que duguen a la pàgina de búsqueda
 
 
-- Pàgina de àudio details
-- Pàgina de video details, posar foto gran o iframe
+X Pàgina de àudio details
+X Pàgina de video details, posar foto gran o iframe
 X - Posar la pàgina de navegació esquerre en totes les pàgines, igual esperar a que estiga tot comentadíssim
 X - Posar links a la pàgina de details en els elements de vídeo xicotets de la pàgina de resultats
 - Revisar que s'utilitzen tots els contiguts de la unitat
 - Documentar tot el codi font sense faltes. Explicar en cada classe o estil, que fa i perque s'ha decidit fer així
-- Revisar que tots els formularis tinguen espais per a missatges d'errors
+X - Revisar que tots els formularis tinguen espais per a missatges d'errors
 X - Utilitzar un validador de html i provar que totes les pàgines no tenen errors i tindre els menys warnings possibles. És el que farà ell  a l'hora de corregir-la
-    index
-    adminAudios
-    adminUsuarios
-    adminVideos
-    directo
-    informacion
-    login
-    misAudios
-    misVideos
-    register
-    resultadosBusquedaGenerica
-    resultadosDetails
-    subirVideos

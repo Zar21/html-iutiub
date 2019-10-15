@@ -154,10 +154,6 @@ legend {
     border-radius: 5px;
 }
 
-summary::marker {
-    font-size: 0;
-}
-
 summary {
     outline: none;
 }
