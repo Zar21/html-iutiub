@@ -12,6 +12,7 @@
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
 </head>
 
 <body>
@@ -75,13 +76,47 @@
                             <!--Espacio para el vídeo-->
                             <tr>
                                 <td>
-                                    <img alt="Audio thumbnail" style="padding: 2em; width:80%; height:30rem;" src="img/audio-thumbnail.jpg">
+                                    <img alt="Audio thumbnail" style="padding: 2em; width:80%; height:30rem;" src="multimedia/img/audio-thumbnail.jpg">
                                 </td>
                             </tr>
                             <!--Título del vídeo-->
                             <tr>
                                 <td class="left">
                                     <p style="margin-left:25%">The Speed of Sound</p>
+                                </td>
+                            </tr>
+                            <!--Audio que se va a reproducir-->
+                            <tr>
+                                    <td>
+                                        <audio controls="controls" id="play-audio">
+                                            <source id="audiosource" src="multimedia/audio/audio_clip1.mp3" type="audio/mp3" />
+                                            Your browser does not support the <audio> element. 
+                                        </audio>
+                                    </td>
+                            </tr>
+                            <!--Botones para reproducir el audio-->
+                            <tr>
+                                <td class="audio-buttons">
+                                    <!--Enceder audio-->
+                                        <button id="play" onclick="playAudio();">
+                                            Play <i class="fas fa-play-circle"></i>
+                                        </button>
+                                    <!--Pausar audio-->
+                                        <button id="pause" onclick="pauseAudio();">
+                                            Pause <i class="fas fa-pause-circle"></i>
+                                        </button>
+                                    <!--Parar audio-->
+                                        <button id="stop" onclick="stopAudio()">
+                                            Stop <i class="fas fa-stop-circle"></i>
+                                        </button> 
+                                    <!--Avanzar 10 segundos-->
+                                        <button id="avance" onclick="avanceSeconds();">
+                                            Avance 10 seconds <i class="fas fa-forward"></i>
+                                        </button>
+                                    <!--Retroceder 10 segundos-->
+                                        <button id="rewind" onclick="rewindSeconds()">
+                                            Rewind 10 seconds <i class="fas fa-backward"></i>
+                                        </button>
                                 </td>
                             </tr>
                             <!--Descripción del video-->
@@ -197,6 +232,7 @@
             </tr>
         </tfoot>
     </table>
+    <script src="js/audio.js"></script>
 </body>
 
 </html>

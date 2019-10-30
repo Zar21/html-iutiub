@@ -12,6 +12,8 @@
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <!-- Añadir favicon a la página -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
 </head>
 
 <body>
@@ -75,7 +77,12 @@
                             <!--Espacio para el vídeo-->
                             <tr>
                                 <td>
-                                    <img alt="Video Thumbnail" style="padding: 2em; width:80%; height:30rem;" src="img/video-thumbnail.jpg">
+                                    <audio src="../multimedia/audio/movieCountdown.mp3" id="movieCountdown"></audio>
+                                    <canvas width="1200px" height="800px" id="countDown" style="border: 1px solid gray">
+                                    <video controls="controls" id="play-video">
+                                        <source id="videosource" src="./multimedia/video/movie_clip.mp4" type="video/mp4" />
+                                        Your browser does not support the <video> element. 
+                                    </video>
                                 </td>
                             </tr>
                             <!--Título del vídeo-->
@@ -83,6 +90,32 @@
                                 <td class="left">
                                     <p style="margin-left:25%">The Speed of Sound</p>
                                 </td>
+                            </tr>
+                            <tr>
+                                <!-- controles del video -->
+                                <td class="video-buttons">
+                                        <!-- botón play -->
+                                        <button id="play" onclick="startCountdown();">
+                                            Play <i class="fas fa-play-circle"></i>
+                                        </button>
+                                        <!-- botón pause -->
+                                        <button id="pause" onclick="pauseVideo();">
+                                            Pause <i class="fas fa-pause-circle"></i>
+                                        </button>
+                                        <!-- botón stop -->
+                                        <button id="stop" onclick="stopVideo()">
+                                            Stop <i class="fas fa-stop-circle"></i>
+                                        </button>
+                                        <!-- botón avance -->
+                                        <button id="avance" onclick="avanceSeconds();">
+                                            Avance 10 seconds <i class="fas fa-forward"></i>
+                                        </button>
+                                        <!-- botón retroceder -->
+                                        <button id="rewind" onclick="rewindSeconds()">
+                                            Rewind 10 seconds <i class="fas fa-backward"></i>
+                                        </button>
+                                </td>
+                                
                             </tr>
                             <!--Descripción del video-->
                             <tr>
@@ -197,6 +230,8 @@
             </tr>
         </tfoot>
     </table>
+    <script src="js/video_controls.js"></script>
+    <script src="js/canvasCountdown.js"></script>
 </body>
 
 </html>

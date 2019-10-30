@@ -1,12 +1,21 @@
-E Llista de reproducció de vídeo
-J Reproducció de vídeo: Inicia, pausa, para
+E (X) Imatge de miniatura; Al pulsar a la miniatura ha de dur a la pàgina; Llista de reproducció de vídeo
+E (X) Imatge de miniatura; Al pulsar a la miniatura ha de dur a la pàgina; Llista de reproducció de àudio
+E Validació del HTML
+
+XR Escriure tasques
 R Canvas compte arrere de 5 a 0
-I Reproducció de àudio
-E Llista de reproducció de àudio
-J
-R
-I
-E
-J
-R
-I
+R Favicon per a totes les pàgines
+
+J Miniatura de video; 
+J (X) Reproducció de vídeo: Inicia, pausa, para, avant 10 segons, arrere 10 segons
+J Menú llista de reproducció de vídeo: Inicia, para, pausa, avant 10 segons, arrere 10 segons, següent vídeo si no és l'últim, video anterior si no és l'últim, reproducció automàtica del següent qun acabe
+J (X)Obtindre 3 vídeos i àudios diferents
+
+I Reproducció de àudio Inicia, pausa, para, avant 10 segons, arrere 10 segons (Hecho)
+I Menú llista de reproducció de àudio: Inicia, para, pausa, avant 10 segons, arrere 10 segons, següent audio si no és l'últim, audio anterior si no és l'últim, reproducció automàtica del següent quan acabe
+I Pàgina de benvinguda amb almenys 3 imatges guardades en un sprite, s'utilitzarà css per a mostrar-les
+
+
+Global: 
+- Totes les pàgines que mostren llistat de àudio o vídeo tenen que tindre la posibilitat de afegir a la llistat de reproducció o de anar desde la imatge
+- Tot lo nou documentat també

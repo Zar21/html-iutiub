@@ -12,6 +12,8 @@
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <!-- Añadir favicon a la página -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
 </head>
 
 <body>
@@ -82,7 +84,12 @@
                             </td>
                         </tr>
                         <!-- Información de la página -->
-                        <!-- celdas de contenido. con width a 50% para que ocupe la mitad de la página de ancho, y height a 27% para determinar la altura-->
+                        <!-- celdas de contenido. con width a 50% para que ocupe la mitad de la página de ancho, y height a 27% para determinar la altura-->>
+                        <!--Imagenes del sprite-->
+                        <tr>
+                            <td><div class="bg-video"></div></td>
+                            <td><div class="bg-audio"></div></td>
+                        </tr>
                         <tr>
                             <td style="height:27%; width:50%">
                                 <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
@@ -131,6 +138,10 @@
                                     <i class="bigIcon fas fa-video"></i> Encuentre sus vídeos y audios favoritos por categoría
                                 </h4>
                             </td>
+                        </tr>
+                        <!--Otra imgen del sprite-->
+                        <tr>
+                            <td colspan="2"><div class="bg-multimedia"></div></td>
                         </tr>
                     </table>
                     <!-- Fin del contenido de la página -->
@@ -193,6 +204,20 @@
                     </details>
                 </td>
             </tr>
+            <!-- Enlace a la página de lista de reproducción -->
+            <!-- Clase para las opciones del menú izquierdo -->
+            <tr class="left-navbar">
+                    <td>
+                        <details>
+                            <!-- icono multimedia utilizando la librería fontawesome -->
+                            <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
+                            <ul>
+                                <li><a href="lrVideos.html">Vídeos</a></li>
+                                <li><a href="lrAudios.html">Audio</a></li>
+                            </ul>
+                        </details>
+                    </td>
+                </tr>
             <!-- Enlace a la página de en directo -->
             <!-- Clase para las opciones del menú izquierdo -->
             <tr class="left-navbar">
