@@ -1,0 +1,12 @@
+E Llista de reproducció de vídeo
+J Reproducció de vídeo: Inicia, pausa, para
+R Canvas compte arrere de 5 a 0
+I Reproducció de àudio
+E Llista de reproducció de àudio
+J
+R
+I
+E
+J
+R
+I
