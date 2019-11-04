@@ -235,16 +235,27 @@ details li a {
 }
 
 .bg-multimedia {
-    width: 626px; height: 375px;
+    width: 330px;
+    height: 194px;
     background: url('multimedia/img/css_sprites.png') -10px -10px;
+    background-size: 500px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    
 }
 
 .bg-audio {
     width: 310px; height: 162px;
     background: url('multimedia/img/css_sprites.png') -10px -405px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .bg-video {
     width: 300px; height: 300px;
     background: url('multimedia/img/css_sprites.png') -656px -10px;
+    margin: 0 auto;
+    position: relative;
 }

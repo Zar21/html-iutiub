@@ -98,7 +98,7 @@
                         <tr>
                             <td>
                                 <video controls="controls" id="play-video">
-                                    <source id="videosource" src="./multimedia/video/movie_clip.mp4" type="video/mp4" />
+                                    <source id="videosource" src="" type="video/mp4" />
                                     Your browser does not support the <video> element.
                                     </video>
                             </td>
@@ -132,11 +132,11 @@
                                     Rewind 10 seconds <i class="fas fa-backward"></i>
                                 </button>
                                 <!-- botón video anterior -->
-                                <button id="previousVideo" onclick="previousVideo()">
+                                <button id="previousVideo" onclick="changeVideo('p')">
                                     Previous video <i class="fas fa-backward"></i>
                                 </button>
                                 <!-- botón siguiente video -->
-                                <button id="nextVideo" onclick="nextVideo()">
+                                <button id="nextVideo" onclick="changeVideo()">
                                     Next video <i class="fas fa-backward"></i>
                                 </button>
                             </td>
@@ -251,5 +251,6 @@
 </body>
 <!-- Cargar el fichero javascript -->
 <script src="js/video_controls.js"></script>
+<script src="js/listaReproduccionVideos.js"></script>
 
 </html>

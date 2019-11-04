@@ -26,12 +26,21 @@
         context.font = "150px Arial";
         context.textAlign = "center";
 
-        function draw(count) {
+        function draw(count, countInterval) {
             context.beginPath();
             context.font = "150px Arial";
             context.textAlign = "center";
             context.fillStyle = "black";
             context.fillRect(0, 0, canvas.width, canvas.height);
+            context.fillStyle = "#ccc";
+            context.arc(canvas.width/2, canvas.height/2, canvas.height/2, 0, 2 * Math.PI);
+            context.fill();
+            context.fillStyle = "grey";
+            context.translate(canvas.width/2, canvas.height/2);
+            context.rotate(countInterval * Math.PI / 180);
+            context.translate(-canvas.width/2, -canvas.height/2);
+            context.fillRect(canvas.width/2, canvas.height/2, canvas.height/2, 10);
+            context.rotate(0 * Math.PI / 180);
             context.fillStyle = "white";
             context.fillText(count, canvas.width/2, canvas.height/2);
         }
@@ -41,18 +50,25 @@
         }
         
         var count = 5;
+        var countInterval = -90;
         function countDown() {
             clearCanvas();
-            draw(count);
-            sound.play();
+            draw(count, countInterval);
             setTimeout(function() {
-                if (count > 0) {
-                    count--;
-                    countDown();
+                if (countInterval == 270){
+                    countInterval = -90;
+                    if (count > 0) {
+                        count--;
+                        sound.play();
+                        countDown();
+                    } else {
+                        console.log('nise');
+                    }
                 } else {
-                    console.log('nise');
+                    countInterval++;
+                    countDown();
                 }
-            }, 1000);
+            }, 1);
         }
         countDown();
     }

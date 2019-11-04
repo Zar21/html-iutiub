@@ -1,28 +1,37 @@
-function startCountdown() {
-    document.getElementById('movieCountdown').style.display = 'block';
-    document.getElementById('play-video').style.display = 'none';
-    var canvas;
-    var context;
-    var sound = document.querySelector("#movieCountdown");
-    
-    canvas = document.getElementById('countDown');
-    context = canvas.getContext('2d');
+const canvas = document.getElementById('countDown');
+const context = canvas.getContext('2d');
+const sound = document.querySelector("#movieCountdown");
+hide();
+draw();
+
+function draw(count = 5) {
+    context.beginPath();
     context.font = "150px Arial";
     context.textAlign = "center";
+    context.fillStyle = "black";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = "white";
+    context.fillText(count, canvas.width/2, canvas.height/2);
+}
 
-    function draw(count) {
-        context.beginPath();
-        context.font = "150px Arial";
-        context.textAlign = "center";
-        context.fillStyle = "black";
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = "white";
-        context.fillText(count, canvas.width/2, canvas.height/2);
-    }
-    
-    function clearCanvas () {
-        canvas.width = canvas.width;
-    }
+function clearCanvas () {
+    canvas.width = canvas.width;
+}
+
+function hide() {
+    document.getElementById('movieCountdown').hidden = false;
+    canvas.hidden = false;
+    document.getElementById('play-video').hidden = true;
+}
+
+function show() {
+    document.getElementById('movieCountdown').hidden = true;
+    canvas.hidden = true;
+    document.getElementById('play-video').hidden= false;
+}
+
+function startCountdown() {
+    hide();
     
     var count = 5;
     function countDown() {
@@ -34,8 +43,7 @@ function startCountdown() {
                 count--;
                 countDown();
             } else {
-                document.getElementById('movieCountdown').style.display = 'block';
-                document.getElementById('play-video').style.display = 'none';
+                show();
                 playVideo();
             }
         }, 1000);
