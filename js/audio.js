@@ -25,21 +25,3 @@ theAudio = document.querySelector("#play-audio");
     function rewindSeconds() {
         theAudio.currentTime = theAudio.currentTime - 10;
     }
-
-    function nextAudio() {      
-        let source = document.getElementById('audiosource');
-        number++
-        if (number > 3) number = 1;
-        source.src = "audio_clip"+ number +".mp3";
-        theAudio.load();
-        theAudio.play();
-    }
-
-    function previousAudio() {
-        let source = document.getElementById('audiosource');
-        number--
-        if (number == 0) number = 3;
-        source.src = "audio_clip"+ number +".mp3";
-        theAudio.load();
-        theAudio.play();
-    }

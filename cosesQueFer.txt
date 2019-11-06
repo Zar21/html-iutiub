@@ -12,7 +12,7 @@ J Menú llista de reproducció de vídeo: Inicia, para, pausa, avant 10 segons, 
 J (X)Obtindre 3 vídeos i àudios diferents
 
 I (X) Reproducció de àudio Inicia, pausa, para, avant 10 segons, arrere 10 segons
-I Menú llista de reproducció de àudio: Inicia, para, pausa, avant 10 segons, arrere 10 segons, següent audio si no és l'últim, audio anterior si no és l'últim, reproducció automàtica del següent quan acabe
+I (X) Menú llista de reproducció de àudio: Inicia, para, pausa, avant 10 segons, arrere 10 segons, següent audio si no és l'últim, audio anterior si no és l'últim, reproducció automàtica del següent quan acabe
 I (X) Pàgina de benvinguda amb almenys 3 imatges guardades en un sprite, s'utilitzarà css per a mostrar-les
 
 

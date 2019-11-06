@@ -131,14 +131,14 @@
                                 <button id="rewind" onclick="rewindSeconds()">
                                     Rewind 10 seconds <i class="fas fa-backward"></i>
                                 </button>
-                                <!-- botón video anterior -->
-                                <!--<button id="previousVideo" onclick="changeVideo('p')">
-                                    Previous video <i class="fas fa-backward"></i>
-                                </button>-->
-                                <!-- botón siguiente video -->
-                                <!--<button id="nextVideo" onclick="changeVideo()">
-                                    Next video <i class="fas fa-backward"></i>
-                                </button>-->
+                                <!-- botón audio anterior -->
+                                <button id="previousVideo" onclick="previousAudio()">
+                                    Previous audio <i class="fas fa-backward"></i>
+                                </button>
+                                <!-- botón siguiente audio -->
+                                <button id="nextVideo" onclick="audioEnded()">
+                                    Next audio <i class="fas fa-forward"></i>
+                                </button>
                             </td>
                         </tr>
                     </table>
@@ -251,5 +251,5 @@
 </body>
 <!-- Cargar el fichero javascript -->
 <script src="js/audio.js"></script>
-
+<script src="js/listaReproduccionAudios.js"></script>
 </html>
