@@ -1,11 +1,11 @@
-body {
+body { /*fuente generica para toda la web*/
     margin: 0px;
     font-family: Helvetica, Arial, Sans-Serif;
 }
 
 table,
 td,
-th {
+th { /*bordes genericos para las tablas de la web*/
     border: 0px solid black;
     border-collapse: collapse;
 }
@@ -19,7 +19,7 @@ table {
     height: 100%;
 }
 
-#mainTable {
+#mainTable { 
     position: absolute;
     top: 0;
     bottom: 0;
@@ -207,7 +207,7 @@ details li a {
 .table-checkbox td {
     text-align: left;
 }
-
+/*Diseño para los botones de control de audio y de video*/
 .audio-buttons button, .video-buttons button {
     color:#fff;
     background-color:#5bc0de;
@@ -233,7 +233,7 @@ details li a {
     transparent;
     border-radius: 4px;
 }
-
+/*Cargar imagenes del sprite*/
 .bg-multimedia {
     width: 330px;
     height: 194px;

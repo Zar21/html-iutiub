@@ -75,32 +75,31 @@
                 <td rowspan="8" colspan="3" id="pageContent">
                     <!--Página principal-->
                     <table id="contentTable">
-                        <tr>
-                            <!-- Clase "left" para alinear el texto a la izquierda -->
-                            <td class="left" colspan="5">
-                                <p>Bienvenido a <a>iUTiUB</a></p>
+                        <tr> 
+                            <td class="left"><!-- Clase "left" para alinear el texto a la izquierda --> 
+                                <p>Bienvenido a <a href="index.html">iUTiUB</a></p>
                             </td>
                         </tr>
                         <tr>
                             <!-- Clase "left" para alinear el texto a la izquierda -->
                             <!-- Clase "blue" para cambiar el color del texto a azul y ponerlo en negrita -->
-                            <td class="left" colspan="5">Estás viendo <span class="blue">la sección de 'Audios'</span>
+                            <td class="left">Estás viendo <span class="blue">la sección de 'Audios'</span>
                             </td>
                         </tr>
                         <!--Explicación de como se han ordenado los vídeos-->
                         <tr>
                             <!-- Clase "left" para alinear el texto a la izquierda -->
                             <!-- Clase "blue" para cambiar el color del texto a azul y ponerlo en negrita -->
-                            <td class="left" colspan="5">Has seleccionado <span class="blue">audios de
+                            <td class="left">Has seleccionado <span class="blue">audios de
                                     %categoria%</span> ordenados por <span class="blue">los más recientes</span></td>
                         </tr>
                         <!--Los vídeos-->
                         <tr>
                             <td>
                                 <audio controls="controls" id="play-audio">
-                                    <source id="audiosource" type="audio/mp3" />
-                                    Your browser does not support the <audio> element.
-                                    </audio>
+                                    <source id="audiosource" type="audio/mp3" src="multimedia/audio/audio_clip1.mp3" />
+                                    Your browser does not support the audio element.
+                                </audio>
                             </td>
                         </tr>
                         <tr>
@@ -248,8 +247,8 @@
             </tr>
         </tfoot>
     </table>
+    <!-- Cargar el fichero javascript -->
+    <script src="js/audio.js"></script>
+    <script src="js/listaReproduccionAudios.js"></script>
 </body>
-<!-- Cargar el fichero javascript -->
-<script src="js/audio.js"></script>
-<script src="js/listaReproduccionAudios.js"></script>
 </html>

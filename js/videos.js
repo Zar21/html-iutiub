@@ -1,4 +1,4 @@
-let buttonsVideos = document.querySelectorAll('#playlistButtonVideo');
+let buttonsVideos = document.querySelectorAll('.playlistButtonVideo');
 buttonsVideos.forEach(element => {
     let videos = JSON.parse(localStorage.getItem('videos'));
     if (!videos) {
