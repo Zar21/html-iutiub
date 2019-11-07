@@ -8,8 +8,8 @@ R (X) Favicon per a totes les pàgines
 
 J Miniatura de video; 
 J (X) Reproducció de vídeo: Inicia, pausa, para, avant 10 segons, arrere 10 segons
-J Menú llista de reproducció de vídeo: Inicia, para, pausa, avant 10 segons, arrere 10 segons, següent vídeo si no és l'últim, video anterior si no és l'últim, reproducció automàtica del següent qun acabe
-J (X)Obtindre 3 vídeos i àudios diferents
+J (X) Menú llista de reproducció de vídeo: Inicia, para, pausa, avant 10 segons, arrere 10 segons, següent vídeo si no és l'últim, video anterior si no és l'últim, reproducció automàtica del següent qun acabe
+J (X) Obtindre 3 vídeos i àudios diferents
 
 I (X) Reproducció de àudio Inicia, pausa, para, avant 10 segons, arrere 10 segons
 I (X) Menú llista de reproducció de àudio: Inicia, para, pausa, avant 10 segons, arrere 10 segons, següent audio si no és l'últim, audio anterior si no és l'últim, reproducció automàtica del següent quan acabe
