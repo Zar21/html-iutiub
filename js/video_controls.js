@@ -28,6 +28,7 @@ function avanceSeconds() {
 function rewindSeconds() {
     theVideo.currentTime = theVideo.currentTime - 10;
 }
+
 // p = previous
 // n = next (default)
 function changeVideo(param = "n") {
