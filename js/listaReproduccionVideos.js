@@ -14,6 +14,7 @@ if (videos && videos.length > 0) {
     theVideo.load();
 } else {
     theVideo.classList.add("hidden");
+    document.getElementsByClassName("video-buttons")[0].classList.add("hidden")
 }
 
 
