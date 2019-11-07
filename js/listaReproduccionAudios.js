@@ -10,6 +10,7 @@ if (audios && audios.length > 0) { //comprobamos si tenemos algun audio en el re
 }
 else { //en caso de no tener audios en el reproductor se oculta la etiqueta audio
     theAudio.classList.add("hidden");
+    document.querySelector(".audio-buttons").classList.add("hidden");
 }
 
 function audioEnded() { //funcion que se ejecuta para activar el siguiente audio
