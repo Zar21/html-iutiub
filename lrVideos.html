@@ -95,16 +95,18 @@
                             <td class="left">Has seleccionado <span class="blue">vídeos de
                                     %categoria%</span> ordenados por <span class="blue">los más recientes</span></td>
                         </tr>
-                        <!--Los vídeos-->
+                        <!--Video actual-->
                         <tr>
                             <td>
                                 <video controls="controls" id="play-video">
+                                    <!-- La etiqueta video exige tener un src inicial, aunque en LS no tenga ningun video, aun asi, el video y los controles estaran ocultos si no hay videos en la lista(LS) -->
                                     <source id="videosource" src="multimedia/movie_clip1.mp4" type="video/mp4" />
                                     Your browser does not support the video element.
                                     </video>
                             </td>
                         </tr>
                         <tr>
+                            <!-- titulo video -->
                             <td class="left">
                                 <p style="margin-left:25%">The Speed of Sound</p>
                             </td>
@@ -263,7 +265,7 @@
             </tr>
         </tfoot>
     </table>
-    <!-- Cargar el fichero javascript -->
+    <!-- Cargar los ficheros javascript -->
     <script src="js/video_controls.js"></script>
     <script src="js/listaReproduccionVideos.js"></script>
 </body>

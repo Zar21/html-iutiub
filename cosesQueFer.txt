@@ -21,7 +21,7 @@ Global:
 - Tot lo nou documentat també
 
 COSES NOVES:
-- Miniatura en tots els videos de la pàgina clicable
+- (X) Miniatura en tots els videos de la pàgina clicable
 - La pàgina de vídeo en directe ha de ser un reproductor en el que es podrà iniciar pausar o parar el vídeo
 - Els àudios han de tindre miniatura clicable també
 - 
