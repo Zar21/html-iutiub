@@ -2,8 +2,6 @@ const canvas = document.getElementById('countDown');
 const context = canvas.getContext('2d');
 const sound = document.querySelector("#movieCountdown");
 var canvasPlaying = false;
-hide();
-draw();
 
 function draw(count = 5, countInterval = -45) {
     context.beginPath();
@@ -41,6 +39,9 @@ function show() {
     canvas.hidden = true;
     document.getElementById('play-video').hidden = false;
 }
+
+hide();
+draw();
 
 function startCountdown() {
     if (!canvasPlaying) {

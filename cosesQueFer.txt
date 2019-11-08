@@ -3,7 +3,7 @@ E (X) Imatge de miniatura; Al pulsar a la miniatura ha de dur a la pàgina; Llis
 E Validació del HTML
 
 R (X) Escriure tasques
-R Canvas compte arrere de 5 a 0
+R (X) Canvas compte arrere de 5 a 0
 R (X) Favicon per a totes les pàgines
 
 J (X) Miniatura de video; 
@@ -19,3 +19,9 @@ I (X) Pàgina de benvinguda amb almenys 3 imatges guardades en un sprite, s'util
 Global: 
 - Totes les pàgines que mostren llistat de àudio o vídeo tenen que tindre la posibilitat de afegir a la llistat de reproducció o de anar desde la imatge
 - Tot lo nou documentat també
+
+COSES NOVES:
+- Miniatura en tots els videos de la pàgina clicable
+- La pàgina de vídeo en directe ha de ser un reproductor en el que es podrà iniciar pausar o parar el vídeo
+- Els àudios han de tindre miniatura clicable també
+- 
