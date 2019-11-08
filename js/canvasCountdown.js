@@ -1,6 +1,7 @@
 const canvas = document.getElementById('countDown');
 const context = canvas.getContext('2d');
 const sound = document.querySelector("#movieCountdown");
+var canvasPlaying = false;
 hide();
 draw();
 
@@ -42,29 +43,33 @@ function show() {
 }
 
 function startCountdown() {
-    hide();
-    var count = 5;
-    var countInterval = -45;
-    function countDown() {
-        clearCanvas();
-        draw(count, countInterval);
-        setTimeout(function () {
-            if (countInterval == 135) {
-                countInterval = -45;
-                count--;
-                draw(count, countInterval);
-                sound.play();
-                if (count > 0) {
-                    countDown();
+    if (!canvasPlaying) {
+        canvasPlaying = true;
+        hide();
+        var count = 5;
+        var countInterval = -45;
+        function countDown() {
+            clearCanvas();
+            draw(count, countInterval);
+            setTimeout(function () {
+                if (countInterval == 135) {
+                    countInterval = -45;
+                    count--;
+                    draw(count, countInterval);
+                    sound.play();
+                    if (count > 0) {
+                        countDown();
+                    } else {
+                        show();
+                        canvasPlaying = false;
+                        playVideo();
+                    }
                 } else {
-                    show();
-                    playVideo();
+                    countInterval++;
+                    countDown();
                 }
-            } else {
-                countInterval++;
-                countDown();
-            }
-        }, 1);
+            }, 1);
+        }
+        countDown();
     }
-    countDown();
 }
