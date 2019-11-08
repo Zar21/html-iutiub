@@ -89,11 +89,33 @@
                                 </tr>
                                 <!-- Se especifica la altura de las filas para que entren en su espacio dedicado -->
                                 <tr style="height:8%">
-                                    <!-- Clase "left" para alinear el texto a la izquierda -->
-                                    <!-- Padding para que el texto esté en la posición correcta, con un color de fondo blanco -->
-                                    <td class="left" style="padding: 0px 20px; background: #c3c3c3">
-                                        Contenido de video en directo
+                                    <!-- Padding para que el video esté en la posición correcta, con un color de fondo blanco -->
+                                    <td style="padding: 0px 20px; background: #c3c3c3">
+                                        <audio src="./multimedia/audio/movieCountdown.mp3" id="movieCountdown"></audio>
+                                        <canvas width="1200" height="800" id="countDown" style="border: 1px solid gray"></canvas>
+                                        <video controls="controls" id="play-video">
+                                            <source id="videosource" src="./multimedia/video/movie_clip1.mp4" type="video/mp4" />
+                                            Your browser does not support the video element. 
+                                        </video>
                                     </td>
+                                </tr>
+                                <tr>
+                                    <!-- controles del video -->
+                                    <td class="video-buttons">
+                                            <!-- botón play -->
+                                            <button id="play" onclick="startCountdown();">
+                                                Play <i class="fas fa-play-circle"></i>
+                                            </button>
+                                            <!-- botón pause -->
+                                            <button id="pause" onclick="pauseVideo();">
+                                                Pause <i class="fas fa-pause-circle"></i>
+                                            </button>
+                                            <!-- botón stop -->
+                                            <button id="stop" onclick="stopVideo()">
+                                                Stop <i class="fas fa-stop-circle"></i>
+                                            </button>
+                                    </td>
+                                    
                                 </tr>
                                 <!-- Se especifica la altura de las filas para que entren en su espacio dedicado -->
                                 <tr style="height:70%">
@@ -303,6 +325,9 @@
             </tr>
         </tfoot>
     </table>
+    
+    <script src="js/video_controls.js"></script>
+    <script src="js/canvasCountdown.js"></script>
 </body>
 
 </html>
