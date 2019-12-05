@@ -6,6 +6,6 @@
 - En resolucions majors de 1200px es veuran 6 vídeos en cada búsqueda. El menú lateral apareixerà.
 
 1 Layout interior de vídeos y audios, responsive flexbox I
-2 Layout barra lateral i superior en totes les pàgines, responsive E
+2 Layout barra lateral i superior en totes les pàgines, responsive R
 3 Layour interior de totes les demés pàgines + register + login, responsive grid J
-4 Comenta tot el codi i el valida R
+4 Comenta tot el codi i el valida E
