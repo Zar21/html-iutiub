@@ -3,16 +3,17 @@
 
 <head>
     <!-- Para que la codificación de la página sea UTF-8 -->
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>iUTiUB</title>
     <!-- Fichero de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/leftNavbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageLayout.css" />
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <!-- Añadir favicon a la página -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -28,16 +29,19 @@
                 <!-- Poner un elemento h1 dentro de un th es incorrecto,
                      asi que aplicamos un estilo para simular el tamaño de un h1,
                      además de cambiar el color de fondo y su tamaño -->
-                <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
+                <th onclick="location.href='index.html'"
+                    style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
                     iUTiUB</th>
                 <!-- Espacio vacío para separar los botones -->
                 <th style="width:55%"></th>
                 <!-- Botón de registro -->
                 <!-- icono de usuario utilizando la librería fontawesome -->
-                <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</th>
+                <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i
+                        class="fas fa-user-plus"></i> Nuevo Usuario</th>
                 <!-- Botón de iniciar sesión-->
                 <!-- icono de sesión utilizando la librería fontawesome -->
-                <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
+                <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i
+                        class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
             </tr>
         </thead>
         <tbody>
@@ -47,7 +51,7 @@
                     <!-- formulario de búsqueda del navbar en la parte izquierda -->
                     <form method="GET" action="resultadosBusquedaGenerica.html">
                         <!-- input text donde se introducirá la cadena de texto a buscar -->
-                        <input size="15" type="search" list="busquedas" name="name" placeholder="Buscar"/>
+                        <input size="15" type="search" list="busquedas" name="name" placeholder="Buscar" />
                         <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
                         <div class="error hidden">
                             Error
@@ -71,18 +75,21 @@
                 <!-- contenido principal de la página, es una sola celda, pero combinada utlilizando las propiedades rowspan,
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
-                    <!-- Información sobre la página -->
-                    <!-- icono de información utilizando la librería fontawesome -->
-                    <p><i class="bigIcon fas fa-info"></i></p>
-                    <p>Encuentra rápidamente los contenidos que desees</p>
-                    <p>Disfruta de los mejores contenidos de vídeo bajo demanda</p>
-                    <p>Disfruta de vídeo en directo</p>
-                    <p>Puedes subir achivos de áudio y vídeo y compartirlo con el resto del múndo</p>
-                    <p>Usted encontrará sus propios vídeos y audios en sus pestañas correspondientes a la izquierda de la página</p>
-                    <p>Encuentre sus videos y audios favoritos por categoría</p>
+                    <div id="content">
+                        <!-- Información sobre la página -->
+                        <!-- icono de información utilizando la librería fontawesome -->
+                        <p><i class="bigIcon fas fa-info"></i></p>
+                        <p>Encuentra rápidamente los contenidos que desees</p>
+                        <p>Disfruta de los mejores contenidos de vídeo bajo demanda</p>
+                        <p>Disfruta de vídeo en directo</p>
+                        <p>Puedes subir achivos de áudio y vídeo y compartirlo con el resto del múndo</p>
+                        <p>Usted encontrará sus propios vídeos y audios en sus pestañas correspondientes a la izquierda
+                            de la página</p>
+                        <p>Encuentre sus videos y audios favoritos por categoría</p>
+                    </div>
                 </td>
             </tr>
-            
+
             <!-- Menú vertical izquierdo -->
 
             <!-- Desplegable del menú de vídeos -->
@@ -140,20 +147,20 @@
                     </details>
                 </td>
             </tr>
- <!-- Enlace a la página de lista de reproducción -->
+            <!-- Enlace a la página de lista de reproducción -->
             <!-- Clase para las opciones del menú izquierdo -->
             <tr class="left-navbar">
-                    <td>
-                        <details>
-                            <!-- icono multimedia utilizando la librería fontawesome -->
-                            <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
-                            <ul>
-                                <li><a href="lrVideos.html">Vídeos</a></li>
-                                <li><a href="lrAudios.html">Audio</a></li>
-                            </ul>
-                        </details>
-                    </td>
-                </tr>
+                <td>
+                    <details>
+                        <!-- icono multimedia utilizando la librería fontawesome -->
+                        <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
+                        <ul>
+                            <li><a href="lrVideos.html">Vídeos</a></li>
+                            <li><a href="lrAudios.html">Audio</a></li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
             <!-- Enlace a la página de en directo -->
             <!-- Clase para las opciones del menú izquierdo -->
             <tr class="left-navbar">

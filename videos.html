@@ -9,7 +9,7 @@
     <title>iUTiUB</title>
     <!-- Fichero de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/leftNavbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageLayout.css"/>
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
@@ -72,138 +72,124 @@
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
                         <!--Página principal-->
-                        <table id="contentTable">
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <td class="left" colspan="5"><p>Bienvenido a <a>iUTiUB</a></p></td>
-                            </tr>
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Clase "blue" para cambiar el color del texto a azul y ponerlo en negrita -->
-                                <td class="left" colspan="5">Estás viendo <span class="blue">la sección de 'Vídeos'</span></td>
-                            </tr>
-                            <!--Explicación de como se han ordenado los vídeos-->
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Clase "blue" para cambiar el color del texto a azul y ponerlo en negrita -->
-                                <td class="left" colspan="5">Has seleccionado <span class="blue">vídeos de %categoria%</span> ordenados por <span class="blue">los más recientes</span></td>
-                            </tr>
+                        <div id="content">
+                            <h2>Bienvenido a <a>iUTiUB</a></h2>
+                        <p>Estás viendo <span class="blue">la sección de 'Vídeos'</span></p>
+                        <p>Has seleccionado <span class="blue">audios de %categoria%</span> ordeandos por <span class="blue">los más recientes</span></p>
                             <!--Los vídeos-->
-                            <tr>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="movie_clip1">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="movie_clip2">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="movie_clip3">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video4">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video5">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                            </tr>
-                            <tr>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video6">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video7">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video8">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video9">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                                <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video10">
-                                <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
-                                <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
-                                <!-- enlace a los detalles del video -->
-                                <a href="videoDetails.html">The Speed of Sound</a><br>
-                                <!-- datos de reproduciones del elemento -->
-                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
-                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                            </tr>
-                        </table>
+                            <div class="videoList">
+                                <div class="left" id="movie_clip1">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="movie_clip2">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="movie_clip3">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="video4">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="video5">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="video6">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="video7">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="video8">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="video9">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                                    <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
+                                <div class="left" id="video10">
+                                    <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
+                                    <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt="video thumbnail"></a><br>
+                                    <!-- enlace a los detalles del video -->
+                                    <a href="videoDetails.html">The Speed of Sound</a><br>
+                                    <!-- datos de reproduciones del elemento -->
+                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                    <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
+                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
+                                </div>
+                            </div>
+                        </div>
                     <!-- Fin del contenido de la página -->
                 </td>
             </tr>

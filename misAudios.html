@@ -9,7 +9,7 @@
     <title>iUTiUB</title>
     <!-- Fichero de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/leftNavbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageLayout.css"/>
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
@@ -72,21 +72,12 @@
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
                         <!--Página principal-->
-                        <table id="contentTable">
-                            <tr>
-                                <!--La clase left alinea el texto que hay en su interior a la derecha-->
-                                <td class="left" colspan="5"><p>Bienvenido a <a>iUTiUB</a></p></td>
-                            </tr>
-                            <tr>
-                                <td class="left" colspan="5">Estás viendo <span class="blue">la sección de 'Mis audios'</span></td>
-                            </tr>
-                            <!--Explicación de como se han ordenado los audios-->
-                            <tr>
-                                <td class="left" colspan="5">Has seleccionado <span class="blue">tus propios audios</span> ordenados por <span class="blue">los más recientes</span></td>
-                            </tr>
-                            <!--Los audios-->
-                            <tr>
-                            <td class="left" style="width:20%" id="audio_clip1">
+                        <div id="content">
+                            <h2>Bienvenido a <a>iUTiUB</a></h2>
+                        <p>Estás viendo <span class="blue">la sección de 'Mis audios'</span></p>
+                        <p>Has seleccionado <span class="blue">tus propios audios</span> ordenados por <span class="blue">los más recientes</span></p>
+                        <div class="audioList">
+                            <div class="left" id="audio_clip1">
                                 <!--Icono de audio-->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!--Enlace a los detalles del audio seleccionado-->
@@ -95,9 +86,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip2">
+                            <div class="left" id="audio_clip2">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -106,9 +97,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip3">
+                            <div class="left" id="audio_clip3">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -117,9 +108,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip4">
+                            <div class="left" id="audio_clip4">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -128,9 +119,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip5">
+                            <div class="left" id="audio_clip5">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -139,11 +130,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
-                            </tr>
-                            <tr>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip6">
+                            <div class="left" id="audio_clip6">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -152,9 +141,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip7">
+                            <div class="left" id="audio_clip7">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -163,9 +152,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip8">
+                            <div class="left" id="audio_clip8">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -174,9 +163,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip9">
+                            <div class="left" id="audio_clip9">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -185,9 +174,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                                 <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip10">
+                            <div class="left" id="audio_clip10">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -196,9 +185,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
-                            </tr>
-                        </table>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Fin del contenido de la página -->
                 </td>
             </tr>

@@ -9,7 +9,7 @@
     <title>iUTiUB</title>
     <!-- Fichero de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/leftNavbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageLayout.css"/>
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
@@ -71,88 +71,65 @@
                 <!-- contenido principal de la página, es una sola celda, pero combinada utlilizando las propiedades rowspan,
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
+                    <div id="content">
+                        <h3>Administración de usuarios</h3>
+                        <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
+                        <fieldset>
+                                <legend>Buscar</legend>
+                                <form>
+                                    <p>Introduce parte del alias del usuario</p>
+                                    <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                                    <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search"><br/>
+                                    <div class="error hidden">
+                                        Error
+                                    </div>
+                                </form>
+                            </fieldset>
+                            <table class="datatable">
+                                    <!--Cabezera de la tabla -->
+                                    <thead>
+                                        <tr>
+                                            <!-- El título de la tabla debe ocupar 5 columnas-->
+                                            <th colspan="4">Mantenimiento de usuarios</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Correo</th>
+                                            <th>Contraseña</th>
+                                            <th>Tipo</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- Cuerpo de la tabla -->
+                                    <tbody>
+                                        <tr>
+                                            <td>hildickethan</td>
+                                            <td>hildickethan@gmail.com</td>
+                                            <td>hildickethan</td>
+                                            <td>Administrador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>jordillopis00</td>
+                                            <td>jordillopis00@gmail.com</td>
+                                            <td>jordillopis00</td>
+                                            <td>Administrador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ivanperezfita</td>
+                                            <td>ivanperezfita@gmail.com</td>
+                                            <td>ivanperezfita</td>
+                                            <td>Administrador</td>
+                                        </tr>
+                                        <tr>
+                                            <td>raulojeda10g</td>
+                                            <td>raulojeda10g@gmail.com</td>
+                                            <td>raulojeda10g</td>
+                                            <td>Administrador</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                    </div>
                         <!--Página principal-->
-                        <table id="contentTable">
-                            <tr>
-                                <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
-                                <td class="left" colspan="2"><h3>Administración de usuarios</h3></td>
-                            </tr>
-                            <tr>
-                                <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
-                                <td class="left" colspan="2">
-                                    <!-- %USER es una variable en la que iría el nombre del usuario -->
-                                    <!-- La clase blue cambia el color del texto al del tema de la página -->
-                                    <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- Fuerza que se alinee a la izquierda el td y lo pone a la mitad de anchura del espacio para el contenido -->
-                                <td class="left" style="height:27%; width:50%">
-                                <fieldset>
-                                    <legend>Buscar</legend>
-                                    <form>
-                                        <p>Introduce parte del alias del usuario</p>
-                                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                        <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search"><br/>
-                                        <div class="error hidden">
-                                            Error
-                                        </div>
-                                    </form>
-                                </fieldset>
-                                </td>
-                                <td style="height:27%; width:50%">
-                                    <!-- Necesario para el td anterior no ocupe este espacio-->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"  style="height:50%; width:100%">
-                                    <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
-                                    <table class="datatable">
-                                        <!--Cabezera de la tabla -->
-                                        <thead>
-                                            <tr>
-                                                <!-- El título de la tabla debe ocupar 5 columnas-->
-                                                <th colspan="4">Mantenimiento de usuarios</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Correo</th>
-                                                <th>Contraseña</th>
-                                                <th>Tipo</th>
-                                            </tr>
-                                        </thead>
-                                        <!-- Cuerpo de la tabla -->
-                                        <tbody>
-                                            <tr>
-                                                <td>hildickethan</td>
-                                                <td>hildickethan@gmail.com</td>
-                                                <td>hildickethan</td>
-                                                <td>Administrador</td>
-                                            </tr>
-                                            <tr>
-                                                <td>jordillopis00</td>
-                                                <td>jordillopis00@gmail.com</td>
-                                                <td>jordillopis00</td>
-                                                <td>Administrador</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ivanperezfita</td>
-                                                <td>ivanperezfita@gmail.com</td>
-                                                <td>ivanperezfita</td>
-                                                <td>Administrador</td>
-                                            </tr>
-                                            <tr>
-                                                <td>raulojeda10g</td>
-                                                <td>raulojeda10g@gmail.com</td>
-                                                <td>raulojeda10g</td>
-                                                <td>Administrador</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- Fin del contenido principal -->
-                                </td>
-                            </tr>
-                        </table>
+                       
                     </td>
                 </tr>
             <!-- Menú vertical izquierdo -->

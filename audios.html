@@ -9,7 +9,7 @@
     <title>iUTiUB</title>
     <!-- Fichero de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/leftNavbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageLayout.css"/>
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
@@ -71,150 +71,74 @@
                 <!-- contenido principal de la página, es una sola celda, pero combinada utlilizando las propiedades rowspan,
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
-                        <!--Página principal-->
-                        <table id="contentTable">
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <td class="left" colspan="5"><p>Bienvenido a <a>iUTiUB</a></p></td>
-                            </tr>
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Clase "blue" para cambiar el color del texto a azul y ponerlo en negrita -->
-                                <td class="left" colspan="5">Estás viendo <span class="blue">la sección de 'Audios'</span></td>
-                            </tr>
-                            <!--Explicación de como se han ordenado los audios-->
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Clase "blue" para cambiar el color del texto a azul y ponerlo en negrita -->
-                                <td class="left" colspan="5">Has seleccionado <span class="blue">audios de %categoria%</span> ordenados por <span class="blue">los más recientes</span></td>
-                            </tr>
-                            <!--Los audios-->
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip1">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip2">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip3">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip4">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip5">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip6">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip7">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip8">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip9">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                                <!-- Clase "left" para alinear el texto a la izquierda -->
-                                <!-- Se especifica la anchura para que sea del tamaño deseado -->
-                                <td class="left" style="width:20%" id="audio_clip10">
-                                    <!-- icono de volumen utilizando la librería fontawesome -->
-                                    <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
-                                    <!-- Enlace para redirigir a la página del audio -->
-                                    <a href="audioDetails.html">The Speed of Sound</a><br>
-                                    <!-- Etiqueta <small> para disminuir el tamaño de la letra, con un cambio de color en el style -->
-                                    <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
-                                    <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
-                                    <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                    <div id="content">
+                        <h2>Bienvenido a <a>iUTiUB</a></h2>
+                        <p>Estás viendo <span class="blue">la sección de 'Audios'</span></p>
+                        <p>Has seleccionado <span class="blue">audios de %categoria%</span> ordeandos por <span class="blue"></span></p>
+                        <div class="audioList">
+                            <div class="left" id="audio_clip1">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip2">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip3">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip4">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip5">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip6">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip7">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip8">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip9">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                            <div class="left" id="audio_clip10">
+                                <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
+                                <a href="audioDetails.html">The Speed of Sound</a><br>
+                                <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
+                                <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
                 </tr>
                 
             <!-- Menú vertical izquierdo -->
