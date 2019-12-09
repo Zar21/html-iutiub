@@ -35,16 +35,16 @@ table {
     padding: 20px;
 }
 
-.blue {
+.blue { /* Clase para remarcar un texto en azul y negrita */
     color: rgb(21, 130, 255);
     font-weight: bold;
 }
 
-.left {
+.left { /* Clase para alinear el texto a la izquierda */
     text-align: left;
 }
 
-.thumbnails {
+.thumbnails { /* Clase para ajustar el tamaño de las imágenes o iconos */
     width: 100%;
     height: 150px;
     font-size: 150px;
@@ -77,43 +77,40 @@ table {
 }
 
 header,
-footer {
+footer { /* Colores de fondo y texto para el header y footer */
     color: white;
     background-color: #333;
 }
 
-.left-navbar {
+.left-navbar { /* Clase para los colores del menú izquierdo, también cambiar el puntero */
     color: white;
     background-color: #333;
     cursor: pointer;
 }
 
-.left-navbar:hover {
+.left-navbar:hover, 
+.top-navbar:hover { /* Clase para cambiar de color la categoria del menú que estamos mirando */
     background-color: rgb(21, 130, 255);
 }
 
-#pageContent {
+#pageContent { /* El contenido de la página */
     background-color: #eee;
     color: black;
 }
 
-.top-navbar {
+.top-navbar { /* Clase para cambiar el puntero del menú superior */
     cursor: pointer;
 }
 
-.top-navbar:hover {
-    background-color: rgb(21, 130, 255);
-}
-
-.top-navbar:active {
+.top-navbar:active { /* Clase para cambiar de color la categoria del menú que tenemos seleccionado */
     background-color: rgb(5, 113, 255);
 }
 
-.error {
+.error { /* Clase de error */
     color: #f00;
 }
 
-.hidden {
+.hidden { /* Clase para volver algo invisible */
     display: none;
 }
 
@@ -126,21 +123,21 @@ footer {
     padding: 10px 30px;
 }
 
-.regularWeight {
+.regularWeight { /* Clase para quitar la negrita */
     font-weight: normal;
 }
 
-.link {
+.link { /* Clase para quitar los cambios automáticos a una etiqueta enlace */
     color: #fff;
     text-decoration: none;
     display: block;
 }
 
-.bigIcon {
+.bigIcon { /* Clase para iconos grandes */
     font-size: 50px;
 }
 
-.index-return {
+.index-return { /* Clase para el botón que vuelve al indice, usado desde el login y register */
     position: absolute;
     top: 40px;
     left: 20px;
@@ -148,26 +145,26 @@ footer {
     font-size: 35px;
 }
 
-fieldset {
+fieldset { /* Bordes para los formularios */
     border: 5px solid #ddd;
     border-radius: 5px;
 }
 
-legend {
+legend { /* Ajustes para las leyendas de los formularios */
     background: #ebeced;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-summary {
+summary { /* Quitar el borde automático de los summary */
     outline: none;
 }
 
-details ul {
+details ul { /* Quitar los puntos automáticos de los ul en las categorias */
     list-style: none;
 }
 
-details li {
+details li { /* Ajustes a las listas de las categorias */
     text-align: left;
     margin-left: 20%;
     border-left: 3px solid #1582ff;
@@ -177,26 +174,26 @@ details li {
     padding-left: 5px;
 }
 
-details li a {
+details li a { /* Clase para quitar los cambios automáticos a una etiqueta enlace */
     text-decoration: none;
     color: #fff;
 }
 
-.left-navbar:hover details li {
+.left-navbar:hover details li { /* Clase para cambiar el color de borde al pasar por encima de una categoria */
     border-color: #000;
 }
 
-.bluebox {
+.bluebox { /* Clase azul */
     background: lightblue;
     color: navy;
 }
 
-.datatable thead {
+.datatable thead { /* Clase gris */
     background-color: lightgray;
     color: black;
 }
 
-#subir-multimedia {
+#subir-multimedia { /* Clase para el botón de subir multimedia */
     text-align: left;
     margin-left: auto;
     margin-right: auto;

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>iUTiUB</title>
-    <!-- Fichero de CSS -->
+    <!-- Ficheros de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/leftNavbar.css"/>
     <!-- Librería para iconos -->
-    <!-- La librería tiene algunos avisos -->
+    <!-- La librería tiene algunos avisos de css -->
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <!-- Añadir favicon a la página -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -21,12 +21,12 @@
 <body>
     <!-- Raíz de la página -->
     <div id="root" style="height:100%">
-        <!-- Menú horizontal superior -->
+        <!-- Header -->
         <header>
+            <!-- Menú horizontal superior -->
             <nav id="top-navbar">
                 <!-- Nombre de página -->
-                <!-- Poner un elemento h1 dendivo de un th es incorrecto,
-                     asi que aplicamos un estilo para simular el tamaño de un h1,
+                <!-- Aplicamos un estilo para simular el tamaño de un h1,
                      además de cambiar el color de fondo y su tamaño -->
                 <div onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
                     iUTiUB</div>
@@ -40,6 +40,7 @@
                 <div class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</div>
             </nav>
         </header>
+        <!-- Menú vertical izquierdo -->
         <nav id="left-navbar">
             <!-- Búsqueda -->
             <div class="left-navbar">
@@ -67,7 +68,6 @@
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-            <!-- Menú vertical izquierdo -->
 
             <!-- Desplegable del menú de vídeos -->
             <!-- Clase para las opciones del menú izquierdo -->
@@ -91,6 +91,7 @@
             <!-- Desplegable del menú de audios -->
             <!-- Clase para las opciones del menú izquierdo -->
             <div class="left-navbar">
+                <!-- Desplegable de categorias de audio -->
                 <details>
                     <!-- icono de audio utilizando la librería fontawesome -->
                     <summary><i class="fas fa-volume-up bigIcon"></i> Audios</summary>
@@ -109,6 +110,7 @@
             <!-- Enlace a la página de multimedia -->
             <!-- Clase para las opciones del menú izquierdo -->
             <div class="left-navbar">
+                <!-- Desplegable de categorias de multimedia -->
                 <details>
                     <!-- icono multimedia utilizando la librería fontawesome -->
                     <summary><i class="bigIcon fas fa-file-video"></i> Mi multimedia</summary>
@@ -121,6 +123,7 @@
             <!-- Enlace a la página de lista de reproducción -->
             <!-- Clase para las opciones del menú izquierdo -->
             <div class="left-navbar">
+                <!-- Desplegable de las listas de reproducción -->
                 <details>
                     <!-- icono lista utilizando la librería fontawesome -->
                     <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
@@ -163,6 +166,7 @@
                 <i class="bigIcon fas fa-info"></i> Información
             </div>
         </nav>
+        <!-- Contenido de la página -->
         <main id="content">
             <tr>
                 <!-- título, texto de bienvenida -->
