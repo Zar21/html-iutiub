@@ -118,11 +118,6 @@ header, footer {
     color: #f00;
 }
 
-.hidden {
-    /* Clase para volver algo invisible */
-    display: none;
-}
-
 .greydiv {
     border: 1px solid black;
     border-radius: 15px;
@@ -217,15 +212,8 @@ details li a {
 
 #subir-multimedia {
     /* Clase para el botón de subir multimedia */
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin: 10%; */
     display: block;
-    width: 23%;
-}
-
-.table-checkbox td {
-    text-align: left;
 }
 
 /*Diseño para los botones de control de audio y de video*/
@@ -258,6 +246,7 @@ details li a {
 /*Cargar imagenes del sprite*/
 
 .bg-multimedia {
+    /* Sprite multimedia */
     width: 330px;
     height: 194px;
     background: url('../multimedia/img/css_sprites.png') -10px -10px;
@@ -269,6 +258,7 @@ details li a {
 }
 
 .bg-audio {
+    /* Sprite audio */
     width: 310px;
     height: 162px;
     background: url('../multimedia/img/css_sprites.png') -10px -405px;
@@ -277,6 +267,7 @@ details li a {
 }
 
 .bg-video {
+    /* Sprite video */
     width: 300px;
     height: 300px;
     background: url('../multimedia/img/css_sprites.png') -656px -10px;
@@ -285,6 +276,7 @@ details li a {
 }
 
 .audioList, .videoList {
+    /* Clase para las listas de audios y videos */
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -298,12 +290,55 @@ details li a {
 /* Login */
 
 .loginheader, .registerheader {
+    /* Clase para los headers del login y register */
     background-color: black;
     color: white;
 }
 
 .login, .register {
+    /* Clases para los margenes del login y register */
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#countDown, #play-video {
+    /* CSS para que ocupe todo el div */
+    width: 100%;
+}
+
+.input_res {
+    /* Clase para el input del login */
+    width: 30%;
+}
+
+.video-buttons {
+    /* Clase para ajustar el contenido de los botones de video */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-buttons button {
+    /* CSS para ajustar los margenes de los botones de video */
+    margin: 5px;
+}
+
+@media (max-width: 767px) {
+    .greydiv {
+        margin: 0;
+    }
+    .datatable td, .datatable th {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 480px) {
+    .datatable td, .datatable th {
+        font-size: 10px;
+    }
+}
+/* list of features in index */
+.features{
+    margin: 10%;
 }

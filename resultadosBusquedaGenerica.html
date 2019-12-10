@@ -72,20 +72,12 @@
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
                     <!--Página principal-->
-                    <table id="contentTable">
-                        <tr>
-                            <!-- titulo de bienvenida  -->
-                            <td class="left" colspan="5">
-                                <p>Bienvenido a <a>iUTiUB</a></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- subtítulo -->
-                            <td class="left" colspan="5">Estás viendo <span class="blue">los resultados de tu búsqueda</span></td>
-                        </tr>
-                        <tr>
+                    <div id="content">
+                        <h2>Bienvenido a <a>iUTiUB</a></h2>
+                        <p>Estás viendo <span class="blue">los resultados de tu búsqueda</span></p>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="movie_clip1">
+                        <div class="audioList">
+                            <div class="left" id="movie_clip1">
                                 <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
                                 <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt=""></a><br>
                                 <!-- enlace a los detalles del video -->
@@ -94,9 +86,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="movie_clip2">
+                            <div class="left" id="movie_clip2">
                                 <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
                                 <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt=""></a><br>
                                 <!-- enlace a los detalles del video -->
@@ -105,9 +97,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip1">
+                            <div class="left" id="audio_clip1">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -116,9 +108,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip2">
+                            <div class="left" id="audio_clip2">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -127,9 +119,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="movie_clip3">
+                            <div class="left" id="movie_clip3">
                                 <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
                                 <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt=""></a><br>
                                 <!-- enlace a los detalles del video -->
@@ -138,11 +130,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                        </tr>
-                        <tr>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip3">
+                            <div class="left" id="audio_clip3">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -151,9 +141,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video4">
+                            <div class="left" id="video4">
                                 <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
                                 <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt=""></a><br>
                                 <!-- enlace a los detalles del video -->
@@ -162,9 +152,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="audio_clip4">
+                            <div class="left" id="audio_clip4">
                                 <!-- icono de sonido utilizando la librería fontawesome -->
                                 <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/audio-thumbnail.jpg" alt="audio thumbnail"></a><br>
                                 <!-- enlace a los detalles del audio -->
@@ -173,9 +163,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el audio está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video5">
+                            <div class="left" id="video5">
                                 <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
                                 <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt=""></a><br>
                                 <!-- enlace a los detalles del video -->
@@ -184,9 +174,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
+                            </div>
                             <!-- resultado individual, tiene width a 20% para que se muestren 5 por fila -->
-                            <td class="left" style="width:20%" id="video6">
+                            <div class="left" id="video6">
                                 <!-- miniatura del video, que redireccionará a la página de rreproduccion del video -->
                                 <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/poster.jpg" alt=""></a><br>
                                 <!-- enlace a los detalles del video -->
@@ -195,9 +185,9 @@
                                 <small><span style="color:grey">27 Reproducciones</span> Hace 14 dias</small>
                                 <!-- Botón que cambia dinámicamente si el video está en la lista de reproducciones -->
                                 <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
-                            </td>
-                        </tr>
-                    </table>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Fin del contenido de la página -->
                 </td>
             </tr>

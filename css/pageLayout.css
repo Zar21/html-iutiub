@@ -5,13 +5,13 @@
 }
 
 #left-navbar {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     background-color: #333;
 }
 
-#left-navbar div {
+.left-navbar {
     flex: 1;
     display: flex;
     flex-basis: auto;
@@ -36,10 +36,36 @@ main {
     align-items: center;
     justify-content: center;
     flex: 100%;
+    font-size: 1.2em;
+    padding: .5em 0;
+}
+
+.top-navbar-title {
+    display: flex;
+    flex: 1;
 }
 
 .top-navbar-empty {
     display: none;
+}
+
+.top-navbar-toggle {
+    background: rgb(0, 94, 200);
+    cursor: pointer;
+    color:white;
+    font-size: 2em;
+    flex: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left-navbar.hiding {
+    display: none;
+}
+
+#left-navbar.showing {
+    display: flex;
 }
 
 #pageTitle {
@@ -56,8 +82,25 @@ footer {
     justify-content: center;
 }
 
-@media (min-width: 768px) { 
+/* CSS para dispositivos con un tamaño con más de 768px de ancho */
+@media (min-width: 768px) {
+
+
+    #left-navbar.hiding {
+        display: flex;
+    }
+
+
+    #left-navbar.showing {
+        display: flex;
+    }
+
+    .top-navbar-toggle {
+        display: none;
+    }
+
     #left-navbar {
+        /* CSS para el menú vertical, usamos flex */
         height: 100%;
         flex: 15%;
         display: flex;
@@ -65,8 +108,9 @@ footer {
         justify-content: center;
         background-color: #333;
     }
-    
-    #left-navbar div {
+
+    .left-navbar {
+        /* CSS para los divs del menú vertical, usamos flex */
         flex: 1;
         display: flex;
         flex-basis: auto;
@@ -75,35 +119,41 @@ footer {
         justify-content: center;
         text-align: center;
     }
-    
+
     main {
+        /* CSS para la sección principal, usamos flex para cambiar la dirección */
         display: flex;
         flex-direction: row;
     }
-    
+
     #content {
+        /* CSS para la sección principal, usamos flex para cambiar el tamaño */
         height: 100%;
         flex: 85%;
     }
-    
+
     #top-navbar {
+        /* CSS para el menú superior, usamos flex para cambiar la dirección */
         display: flex;
         flex-direction: row;
     }
-    
+
     .top-navbar {
+        /* Clase para el menú superior, usamos flex para ajustar el contenido */
         display: flex;
         align-items: center;
         justify-content: center;
         flex: 1;
     }
-    
+
     .top-navbar-empty {
+        /* Clase para el div entre nuestro título y los botones de login/register */
         display: block;
         flex: 40%;
     }
-    
+
     #pageTitle {
+        /* Aplicamos un estilo para simular un h1, además de cambiar el color de fondo y el cursor */        
         cursor: pointer;
         background: rgb(21, 130, 255);
         color:white;
@@ -111,7 +161,9 @@ footer {
         padding: .67em 0;
         min-width: 200px;
     }
-    
-    
-    
+}
+
+.hidden {
+    /* Clase para volver algo invisible */
+    display: none;
 }

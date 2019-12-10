@@ -9,10 +9,11 @@
     <title>iUTiUB</title>
     <!-- Fichero de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/pageLayout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageLayout.css" />
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <!-- Añadir favicon a la página -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -28,16 +29,19 @@
                 <!-- Poner un elemento h1 dentro de un th es incorrecto,
                      asi que aplicamos un estilo para simular el tamaño de un h1,
                      además de cambiar el color de fondo y su tamaño -->
-                <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
+                <th onclick="location.href='index.html'"
+                    style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
                     iUTiUB</th>
                 <!-- Espacio vacío para separar los botones -->
                 <th style="width:55%"></th>
                 <!-- Botón de registro -->
                 <!-- icono de usuario utilizando la librería fontawesome -->
-                <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</th>
+                <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i
+                        class="fas fa-user-plus"></i> Nuevo Usuario</th>
                 <!-- Botón de iniciar sesión-->
                 <!-- icono de sesión utilizando la librería fontawesome -->
-                <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
+                <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i
+                        class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
             </tr>
         </thead>
         <tbody>
@@ -71,68 +75,88 @@
                 <!-- contenido principal de la página, es una sola celda, pero combinada utlilizando las propiedades rowspan,
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
+                    <div id="content">
+                        <p>Subir Multimedia</p>
+                        <!-- fieldset que agrupara todo ell formulario de información -->
+                        <fieldset class="subir-multimedia">
+                            <!-- leyenda del fieldset -->
+                            <legend>Subir multimedia</legend>
+                            <!-- formulario donde se introducirán los datos del video -->
+                            <form id="subir-multimedia" name="subir-multimedia" method="POST"
+                                enctype="multipart/form-data">
+                                <!-- aqui se introduciran el título del video -->
+                                <p><label for="subir-titulo">Título</label></p>
+                                <!-- input donde irá el título -->
+                                <input id="subir-titulo" type="text" autofocus class="input_res"/>
+                                <!-- aqui se mostrarán los errores si los hubiera -->
+                                <div class="error hidden">
+                                    Debes introducir un título
+                                </div>
+                                <!-- introducción de los comentarios del video -->
+                                <p><label for="subir-comentarios">Comentarios</label></p>
+                                <!-- textarea donde se introducirán los comentarios, con 4 filas y 40 columnas -->
+                                <textarea id="subir-comentarios" rows="4" cols="40" placeholder="Escribe..." class="input_res"></textarea>
+                                <!-- aqui se mostrarán los errores si los hubiera -->
+                                <div class="error hidden">
+                                    Este comentario no esta permitido
+                                </div>
+                                <!-- introducción de las categorias del video -->
+                                <p>Categorías</p>
+                                <!-- tabla de categorias, cada checkbox es una categoria -->
+                                <table class="table-checkbox">
+                                    <tr>
+                                        <td><input id="subir-checkbox-todos" type="checkbox" value="todos" /><label
+                                                for="subir-checkbox-todos">Todos</label></td>
+                                        <td><input id="subir-checkbox-deportes" type="checkbox"
+                                                value="deportes" /><label for="subir-checkbox-deportes">Deportes</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="subir-checkbox-educacion" type="checkbox"
+                                                value="educación" /><label
+                                                for="subir-checkbox-educacion">Educación</label></td>
+                                        <td><input id="subir-checkbox-humor" type="checkbox" value="humor" /><label
+                                                for="subir-checkbox-humor">Humor</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="subir-checkbox-noticias" type="checkbox"
+                                                value="noticias" /><label for="subir-checkbox-noticias">Noticias</label>
+                                        </td>
+                                        <td><input id="subir-checkbox-tiempo" type="checkbox"
+                                                value="tiempo-libre" /><label for="subir-checkbox-tiempo">Tiempo
+                                                libre</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input id="subir-checkbox-otros" type="checkbox" value="otros" /><label
+                                                for="subir-checkbox-otros">Otros</label></td>
+                                        <td><input id="subir-checkbox-aleatorio" type="checkbox"
+                                                value="aleatorio" /><label
+                                                for="subir-checkbox-aleatorio">Aleatorio</label></td>
+                                    </tr>
+                                </table>
+                                <!-- aqui se mostrarán los errores si los hubiera -->
+                                <div class="error hidden">
+                                    Debes seleccionar una categoria
+                                </div>
+                                <!-- introduccion del archivos -->
+                                <p><label for="subir-archivo">Fichero</label></p>
+                                <input id="subir-archivo" type="file" /><br /><br />
+                                <!-- aqui se mostrarán los errores si los hubiera -->
+                                <div class="error hidden">
+                                    Debes subir el fichero
+                                </div>
+                                <!-- botón de subir archivo -->
+                                <button type="submit" value="Subir">Subir</button>
+                                <!-- boton de reset -->
+                                <button type="reset" value="Resetear">Resetear</button>
+                            </form>
+                        </fieldset>
+
+
+                        <!-- /////////////////////////////////////////////////////////////// -->
+                    </div>
                     <!--Página principal-->
-                    <p>Subir Multimedia</p>
-                    <!-- fieldset que agrupara todo ell formulario de información -->
-                    <fieldset>
-                        <!-- leyenda del fieldset -->
-                        <legend>Subir multimedia</legend>
-                        <!-- formulario donde se introducirán los datos del video -->
-                        <form id="subir-multimedia" name="subir-multimedia" method="POST" enctype="multipart/form-data">
-                            <!-- aqui se introduciran el título del video -->
-                            <p><label for="subir-titulo">Título</label></p>
-                            <!-- input donde irá el título -->
-                            <input id="subir-titulo" type="text" autofocus/>
-                            <!-- aqui se mostrarán los errores si los hubiera -->
-                            <div class="error hidden">
-                                Debes introducir un título
-                            </div>
-                            <!-- introducción de los comentarios del video -->
-                            <p><label for="subir-comentarios">Comentarios</label></p>
-                            <!-- textarea donde se introducirán los comentarios, con 4 filas y 40 columnas -->
-                            <textarea id="subir-comentarios" rows="4" cols="40" placeholder="Escribe..."></textarea>
-                            <!-- aqui se mostrarán los errores si los hubiera -->
-                            <div class="error hidden">
-                                Este comentario no esta permitido
-                            </div>
-                            <!-- introducción de las categorias del video -->
-                            <p>Categorías</p>
-                            <!-- tabla de categorias, cada checkbox es una categoria -->
-                            <table class="table-checkbox">
-                                <tr>
-                                    <td><input id="subir-checkbox-todos" type="checkbox" value="todos" /><label for="subir-checkbox-todos">Todos</label></td>
-                                    <td>><input id="subir-checkbox-deportes" type="checkbox" value="deportes" /><label for="subir-checkbox-deportes">Deportes</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input id="subir-checkbox-educacion" type="checkbox" value="educación" /><label for="subir-checkbox-educacion">Educación</label></td>
-                                    <td><input id="subir-checkbox-humor" type="checkbox" value="humor" /><label for="subir-checkbox-humor">Humor</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input id="subir-checkbox-noticias" type="checkbox" value="noticias" /><label for="subir-checkbox-noticias">Noticias</label></td>
-                                    <td><input id="subir-checkbox-tiempo" type="checkbox" value="tiempo-libre" /><label for="subir-checkbox-tiempo">Tiempo libre</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input id="subir-checkbox-otros" type="checkbox" value="otros" /><label for="subir-checkbox-otros">Otros</label></td>
-                                    <td><input id="subir-checkbox-aleatorio" type="checkbox" value="aleatorio" /><label for="subir-checkbox-aleatorio">Aleatorio</label></td>
-                                </tr>
-                            </table>
-                            <!-- aqui se mostrarán los errores si los hubiera -->
-                            <div class="error hidden">
-                                Debes seleccionar una categoria
-                            </div>
-                            <!-- introduccion del archivos -->
-                            <p><label for="subir-archivo">Fichero</label></p>
-                            <input id="subir-archivo" type="file" /><br /><br />
-                            <!-- aqui se mostrarán los errores si los hubiera -->
-                            <div class="error hidden">
-                                Debes subir el fichero
-                            </div>
-                            <!-- botón de subir archivo -->
-                            <button type="submit" value="Subir">Subir</button>
-                            <!-- boton de reset -->
-                            <button type="reset" value="Resetear">Resetear</button>
-                        </form>
-                    </fieldset>
+                    
                     <!-- Fin del contenido de la página -->
                 </td>
             </tr>
@@ -193,20 +217,20 @@
                     </details>
                 </td>
             </tr>
- <!-- Enlace a la página de lista de reproducción -->
+            <!-- Enlace a la página de lista de reproducción -->
             <!-- Clase para las opciones del menú izquierdo -->
             <tr class="left-navbar">
-                    <td>
-                        <details>
-                            <!-- icono multimedia utilizando la librería fontawesome -->
-                            <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
-                            <ul>
-                                <li><a href="lrVideos.html">Vídeos</a></li>
-                                <li><a href="lrAudios.html">Audio</a></li>
-                            </ul>
-                        </details>
-                    </td>
-                </tr>
+                <td>
+                    <details>
+                        <!-- icono multimedia utilizando la librería fontawesome -->
+                        <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
+                        <ul>
+                            <li><a href="lrVideos.html">Vídeos</a></li>
+                            <li><a href="lrAudios.html">Audio</a></li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
             <!-- Enlace a la página de en directo -->
             <!-- Clase para las opciones del menú izquierdo -->
             <tr class="left-navbar">
