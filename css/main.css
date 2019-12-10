@@ -1,4 +1,4 @@
-body {
+html, body {
     /*fuente generica para toda la web*/
     margin: 0px;
     font-family: Helvetica, Arial, Sans-Serif;
@@ -21,7 +21,6 @@ table {
 }
 
 #root {
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -244,6 +243,10 @@ details li a {
 }
 
 /*Cargar imagenes del sprite*/
+.bg {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .bg-multimedia {
     /* Sprite multimedia */
@@ -335,7 +338,7 @@ details li a {
 
 @media(max-width: 480px) {
     .datatable td, .datatable th {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 /* list of features in index */

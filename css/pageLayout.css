@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: #333;
+    height: 100%;
 }
 
 .left-navbar {
@@ -118,6 +119,7 @@ footer {
         align-items: center;
         justify-content: center;
         text-align: center;
+        height: 100%;
     }
 
     main {
@@ -130,6 +132,7 @@ footer {
         /* CSS para la sección principal, usamos flex para cambiar el tamaño */
         height: 100%;
         flex: 85%;
+        min-height: 900px;
     }
 
     #top-navbar {

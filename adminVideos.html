@@ -3,16 +3,17 @@
 
 <head>
     <!-- Para que la codificación de la página sea UTF-8 -->
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>iUTiUB</title>
     <!-- Fichero de CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/pageLayout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pageLayout.css" />
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos -->
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <!-- Añadir favicon a la página -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -28,16 +29,19 @@
                 <!-- Poner un elemento h1 dentro de un th es incorrecto,
                      asi que aplicamos un estilo para simular el tamaño de un h1,
                      además de cambiar el color de fondo y su tamaño -->
-                <th onclick="location.href='index.html'" style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
+                <th onclick="location.href='index.html'"
+                    style="cursor: pointer; background: rgb(21, 130, 255); width:15%; color:white; font-size: 2em; padding: .67em 0">
                     iUTiUB</th>
                 <!-- Espacio vacío para separar los botones -->
                 <th style="width:55%"></th>
                 <!-- Botón de registro -->
                 <!-- icono de usuario utilizando la librería fontawesome -->
-                <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i> Nuevo Usuario</th>
+                <th class="top-navbar" style="width:15%" onclick="location.href='register.html'"><i
+                        class="fas fa-user-plus"></i> Nuevo Usuario</th>
                 <!-- Botón de iniciar sesión-->
                 <!-- icono de sesión utilizando la librería fontawesome -->
-                <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
+                <th class="top-navbar" style="width:15%" onclick="location.href='login.html'"><i
+                        class="fas fa-sign-in-alt"></i> Iniciar Sesión</th>
             </tr>
         </thead>
         <tbody>
@@ -47,7 +51,7 @@
                     <!-- formulario de búsqueda del navbar en la parte izquierda -->
                     <form method="GET" action="resultadosBusquedaGenerica.html">
                         <!-- input text donde se introducirá la cadena de texto a buscar -->
-                        <input size="15" type="search" list="busquedas" name="name" placeholder="Buscar"/>
+                        <input size="15" type="search" list="busquedas" name="name" placeholder="Buscar" />
                         <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
                         <div class="error hidden">
                             Error
@@ -71,95 +75,81 @@
                 <!-- contenido principal de la página, es una sola celda, pero combinada utlilizando las propiedades rowspan,
                      para que combine 8 filas, y el colspan, para combinar 3 columnas -->
                 <td rowspan="9" colspan="3" id="pageContent">
-                        <!--Página principal-->
-                        <table id="contentTable">
-                            <tr>
-                                <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
-                                <td class="left" colspan="2"><h3>Administración de vídeos</h3></td>
-                            </tr>
-                            <tr>
-                                <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
-                                <td class="left" colspan="2">
-                                    <!-- %USER es una v type="submit"ariable en la que iría el nombre del usuario -->
-                                    <!-- La clase blue cambia el color del texto al del tema de la página -->
-                                    <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
-                                </td>
-                            </tr>
-                            <tr>
-                                <!-- Fuerza que se alinee a la izquierda el td y lo pone a la mitad de anchura del espacio para el contenido -->
-                                <td class="left" style="height:27%; width:50%">
-                                <fieldset>
-                                    <legend>Buscar</legend>
-                                    <form>
-                                        <p>Introduce parte del alias del usuario</p>
-                                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                        <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search"><br/>
-                                        <div class="error hidden">
-                                            Error
-                                        </div>
-                                    </form>
-                                </fieldset>
-                                </td>
-                                <td style="height:27%; width:50%">
-                                    <!-- Necesario para el td anterior no ocupe este espacio-->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"  style="height:50%; width:100%">
-                                    <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
-                                    <table class="datatable">
-                                        <!--Cabezera de la tabla -->
-                                        <thead>
-                                            <tr>
-                                                <th colspan="5">Mantenimiento de vídeos</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Usuario</th>
-                                                <th>Nombre</th>
-                                                <th>Título</th>
-                                                <th>Comentarios</th>
-                                                <th>Categoría</th>
-                                            </tr>
-                                        </thead>
-                                        <!-- Cuerpo de la tabla -->
-                                        <tbody>
-                                            <tr>
-                                                <td>hildickethan</td>
-                                                <td>Tutorial.mp4</td>
-                                                <td>Tutorial arreglar PC</td>
-                                                <td>Buen video</td>
-                                                <td>Educación</td>
-                                            </tr>
-                                            <tr>
-                                                <td>jordillopis00</td>
-                                                <td>BlackNinja.mp4</td>
-                                                <td>Black Ninja</td>
-                                                <td>Divertido</td>
-                                                <td>Humor</td>
-                                            </tr>
-                                            <tr>
-                                                <td>ivanperezfita</td>
-                                                <td>BlackNinja2.mp4</td>
-                                                <td>Black Ninja 2</td>
-                                                <td>Increíble</td>
-                                                <td>Humor</td>
-                                            </tr>
-                                            <tr>
-                                                <td>raulojeda10g</td>
-                                                <td>skateOntinyent.mp4</td>
-                                                <td>Raül Ojeda skate en Ontinyent</td>
-                                                <td>No está mal</td>
-                                                <td>Deportes</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <!-- Fin del contenido principal -->
-                                </td>
-                            </tr>
+                     <!--Página principal-->
+                    <div id="content">
+                        <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
+                        <h3>Administración de vídeos</h3>
+                        <!-- %USER es una v type="submit"ariable en la que iría el nombre del usuario -->
+                        <!-- La clase blue cambia el color del texto al del tema de la página -->
+                        <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
+
+                        <fieldset>
+                            <legend>Buscar</legend>
+                            <form>
+                                <p>Introduce parte del alias del usuario</p>
+                                <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                                <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input
+                                    type="search"><br />
+                                <div class="error hidden">
+                                    Error
+                                </div>
+                            </form>
+                        </fieldset>
+
+
+                        <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
+                        <table class="datatable">
+                            <!--Cabezera de la tabla -->
+                            <thead>
+                                <tr>
+                                    <th colspan="5">Mantenimiento de vídeos</th>
+                                </tr>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Nombre</th>
+                                    <th>Título</th>
+                                    <th>Comentarios</th>
+                                    <th>Categoría</th>
+                                </tr>
+                            </thead>
+                            <!-- Cuerpo de la tabla -->
+                            <tbody>
+                                <tr>
+                                    <td>hildickethan</td>
+                                    <td>Tutorial.mp4</td>
+                                    <td>Tutorial arreglar PC</td>
+                                    <td>Buen video</td>
+                                    <td>Educación</td>
+                                </tr>
+                                <tr>
+                                    <td>jordillopis00</td>
+                                    <td>BlackNinja.mp4</td>
+                                    <td>Black Ninja</td>
+                                    <td>Divertido</td>
+                                    <td>Humor</td>
+                                </tr>
+                                <tr>
+                                    <td>ivanperezfita</td>
+                                    <td>BlackNinja2.mp4</td>
+                                    <td>Black Ninja 2</td>
+                                    <td>Increíble</td>
+                                    <td>Humor</td>
+                                </tr>
+                                <tr>
+                                    <td>raulojeda10g</td>
+                                    <td>skateOntinyent.mp4</td>
+                                    <td>Raül Ojeda skate en Ontinyent</td>
+                                    <td>No está mal</td>
+                                    <td>Deportes</td>
+                                </tr>
+                            </tbody>
                         </table>
-                    </td>
-                </tr>
-                
+                        <!-- Fin del contenido principal -->
+                    </div>
+
+                </td>
+            </tr>
+
             <!-- Menú vertical izquierdo -->
 
             <!-- Desplegable del menú de vídeos -->
@@ -217,20 +207,20 @@
                     </details>
                 </td>
             </tr>
- <!-- Enlace a la página de lista de reproducción -->
+            <!-- Enlace a la página de lista de reproducción -->
             <!-- Clase para las opciones del menú izquierdo -->
             <tr class="left-navbar">
-                    <td>
-                        <details>
-                            <!-- icono multimedia utilizando la librería fontawesome -->
-                            <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
-                            <ul>
-                                <li><a href="lrVideos.html">Vídeos</a></li>
-                                <li><a href="lrAudios.html">Audio</a></li>
-                            </ul>
-                        </details>
-                    </td>
-                </tr>
+                <td>
+                    <details>
+                        <!-- icono multimedia utilizando la librería fontawesome -->
+                        <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
+                        <ul>
+                            <li><a href="lrVideos.html">Vídeos</a></li>
+                            <li><a href="lrAudios.html">Audio</a></li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
             <!-- Enlace a la página de en directo -->
             <!-- Clase para las opciones del menú izquierdo -->
             <tr class="left-navbar">
