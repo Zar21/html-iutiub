@@ -12,15 +12,18 @@ table, td, th {
 }
 
 td {
+    /* CSS para que el contenido de una tabla estiga alineada al centro */
     text-align: center;
 }
 
 table {
+    /* CSS para que una tabla ocupe toda la página */
     width: 100%;
     height: 100%;
 }
 
 #root {
+    /* CSS para la raiz de la página */
     top: 0;
     bottom: 0;
     left: 0;
@@ -28,6 +31,7 @@ table {
 }
 
 #register h1, #login h1 {
+    /* CSS para los h1 del login y register */
     text-align: center;
     background: rgb(21, 130, 255);
     color: #fff;
@@ -52,31 +56,6 @@ table {
     font-size: 150px;
     text-align: center;
 }
-
-/* #registerTable,
-#loginTable {
-    width: 50px;
-    margin: 0 50px;
-    margin-left: 25%;
-    margin-right: 100%;
-    position: relative;
-    left: 50%;
-    text-align: center;
-    width: 500px;
-    margin-left: -250px;
-    border: 1px solid #000;
-}
-
-#registerTable th,
-#loginTable th {
-    background: #333;
-    color: #fff;
-}
-
-#registerTable td,
-#loginTable td {
-    padding: 20px;
-} */
 
 header, footer {
     /* Colores de fondo y texto para el header y footer */
@@ -118,12 +97,15 @@ header, footer {
 }
 
 .greydiv {
+    /* Clase para cambiar el color a gris y ajustar los margenes */
     border: 1px solid black;
     border-radius: 15px;
     background-color: lightgrey;
     margin-left: 25%;
     margin-right: 25%;
     padding: 10px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .regularWeight {
@@ -203,6 +185,11 @@ details li a {
     color: navy;
 }
 
+.datatable {
+    /* Clase para las tablas de administración */
+    height: unset;
+}
+
 .datatable thead {
     /* Clase gris */
     background-color: lightgray;
@@ -215,9 +202,9 @@ details li a {
     display: block;
 }
 
-/*Diseño para los botones de control de audio y de video*/
 
 .audio-buttons button, .video-buttons button {
+    /*Diseño para los botones de control de audio y de video*/
     color: #fff;
     background-color: #5bc0de;
     border-color: #46b8da;
@@ -244,6 +231,7 @@ details li a {
 
 /*Cargar imagenes del sprite*/
 .bg {
+    /* CSS general para todos los sprites */
     display: flex;
     flex-wrap: wrap;
 }
@@ -287,6 +275,7 @@ details li a {
 }
 
 .audioList .left, .videoList .left {
+    /* Clase para las listas de audios y videos de la izquierda */
     margin-top: 20px;
 }
 
@@ -315,33 +304,77 @@ details li a {
     width: 30%;
 }
 
-.video-buttons {
+.video-buttons, .audio-buttons {
     /* Clase para ajustar el contenido de los botones de video */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.video-buttons button {
+.video-buttons button, .audio-buttons button {
     /* CSS para ajustar los margenes de los botones de video */
     margin: 5px;
 }
 
+/* CSS para dispositivos con un tamaño con menos de 767px de ancho */
 @media (max-width: 767px) {
     .greydiv {
-        margin: 0;
+        /* Ajustar los márgenes */
+        margin-left: 0;
+        margin-right: 0;
     }
     .datatable td, .datatable th {
+        /* Ajustar el tamaño de letra */
         font-size: 14px;
     }
 }
 
+/* CSS para dispositivos con un tamaño con menos de 480px de ancho */
 @media(max-width: 480px) {
     .datatable td, .datatable th {
+        /* Ajustar el tamaño de letra */
         font-size: 9px;
     }
 }
-/* list of features in index */
+
 .features{
-    margin: 10%;
+    /* Margenes para las características del índice */
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.center-container {
+    /* Clase para centrar el texto */
+    text-align: center;
+}
+
+.checkboxes{
+    /* Clase para los checkbox */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkboxes .ckbx {
+    /* Clase para el flex de los checkbox */
+    flex: 50%;
+}
+
+.information {
+    /* Clase para los márgenes de la página de información */
+    margin: 0 10% 0 10%;
+}
+
+.header{
+    background-color:lightblue;
+}
+.headertable{
+    flex: 100%;
+}
+.liketable{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row{
+    flex: 50%;
 }

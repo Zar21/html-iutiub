@@ -1,5 +1,5 @@
-let buttonsAudios = document.querySelectorAll('.playlistButtonAudio');
-buttonsAudios.forEach(element => {    
+let buttonsAudios = document.querySelectorAll('.playlistButtonAudio'); //
+buttonsAudios.forEach(element => {
     let audios = JSON.parse(localStorage.getItem('audios'));
     if (!audios) {
         audios = [];
