@@ -40,6 +40,7 @@ function addAudioListener(elem) {
     elem.addEventListener('click', addAudio);
     elem.innerHTML = '+';
     elem.style.background = 'rgba(0,255,0,0.3)';
+    elem.style.padding = '10px 30px';
 }
 
 function removeAudioListener(elem) {
@@ -47,4 +48,5 @@ function removeAudioListener(elem) {
     elem.addEventListener('click', removeAudio);
     elem.innerHTML = '-';
     elem.style.background = 'rgba(255,0,0,0.3)';
+    elem.style.padding = '10px 32px';
 }
