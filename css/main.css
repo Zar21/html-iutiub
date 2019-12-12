@@ -276,7 +276,7 @@ details li a {
 
 .audioList .left, .videoList .left {
     /* Clase para las listas de audios y videos de la izquierda */
-    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 /* Login */
@@ -315,7 +315,33 @@ details li a {
     /* CSS para ajustar los margenes de los botones de video */
     margin: 5px;
 }
-
+/* Estilo para controlar el tamaño de las listas tanto de videos como de audios*/
+.videoList > div, .audioList > div {
+    position: relative;
+    width: 14%;
+    padding: 10px;
+}
+/* Ajuste de tamaño para las imagenes de las listas de audios y videos*/
+.videoList > div .thumbnails, .audioList > div .thumbnails {
+    width: 100%;
+    height: auto;
+    font-size: 150px;
+    text-align: center;
+}
+/* Estilo para ajustar la posición del botón para agregar a la lista de reproducción*/
+.playlistButtonVideo, .playlistButtonAudio {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+}
+@media (max-width: 1200px) {
+    /*Cambio de tamaño para las listas por debajo de 1200px*/
+    .videoList > div, .audioList > div{
+        width: 28%;
+        padding: 10px;
+        font-size: 12px;
+    }
+}
 /* CSS para dispositivos con un tamaño con menos de 767px de ancho */
 @media (max-width: 767px) {
     .greydiv {
@@ -326,6 +352,18 @@ details li a {
     .datatable td, .datatable th {
         /* Ajustar el tamaño de letra */
         font-size: 14px;
+    }
+    
+        /*Cambio de tamaño para las listas por debajo de 767px*/
+    .videoList > div, .audioList > div {
+        margin-bottom: 20px;
+        padding: 10px;
+        flex: 35%;
+        font-size: 10px;
+    }
+    /*Cambio de posición para el botón de lista de reproducción por debajo de 767px*/
+    .playlistButtonVideo, .playlistButtonAudio {
+        left: 20px;
     }
 }
 

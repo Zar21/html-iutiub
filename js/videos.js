@@ -40,6 +40,7 @@ function addVideoListener(elem) {
     elem.addEventListener('click', addVideo);
     elem.innerHTML = '+';
     elem.style.background = 'rgba(0,255,0,0.3)';
+    elem.style.padding = '10px 30px';
 }
 
 function removeVideoListener(elem) {
@@ -47,4 +48,5 @@ function removeVideoListener(elem) {
     elem.addEventListener('click', removeVideo);
     elem.innerHTML = '-';
     elem.style.background = 'rgba(255,0,0,0.3)';
+    elem.style.padding = '10px 32px';
 }
