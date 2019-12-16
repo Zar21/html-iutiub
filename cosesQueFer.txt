@@ -8,3 +8,13 @@ X -1 Layout interior de vídeos y audios  responsive flexbox I
   - 2 Layout barra lateral i superior en totes les pàgines, responsive R
 X - 3 Layout interior de totes les demés pàgines + register + login, responsive J
   - 4 Comenta tot el codi i el valida E
+
+
+
+
+BOOTSTRAP:
+
+I - 1 Layout interior de vídeos y audios  responsive flexbox
+E - 2 Layout barra lateral i superior en totes les pàgines, responsive
+R - 3 Layout interior de totes les demés pàgines + register + login, responsive
+J - 4 Comenta tot el codi i el valida
