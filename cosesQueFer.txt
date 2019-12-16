@@ -18,3 +18,24 @@ I - 1 Layout interior de vídeos y audios  responsive flexbox
 E - 2 Layout barra lateral i superior en totes les pàgines, responsive
 R - 3 Layout interior de totes les demés pàgines + register + login, responsive
 J - 4 Comenta tot el codi i el valida
+
+Pàgines que ha de fer Ivan:
+audios.html
+misAudios.html
+misVideos.html
+resultadosBusquedaGenerica.html
+videos.html
+audioDetails.html
+lrAudios.html
+lrVideos.html
+videoDetails.html
+directo.html
+
+Pàgines que ha de fer Raül:
+adminAudios.html
+adminUsuarios.html
+adminVideos.html
+index.html
+informacion.html
+login.html
+register.html
