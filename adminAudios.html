@@ -182,20 +182,22 @@
                         <h3>Administración de audios</h3>
                         <!-- %USER% es una variable en la que iría el nombre del usuario -->
                         <!-- La clase blue cambia el color del texto al del tema de la página -->
-                        <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
+                        <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
 
-                        <fieldset>
-                            <legend>Buscar</legend>
-                            <form>
-                                <p>Introduce parte del alias del usuario</p>
-                                <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                <button type="submit"><i class="fas fa-tag"></i> Buscar</button><input
-                                    type="search" class="input_res"><br />
-                                <div class="error hidden">
-                                    Error
-                                </div>
-                            </form>
-                        </fieldset>
+                        <form>
+                            <fieldset class="border p-2">
+                                <legend class="w-auto">Buscar</legend class="w-auto">
+                                    <div class="form-group row">
+                                        <label for="input_res" class="text-muted col-sm-12">Introduce parte del alias del usuario</label>
+                                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                                        <button class="btn btn-secondary col-sm-2" type="submit"><i class="fas fa-tag"></i> Buscar</button>
+                                        <input id="input_res" type="search" class="col-sm-10 input_res form-control"><br />
+                                        <div hidden class="col-sm-12 text-danger hidden">
+                                            Error
+                                        </div>
+                                    </div>
+                            </fieldset>
+                        </form>
 
                         <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
                         <table class="datatable">
@@ -253,6 +255,8 @@
                 </footer>
             </div>
             <script src="js/layout.js"></script>
-        </body>
+            <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
         
         </html>

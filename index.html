@@ -24,33 +24,53 @@
     <!-- Raíz de la página -->
     <div id="root">
         <!-- Header -->
-        <header>
-            <!-- Menú horizontal superior -->
-            <nav id="top-navbar">
-                <div class="top-navbar-title">
-                    <!-- Nombre de página -->
-                    <div id="pageTitle" class="top-navbar" onclick="location.href='index.html'">
-                        iUTiUB
-                    </div>
-                    <!-- Botón de menú para móbiles -->
-                    <div id="top-navbar-toggle" class="top-navbar-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
+        <header class="text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                <a class="navbar-brand" href="index.html">iUTiUB</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <!-- Botón de registro -->
+                        <!-- icono de usuario utilizando la librería fontawesome -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="register.html"><i class="fas fa-user-plus"></i>&nbsp;Nuevo Usuario</a>
+                        </li>
+                        <!-- Botón de iniciar sesión-->
+                        <!-- icono de sesión utilizando la librería fontawesome -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i>&nbsp;Iniciar Sesión</a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Espacio vacío para separar los botones -->
-                <div class="top-navbar-empty"></div>
-                <!-- Botón de registro -->
-                <!-- icono de usuario utilizando la librería fontawesome -->
-                <div class="top-navbar" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i>
-                    &nbsp;Nuevo Usuario</div>
-                <!-- Botón de iniciar sesión-->
-                <!-- icono de sesión utilizando la librería fontawesome -->
-                <div class="top-navbar" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i>
-                    &nbsp;Iniciar Sesión</div>
             </nav>
         </header>
         <!-- Menú vertical izquierdo -->
         <main>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
             <nav id="left-navbar" class="hiding">
                 <!-- Búsqueda -->
                 <div class="left-navbar">
@@ -233,6 +253,8 @@
         </footer>
     </div>
     <script src="js/layout.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
