@@ -25,9 +25,11 @@
     <div id="root">
         <!-- Header -->
         <header class="text-center">
-            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-                <a class="navbar-brand" href="index.html">iUTiUB</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="h1 text-light text-decoration-none" href="index.html">iUTiUB</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse">
@@ -35,12 +37,14 @@
                         <!-- Botón de registro -->
                         <!-- icono de usuario utilizando la librería fontawesome -->
                         <li class="nav-item">
-                            <a class="nav-link" href="register.html"><i class="fas fa-user-plus"></i>&nbsp;Nuevo Usuario</a>
+                            <a class="nav-link text-light" href="register.html"><i
+                                    class="fas fa-user-plus"></i>&nbsp;Nuevo Usuario</a>
                         </li>
                         <!-- Botón de iniciar sesión-->
                         <!-- icono de sesión utilizando la librería fontawesome -->
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i>&nbsp;Iniciar Sesión</a>
+                            <a class="nav-link text-light" href="login.html"><i
+                                    class="fas fa-sign-in-alt"></i>&nbsp;Iniciar Sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -48,60 +52,62 @@
         </header>
         <!-- Menú vertical izquierdo -->
         <main>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <!-- formulario de búsqueda del navbar en la parte izquierda -->
+                            <form method="GET" action="resultadosBusquedaGenerica.html">
+                                <div class="row">
+                                    <!-- input text donde se introducirá la cadena de texto a buscar -->
+                                    <input size="15" type="search" list="busquedas" name="name" class="form-control col-sm-9" placeholder="Buscar" />
+                                    <!-- boton que realizará la búsqueda -->
+                                    <!-- icono de buscar utilizando la librería fontawesome -->
+                                    <button type="submit" class="btn btn-primary col-sm-1"><i class="fas fa-search"></i></button>
+                                </div>
+                                <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
+                                <div class="text-danger d-sm-none">
+                                    Error
+                                </div>
+                                <!-- sugerencias de las categorías que se pueden buscar -->
+                                <datalist id="busquedas">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Deportes">Deportes</option>
+                                    <option value="Educación">Educación</option>
+                                    <option value="Humor">Humor</option>
+                                    <option value="Noticias">Noticias</option>
+                                    <option value="Tiempo libre">Tiempo libre</option>
+                                    <option value="Otros">Otros</option>
+                                    <option value="Aleatorio">Aleatorio</option>
+                                </datalist>
+                            </form>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <nav id="left-navbar" class="hiding">
+            <nav>
                 <!-- Búsqueda -->
-                <div class="left-navbar">
-                    <!-- formulario de búsqueda del navbar en la parte izquierda -->
-                    <form method="GET" action="resultadosBusquedaGenerica.html">
-                        <!-- input text donde se introducirá la cadena de texto a buscar -->
-                        <input size="15" type="search" list="busquedas" name="name" placeholder="Buscar" />
-                        <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
-                        <div class="error hidden">
-                            Error
-                        </div>
-                        <!-- sugerencias de las categorías que se pueden buscar -->
-                        <datalist id="busquedas">
-                            <option value="Todos">Todos</option>
-                            <option value="Deportes">Deportes</option>
-                            <option value="Educación">Educación</option>
-                            <option value="Humor">Humor</option>
-                            <option value="Noticias">Noticias</option>
-                            <option value="Tiempo libre">Tiempo libre</option>
-                            <option value="Otros">Otros</option>
-                            <option value="Aleatorio">Aleatorio</option>
-                        </datalist>
-                        <!-- boton que realizará la búsqueda -->
-                        <!-- icono de buscar utilizando la librería fontawesome -->
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
+                <div>
                 </div>
 
                 <!-- Desplegable del menú de vídeos -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
+                <div>
                     <!-- Desplegable de categorias de vídeo -->
                     <details>
                         <!-- icono de vídeo utilizando la librería fontawesome -->
@@ -120,7 +126,7 @@
                 </div>
                 <!-- Desplegable del menú de audios -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
+                <div>
                     <!-- Desplegable de categorias de audio -->
                     <details>
                         <!-- icono de audio utilizando la librería fontawesome -->
@@ -139,7 +145,7 @@
                 </div>
                 <!-- Enlace a la página de multimedia -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
+                <div>
                     <!-- Desplegable de categorias de multimedia -->
                     <details>
                         <!-- icono multimedia utilizando la librería fontawesome -->
@@ -152,7 +158,7 @@
                 </div>
                 <!-- Enlace a la página de lista de reproducción -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
+                <div>
                     <!-- Desplegable de las listas de reproducción -->
                     <details>
                         <!-- icono lista utilizando la librería fontawesome -->
@@ -165,19 +171,19 @@
                 </div>
                 <!-- Enlace a la página de en directo -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar" onclick="location.href='directo.html'">
+                <div onclick="location.href='directo.html'">
                     <!-- icono de vídeo utilizando la librería fontawesome -->
                     <i class="bigIcon fas fa-video"></i> En directo
                 </div>
                 <!-- Enlace a la página de subir vídeos -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar" onclick="location.href='subirVideos.html'">
+                <div onclick="location.href='subirVideos.html'">
                     <!-- icono de subir archivo utilizando la librería fontawesome -->
                     <i class="bigIcon fas fa-upload"></i> Subir multimedia
                 </div>
                 <!-- Enlace a la página de administración -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
+                <div>
                     <details>
                         <!-- submenú de el panel administración -->
                         <summary>
@@ -192,7 +198,7 @@
                 </div>
                 <!-- enlace a la página información -->
                 <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar" onclick="location.href='informacion.html'">
+                <div onclick="location.href='informacion.html'">
                     <i class="bigIcon fas fa-info"></i> Información
                 </div>
             </nav>
