@@ -32,9 +32,9 @@ videoDetails.html
 directo.html
 
 Pàgines que ha de fer Raül:
-adminAudios.html
-adminUsuarios.html
-adminVideos.html
+X adminAudios.html
+X adminUsuarios.html
+X adminVideos.html
 index.html
 informacion.html
 login.html

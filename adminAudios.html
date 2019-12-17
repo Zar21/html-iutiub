@@ -177,86 +177,82 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
-                    <div id="content">
-                        <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
-                        <h3>Administración de audios</h3>
-                        <!-- %USER% es una variable en la que iría el nombre del usuario -->
-                        <!-- La clase blue cambia el color del texto al del tema de la página -->
-                        <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
+            <div id="content" class="container-fluid">
+                <h3>Administración de audios</h3>
+                <!-- %USER% es una variable en la que iría el nombre del usuario -->
+                <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
+                <form>
+                    <fieldset class="border p-2">
+                        <legend class="w-auto">Buscar</legend class="w-auto">
+                        <div class="form-group row justify-content-around">
+                            <label for="input_res" class="text-muted col-12">Introduce parte del alias del
+                                usuario</label>
+                            <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                            <button class="btn btn-secondary col-5 col-md-1" type="submit"><i class="fas fa-tag"></i>
+                                Buscar</button>
+                            <input id="input_res" type="search" class="col-10 col-md-8 input_res form-control"><br />
+                            <div hidden class="col-12 text-danger">
+                                Error
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
 
-                        <form>
-                            <fieldset class="border p-2">
-                                <legend class="w-auto">Buscar</legend class="w-auto">
-                                    <div class="form-group row">
-                                        <label for="input_res" class="text-muted col-sm-12">Introduce parte del alias del usuario</label>
-                                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                        <button class="btn btn-secondary col-sm-2" type="submit"><i class="fas fa-tag"></i> Buscar</button>
-                                        <input id="input_res" type="search" class="col-sm-10 input_res form-control"><br />
-                                        <div hidden class="col-sm-12 text-danger hidden">
-                                            Error
-                                        </div>
-                                    </div>
-                            </fieldset>
-                        </form>
-
-                        <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
-                        <table class="datatable">
-                            <!--Cabezera de la tabla -->
-                            <thead>
-                                <tr>
-                                    <!-- El título de la tabla debe ocupar 5 columnas-->
-                                    <th colspan="5">Mantenimiento de audios</th>
-                                </tr>
-                                <tr>
-                                    <th>Usuario</th>
-                                    <th>Nombre</th>
-                                    <th>Título</th>
-                                    <th>Comentarios</th>
-                                    <th>Categoría</th>
-                                </tr>
-                            </thead>
-                            <!-- Cuerpo de la tabla -->
-                            <tbody>
-                                <tr>
-                                    <td>hildickethan</td>
-                                    <td>podcast.mp3</td>
-                                    <td>Podcast hablando de PCs</td>
-                                    <td>Entretenido</td>
-                                    <td>Educación</td>
-                                </tr>
-                                <tr>
-                                    <td>jordillopis00</td>
-                                    <td>BNPodcast.mp3</td>
-                                    <td>Preguntas y Respuestas</td>
-                                    <td>Divertido</td>
-                                    <td>Humor</td>
-                                </tr>
-                                <tr>
-                                    <td>ivanperezfita</td>
-                                    <td>BNPodcast2.mp3</td>
-                                    <td>Respondiendo a fans</td>
-                                    <td>Increíble</td>
-                                    <td>Humor</td>
-                                </tr>
-                                <tr>
-                                    <td>raulojeda10g</td>
-                                    <td>paradise.mp3</td>
-                                    <td>Raül Ojeda cantando Paradise </td>
-                                    <td>Estrepitoso!</td>
-                                    <td>Otros</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </main>
-                <!-- Footer, con los nombres de los autores del proyecto -->
-                <footer>
-                    <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
-                </footer>
+                <div class="row justify-content-around">
+                    <table class="col-8 table table-striped">
+                        <!--Cabezera de la tabla -->
+                        <thead>
+                            <tr class="d-flex row">
+                                <th class="col-md-4" scope="col">Usuario</th>
+                                <th class="col-md-2" scope="col">Nombre</th>
+                                <th class="col-md-2" scope="col">Título</th>
+                                <th class="col-md-2" scope="col">Comentarios</th>
+                                <th class="col-md-2" scope="col">Categoría</th>
+                            </tr>
+                        </thead>
+                        <!-- Cuerpo de la tabla -->
+                        <tbody>
+                            <tr class="d-flex row">
+                                <td class="col-md-4" scope="row">hildickethan</td>
+                                <td class="col-md-2">podcast.mp3</td>
+                                <td class="col-md-2">Podcast hablando de PCs</td>
+                                <td class="col-md-2">Entretenido</td>
+                                <td class="col-md-2">Educación</td>
+                            </tr>
+                            <tr class="d-flex row">
+                                <td class="col-md-4" scope="row">jordillopis00</td>
+                                <td class="col-md-2">BNPodcast.mp3</td>
+                                <td class="col-md-2">Preguntas y Respuestas</td>
+                                <td class="col-md-2">Divertido</td>
+                                <td class="col-md-2">Humor</td>
+                            </tr>
+                            <tr class="d-flex row">
+                                <td class="col-md-4" scope="row">ivanperezfita</td>
+                                <td class="col-md-2">BNPodcast2.mp3</td>
+                                <td class="col-md-2">Respondiendo a fans</td>
+                                <td class="col-md-2">Increíble</td>
+                                <td class="col-md-2">Humor</td>
+                            </tr>
+                            <tr class="d-flex row">
+                                <td class="col-md-4" scope="row">raulojeda10g</td>
+                                <td class="col-md-2">paradise.mp3</td>
+                                <td class="col-md-2">Raül Ojeda cantando Paradise </td>
+                                <td class="col-md-2">Estrepitoso!</td>
+                                <td class="col-md-2">Otros</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <script src="js/layout.js"></script>
-            <script src="js/jquery-3.3.1.min.js"></script>
+        </main>
+        <!-- Footer, con los nombres de los autores del proyecto -->
+        <footer>
+            <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
+        </footer>
+    </div>
+    <script src="js/layout.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
-        
-        </html>
+
+</html>
