@@ -20,22 +20,22 @@ R - 3 Layout interior de totes les demés pàgines + register + login, responsiv
 J - 4 Comenta tot el codi i el valida
 
 Pàgines que ha de fer Ivan:
-audios.html
-misAudios.html
-misVideos.html
-resultadosBusquedaGenerica.html
-videos.html
-audioDetails.html
-lrAudios.html
-lrVideos.html
-videoDetails.html
-directo.html
+X audios.html (comentat)
+X misAudios.html (comentat)
+X misVideos.html (comentat)
+X resultadosBusquedaGenerica.html (comentat)
+X videos.html
+X audioDetails.html
+X videoDetails.html
+X lrAudios.html
+X lrVideos.html
+X directo.html
 
 Pàgines que ha de fer Raül:
 X adminAudios.html
 X adminUsuarios.html
 X adminVideos.html
 index.html
-informacion.html
-login.html
-register.html
+X informacion.html
+X login.html
+X register.html

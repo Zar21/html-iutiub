@@ -177,9 +177,9 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
-            <div id="content">
-                <div class="center-container">
+            <div id="content" class="container-fluid">
                     <h2>Bienvenido a <a>iUTiUB</a></h2>
+                    <div class="text-center">
                     <p>Estás viendo <span class="blue">la sección de 'Audios'</span></p>
                     <p>Has seleccionado <span class="blue">audios de %categoria%</span> ordeandos por <span
                             class="blue">los
@@ -191,31 +191,31 @@
                     <p>The Speed of Sound</p>
                     <div class="audio-buttons">
                         <!-- botón play -->
-                        <button id="play" onclick="playAudio();">
+                        <button class="mt-1 btn btn-success" id="play" onclick="playAudio();">
                             Play <i class="fas fa-play-circle"></i>
                         </button>
                         <!--Pausar audio-->
-                        <button id="pause" onclick="pauseAudio();">
+                        <button class="mt-1 btn btn-danger" id="pause" onclick="pauseAudio();">
                             Pause <i class="fas fa-pause-circle"></i>
                         </button>
                         <!--Parar audio-->
-                        <button id="stop" onclick="stopAudio()">
+                        <button class="mt-1 btn btn-danger" id="stop" onclick="stopAudio()">
                             Stop <i class="fas fa-stop-circle"></i>
                         </button>
                         <!--Avanzar 10 segundos-->
-                        <button id="avance" onclick="avanceSeconds();">
+                        <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
                             Avance 10 seconds <i class="fas fa-forward"></i>
                         </button>
                         <!--Retroceder 10 segundos-->
-                        <button id="rewind" onclick="rewindSeconds()">
+                        <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
                             Rewind 10 seconds <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón audio anterior -->
-                        <button id="previousVideo" onclick="previousAudio()">
+                        <button class="mt-1 btn btn-primary" id="previousVideo" onclick="previousAudio()">
                             Previous audio <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón siguiente audio -->
-                        <button id="nextVideo" onclick="audioEnded()">
+                        <button class="mt-1 btn btn-primary" id="nextVideo" onclick="audioEnded()">
                             Next audio <i class="fas fa-forward"></i>
                         </button>
                     </div>

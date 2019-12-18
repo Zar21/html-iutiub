@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 
 <head>
     <!-- Para que la codificación de la página sea UTF-8 -->
@@ -8,8 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>iUTiUB</title>
     <!-- Ficheros de CSS -->
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/pageLayout.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos de css -->
@@ -20,235 +18,236 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body>
-    <!-- Raíz de la página -->
-    <div id="root">
-        <!-- Header -->
-        <header class="text-center">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="h1 text-light text-decoration-none" href="index.html">iUTiUB</a>
+<!-- Raíz de la página -->
+<body class="d-flex flex-column h-100">
+    <!-- Header -->
+    <header class="text-center">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <a class="h1 text-light text-decoration-none navbar-text col-6 col-md-2" href="index.html">iUTiUB</a>
+            <div class="col-6 col-md">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarLeft" aria-controls="navbarLeft" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                data-target="#navbarLeft" aria-controls="navbarLeft" aria-expanded="false"
+                aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav">
-                        <!-- Botón de registro -->
-                        <!-- icono de usuario utilizando la librería fontawesome -->
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="register.html"><i
-                                    class="fas fa-user-plus"></i>&nbsp;Nuevo Usuario</a>
-                        </li>
-                        <!-- Botón de iniciar sesión-->
-                        <!-- icono de sesión utilizando la librería fontawesome -->
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="login.html"><i
-                                    class="fas fa-sign-in-alt"></i>&nbsp;Iniciar Sesión</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- Menú vertical izquierdo -->
-        <main>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-                <div class="collapse navbar-collapse" id="navbarLeft">
-                    <ul class="navbar-nav mr-auto">
-                        <!-- Búsqueda -->
-                        <li class="nav-item">
-                            <!-- formulario de búsqueda -->
-                            <form method="GET" action="resultadosBusquedaGenerica.html">
-                                <div class="row">
-                                    <!-- input text donde se introducirá la cadena de texto a buscar -->
-                                    <input size="15" type="search" list="busquedas" name="name" class="form-control col-9" placeholder="Buscar" />
-                                    <!-- boton que realizará la búsqueda -->
-                                    <!-- icono de buscar utilizando la librería fontawesome -->
-                                    <button type="submit" class="btn btn-primary col-2"><i class="fas fa-search"></i></button>
-                                </div>
-                                <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
-                                <div class="text-danger d-none">
-                                    Error
-                                </div>
-                                <!-- sugerencias de las categorías que se pueden buscar -->
-                                <datalist id="busquedas">
-                                    <option value="Todos">Todos</option>
-                                    <option value="Deportes">Deportes</option>
-                                    <option value="Educación">Educación</option>
-                                    <option value="Humor">Humor</option>
-                                    <option value="Noticias">Noticias</option>
-                                    <option value="Tiempo libre">Tiempo libre</option>
-                                    <option value="Otros">Otros</option>
-                                    <option value="Aleatorio">Aleatorio</option>
-                                </datalist>
-                            </form>
-                        </li>
-                        <!-- Desplegable del menú de vídeos -->
-                        <!-- Desplegable de categorias de vídeo -->
-                        <li class="nav-item dropdown">
-                                <!-- icono de vídeo utilizando la librería fontawesome -->
-                                <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="col-2 text-center h2 fas fa-desktop"></i>
-                                    <span class="col-10">Vídeos</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <a class="dropdown-item" href="videos.html">Todos</a>
-                                    <a class="dropdown-item" href="videos.html">Deportes</a>
-                                    <a class="dropdown-item" href="videos.html">Educación</a>
-                                    <a class="dropdown-item" href="videos.html">Humor</a>
-                                    <a class="dropdown-item" href="videos.html">Noticias</a>
-                                    <a class="dropdown-item" href="videos.html">Tiempo libre</a>
-                                    <a class="dropdown-item" href="videos.html">Otros</a>
-                                    <a class="dropdown-item" href="videos.html">Aleatorio</a>
-                                </div>
-                        </li>
-                        <!-- Desplegable del menú de audios -->
-                        <!-- Desplegable de categorias de audio -->
-                        <li class="nav-item dropdown">
-                                <!-- icono de audio utilizando la librería fontawesome -->
-                                <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="col-2 text-center h2 fas fa-volume-up"></i>
-                                    <span class="col-10">Audios</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                    <a class="dropdown-item" href="audios.html">Todos</a>
-                                    <a class="dropdown-item" href="audios.html">Deportes</a>
-                                    <a class="dropdown-item" href="audios.html">Educación</a>
-                                    <a class="dropdown-item" href="audios.html">Humor</a>
-                                    <a class="dropdown-item" href="audios.html">Noticias</a>
-                                    <a class="dropdown-item" href="audios.html">Tiempo libre</a>
-                                    <a class="dropdown-item" href="audios.html">Otros</a>
-                                    <a class="dropdown-item" href="audios.html">Aleatorio</a>
-                                </div>
-                        </li>
-                        <!-- Enlace a la página de multimedia -->
-                        <!-- Desplegable de categorias de multimedia -->
-                        <li class="nav-item dropdown">
-                                <!-- icono multimedia utilizando la librería fontawesome -->
-                                <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="col-2 text-center h2 fas fa-file-video"></i>
-                                    <span class="col-10">Mi multimedia</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                                    <a class="dropdown-item" href="misVideos.html">Vídeos</a>
-                                    <a class="dropdown-item" href="misAudios.html">Audios</a>
-                                </div>
-                        </li>
-                        <!-- Enlace a la página de lista de reproducción -->
-                        <!-- Desplegable de las listas de reproducción -->
-                        <li class="nav-item dropdown">
-                                <!-- icono lista utilizando la librería fontawesome -->
-                                <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="col-2 text-center h2 fas fa-list-ul"></i>
-                                    <span class="col-10">Lista de reproducción</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                                    <a class="dropdown-item" href="lrVideos.html">Vídeos</a>
-                                    <a class="dropdown-item" href="lrAudios.html">Audios</a>
-                                </div>
-                        </li>
-                        <!-- Enlace a la página de en directo -->
-                        <li class="nav-item">
-                            <!-- icono de vídeo utilizando la librería fontawesome -->
-                            <a class="row nav-link" href="directo.html">
-                                <i class="col-2 text-center h2 fas fa-video"></i>
-                                <span class="col-10">Directo</span>
-                            </a>
-                        </li>
-                        <!-- Enlace a la página de subir vídeos -->
-                        <li class="nav-item">
-                            <!-- icono de subir archivo utilizando la librería fontawesome -->
-                            <a class="row nav-link" href="subirVideos.html">
-                                <i class="col-2 text-center h2 fas fa-upload"></i>
-                                <span class="col-10">Subir multimedia</span>
-                            </a>
-                        </li>
-                        <!-- Enlace a la página de administración -->
-                        <!-- Desplegable del panel de administración -->
-                        <li class="nav-item dropdown">
-                                <!-- icono lista utilizando la librería fontawesome -->
-                                <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="col-2 text-center h2 fas fa-wrench"></i>
-                                    <span class="col-10">Administración</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                                    <a class="dropdown-item" href="adminUsuarios.html">Usuarios</a>
-                                    <a class="dropdown-item" href="adminVideos.html">Audios</a>
-                                    <a class="dropdown-item" href="adminAudios.html">Audios</a>
-                                </div>
-                        </li>
-                        <!-- Enlace a la página de información -->
-                        <li class="nav-item">
-                            <!-- icono de subir archivo utilizando la librería fontawesome -->
-                            <a class="row nav-link" href="informacion.html">
-                                <i class="col-2 text-center h2 fas fa-info"></i>
-                                <span class="col-10">Información</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- Contenido de la página -->
-            <div id="content" class="container-fluid">
-                <h3>Bienvenido a <span class="blue">iUTiUB</span></h3>
-                <h3>Te presentamos las características del nuevo <span class="blue">iUTiUB</span></h3>
-                <!-- Sprites -->
-                <div class="bg">
-                    <div class="bg-video"></div>
-                    <div class="bg-audio"></div>
-                </div>
-                <div class="features">
-                    <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                    <h4 class="regularWeight">
-                        <!-- icono de buscar utilizando la librería fontawesome -->
-                        <i class="bigIcon fas fa-search"></i> Encuentra rápidamente los contenidos que desees
-                    </h4>
-
-                    <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                    <h4 class="regularWeight">
-                        <!-- icono de pantalla utilizando la librería fontawesome -->
-                        <i class="bigIcon fas fa-desktop"></i> Disfruta de los mejores contenidos de vídeo bajo demanda
-                    </h4>
-
-                    <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                    <h4 class="regularWeight">
-                        <!-- icono de torre utilizando la librería fontawesome -->
-                        <i class="bigIcon fas fa-broadcast-tower"></i> Disfruta de vídeo en directo
-                    </h4>
-
-                    <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                    <h4 class="regularWeight">
-                        <!-- icono de subir utilizando la librería fontawesome -->
-                        <i class="bigIcon fas fa-file-upload"></i> Puedes subir achivos de áudio y vídeo y compartirlo
-                        con
-                        el resto del múndo
-                    </h4>
-
-                    <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                    <h4 class="regularWeight">
-                        <!-- icono de archivo de vídeo utilizando la librería fontawesome -->
-                        <i class="bigIcon fas fa-file-video"></i> Usted encontrará sus propios vídeos y audios en sus
-                        pestañas correspondientes a la izquierda de la página
-                    </h4>
-                    <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                    <h4 class="regularWeight">
-                        <!-- icono de vídeo utilizando la librería fontawesome -->
-                        <i class="bigIcon fas fa-video"></i> Encuentre sus vídeos y audios favoritos por categoría
-                    </h4>
-                </div>
-
             </div>
-        </main>
-        <!-- Footer, con los nombres de los autores del proyecto -->
-        <footer class="bg-dark text-light mt-4 p-3">
-            <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
-        </footer>
-    </div>
+            <div class="col col-md-6"></div>
+            <div class="navbar-collapse col col-md-3">
+                <ul class="navbar-nav">
+                    <!-- Botón de registro -->
+                    <!-- icono de usuario utilizando la librería fontawesome -->
+                    <li class="nav-item px-4">
+                        <a class="nav-link text-light" href="register.html"><i
+                                class="fas fa-user-plus"></i>&nbsp;Nuevo Usuario</a>
+                    </li>
+                    <!-- Botón de iniciar sesión-->
+                    <!-- icono de sesión utilizando la librería fontawesome -->
+                    <li class="nav-item px-4">
+                        <a class="nav-link text-light" href="login.html"><i
+                                class="fas fa-sign-in-alt"></i>&nbsp;Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-grow-1 flex-shrink-0">
+        <!-- Menú vertical izquierdo -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <div class="collapse navbar-collapse" id="navbarLeft">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Búsqueda -->
+                    <li class="nav-item">
+                        <!-- formulario de búsqueda -->
+                        <form method="GET" action="resultadosBusquedaGenerica.html">
+                            <div class="row">
+                                <!-- input text donde se introducirá la cadena de texto a buscar -->
+                                <input size="15" type="search" list="busquedas" name="name" class="form-control col-7 mr-2" placeholder="Buscar" />
+                                <!-- boton que realizará la búsqueda -->
+                                <!-- icono de buscar utilizando la librería fontawesome -->
+                                <button type="submit" class="btn btn-primary col-2"><i class="fas fa-search"></i></button>
+                            </div>
+                            <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
+                            <div class="text-danger d-none">
+                                Error
+                            </div>
+                            <!-- sugerencias de las categorías que se pueden buscar -->
+                            <datalist id="busquedas">
+                                <option value="Todos">Todos</option>
+                                <option value="Deportes">Deportes</option>
+                                <option value="Educación">Educación</option>
+                                <option value="Humor">Humor</option>
+                                <option value="Noticias">Noticias</option>
+                                <option value="Tiempo libre">Tiempo libre</option>
+                                <option value="Otros">Otros</option>
+                                <option value="Aleatorio">Aleatorio</option>
+                            </datalist>
+                        </form>
+                    </li>
+                    <!-- Desplegable del menú de vídeos -->
+                    <!-- Desplegable de categorias de vídeo -->
+                    <li class="nav-item dropdown">
+                            <!-- icono de vídeo utilizando la librería fontawesome -->
+                            <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="col-2 text-center h2 fas fa-desktop"></i>
+                                <span class="col-10">Vídeos</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="videos.html">Todos</a>
+                                <a class="dropdown-item" href="videos.html">Deportes</a>
+                                <a class="dropdown-item" href="videos.html">Educación</a>
+                                <a class="dropdown-item" href="videos.html">Humor</a>
+                                <a class="dropdown-item" href="videos.html">Noticias</a>
+                                <a class="dropdown-item" href="videos.html">Tiempo libre</a>
+                                <a class="dropdown-item" href="videos.html">Otros</a>
+                                <a class="dropdown-item" href="videos.html">Aleatorio</a>
+                            </div>
+                    </li>
+                    <!-- Desplegable del menú de audios -->
+                    <!-- Desplegable de categorias de audio -->
+                    <li class="nav-item dropdown">
+                            <!-- icono de audio utilizando la librería fontawesome -->
+                            <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="col-2 text-center h2 fas fa-volume-up"></i>
+                                <span class="col-10">Audios</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="audios.html">Todos</a>
+                                <a class="dropdown-item" href="audios.html">Deportes</a>
+                                <a class="dropdown-item" href="audios.html">Educación</a>
+                                <a class="dropdown-item" href="audios.html">Humor</a>
+                                <a class="dropdown-item" href="audios.html">Noticias</a>
+                                <a class="dropdown-item" href="audios.html">Tiempo libre</a>
+                                <a class="dropdown-item" href="audios.html">Otros</a>
+                                <a class="dropdown-item" href="audios.html">Aleatorio</a>
+                            </div>
+                    </li>
+                    <!-- Enlace a la página de multimedia -->
+                    <!-- Desplegable de categorias de multimedia -->
+                    <li class="nav-item dropdown">
+                            <!-- icono multimedia utilizando la librería fontawesome -->
+                            <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="col-2 text-center h2 fas fa-file-video"></i>
+                                <span class="col-10">Mi multimedia</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <a class="dropdown-item" href="misVideos.html">Vídeos</a>
+                                <a class="dropdown-item" href="misAudios.html">Audios</a>
+                            </div>
+                    </li>
+                    <!-- Enlace a la página de lista de reproducción -->
+                    <!-- Desplegable de las listas de reproducción -->
+                    <li class="nav-item dropdown">
+                            <!-- icono lista utilizando la librería fontawesome -->
+                            <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="col-2 text-center h2 fas fa-list-ul"></i>
+                                <span class="col-10">Lista de reproducción</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                                <a class="dropdown-item" href="lrVideos.html">Vídeos</a>
+                                <a class="dropdown-item" href="lrAudios.html">Audios</a>
+                            </div>
+                    </li>
+                    <!-- Enlace a la página de en directo -->
+                    <li class="nav-item">
+                        <!-- icono de vídeo utilizando la librería fontawesome -->
+                        <a class="row nav-link" href="directo.html">
+                            <i class="col-2 text-center h2 fas fa-video"></i>
+                            <span class="col-10">Directo</span>
+                        </a>
+                    </li>
+                    <!-- Enlace a la página de subir vídeos -->
+                    <li class="nav-item">
+                        <!-- icono de subir archivo utilizando la librería fontawesome -->
+                        <a class="row nav-link" href="subirVideos.html">
+                            <i class="col-2 text-center h2 fas fa-upload"></i>
+                            <span class="col-10">Subir multimedia</span>
+                        </a>
+                    </li>
+                    <!-- Enlace a la página de administración -->
+                    <!-- Desplegable del panel de administración -->
+                    <li class="nav-item dropdown">
+                            <!-- icono lista utilizando la librería fontawesome -->
+                            <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="col-2 text-center h2 fas fa-wrench"></i>
+                                <span class="col-10">Administración</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                                <a class="dropdown-item" href="adminUsuarios.html">Usuarios</a>
+                                <a class="dropdown-item" href="adminVideos.html">Audios</a>
+                                <a class="dropdown-item" href="adminAudios.html">Audios</a>
+                            </div>
+                    </li>
+                    <!-- Enlace a la página de información -->
+                    <li class="nav-item">
+                        <!-- icono de subir archivo utilizando la librería fontawesome -->
+                        <a class="row nav-link" href="informacion.html">
+                            <i class="col-2 text-center h2 fas fa-info"></i>
+                            <span class="col-10">Información</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Contenido de la página -->
+        <div id="content" class="container-fluid">
+            <h3>Bienvenido a <span class="blue">iUTiUB</span></h3>
+            <h3>Te presentamos las características del nuevo <span class="blue">iUTiUB</span></h3>
+            <!-- Sprites -->
+            <div class="bg">
+                <div class="bg-video"></div>
+                <div class="bg-audio"></div>
+            </div>
+            <div class="features">
+                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                <h4 class="regularWeight">
+                    <!-- icono de buscar utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-search"></i> Encuentra rápidamente los contenidos que desees
+                </h4>
+
+                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                <h4 class="regularWeight">
+                    <!-- icono de pantalla utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-desktop"></i> Disfruta de los mejores contenidos de vídeo bajo demanda
+                </h4>
+
+                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                <h4 class="regularWeight">
+                    <!-- icono de torre utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-broadcast-tower"></i> Disfruta de vídeo en directo
+                </h4>
+
+                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                <h4 class="regularWeight">
+                    <!-- icono de subir utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-file-upload"></i> Puedes subir achivos de áudio y vídeo y compartirlo
+                    con
+                    el resto del múndo
+                </h4>
+
+                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                <h4 class="regularWeight">
+                    <!-- icono de archivo de vídeo utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-file-video"></i> Usted encontrará sus propios vídeos y audios en sus
+                    pestañas correspondientes a la izquierda de la página
+                </h4>
+                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
+                <h4 class="regularWeight">
+                    <!-- icono de vídeo utilizando la librería fontawesome -->
+                    <i class="bigIcon fas fa-video"></i> Encuentre sus vídeos y audios favoritos por categoría
+                </h4>
+            </div>
+
+        </div>
+    </main>
+    <!-- Footer, con los nombres de los autores del proyecto -->
+    <footer class="bg-dark text-light p-3 flex-shrink-0">
+        <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
+    </footer>
     <script src="js/layout.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

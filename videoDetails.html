@@ -177,38 +177,38 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
-            <div id="content">
-                <div class="center-container">
+            <div id="content" class="container-fluid">     
                     <h2>Bienvenido a <a>iUTiUB</a></h2>
+                    <div class="text-center">
                     <audio src="./multimedia/audio/movieCountdown.mp3" id="movieCountdown"></audio>
-                    <canvas width="1200" height="800" id="countDown" ></canvas>
-                    <video controls="controls" id="play-video">
+                    <canvas class='w-100' width="1200" height="800" id="countDown" ></canvas>
+                    <video class="w-100" controls="controls" id="play-video">
                         <source id="videosource" src="./multimedia/video/movie_clip1.mp4" type="video/mp4" />
                         Your browser does not support the video element.
                     </video>
                     <div class="video-buttons">
                         <!-- botón play -->
-                        <button id="play" onclick="startCountdown();">
+                        <button class="mt-1 btn btn-success" id="play" onclick="startCountdown();">
                             Play <i class="fas fa-play-circle"></i>
                         </button>
                         <!-- botón pause -->
-                        <button id="pause" onclick="pauseVideo();">
+                        <button class="mt-1 btn btn-danger" id="pause" onclick="pauseVideo();">
                             Pause <i class="fas fa-pause-circle"></i>
                         </button>
                         <!-- botón stop -->
-                        <button id="stop" onclick="stopVideo()">
+                        <button class="mt-1 btn btn-danger" id="stop" onclick="stopVideo()">
                             Stop <i class="fas fa-stop-circle"></i>
                         </button>
                         <!-- botón avance -->
-                        <button id="avance" onclick="avanceSeconds();">
+                        <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
                             Avance 10 seconds <i class="fas fa-forward"></i>
                         </button>
                         <!-- botón retroceder -->
-                        <button id="rewind" onclick="rewindSeconds()">
+                        <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
                             Rewind 10 seconds <i class="fas fa-backward"></i>
                         </button>
                     </div>
-                    <div class="greydiv left"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <div class="mt-3 card bg-secondary text-white"><div class="card-body text-center"><small class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Sed et lorem condimentum quam finibus consectetur et ac mauris. Donec non lorem eget
                             risus laoreet rhoncus. Praesent gravida odio non nibh rutrum, quis convallis sem
                             sagittis. Vestibulum cursus aliquet vulputate. Donec porttitor nibh efficitur nunc
@@ -216,7 +216,7 @@
                             maximus et nulla in hendrerit. Vivamus vel sapien ac eros iaculis imperdiet in ac
                             mauris. Etiam ac magna sapien. Ut massa risus, rutrum vulputate felis sit amet,
                             consequat bibendum orci. Duis egestas a ex nec cursus. Etiam dapibus bibendum metus
-                            et posuere. </small></div>
+                            et posuere. </small></div></div>
                 </div>
 
 

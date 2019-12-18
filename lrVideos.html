@@ -177,14 +177,14 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
-            <div id="content">
-                <div class="center-container">
+            <div id="content" class="container-fluid">
                     <h2>Bienvenido a <a>iUTiUB</a></h2>
+                    <div class="text-center">
                     <p>Estás viendo <span class="blue">la sección de 'Videos'</span></p>
                     <p>Has seleccionado <span class="blue">audios de %categoria%</span> ordeandos por <span
                             class="blue">los
                             más recientes</span></p>
-                    <video controls="controls" id="play-video">
+                    <video class="w-100" controls="controls" id="play-video">
                         <!-- La etiqueta video exige tener un src inicial, aunque en LS no tenga ningun video, aun asi, el video y los controles estaran ocultos si no hay videos en la lista(LS) -->
                         <source id="videosource" src="multimedia/movie_clip1.mp4" type="video/mp4" />
                         Your browser does not support the video element.
@@ -192,31 +192,31 @@
                     <p>The Speed of Sound</p>
                     <div class="video-buttons">
                         <!-- botón play -->
-                        <button id="play" onclick="playVideo();">
+                        <button class="mt-1 btn btn-success" id="play" onclick="playVideo();">
                             Play <i class="fas fa-play-circle"></i>
                         </button>
                         <!-- botón pause -->
-                        <button id="pause" onclick="pauseVideo();">
+                        <button class="mt-1 btn btn-danger" id="pause" onclick="pauseVideo();">
                             Pause <i class="fas fa-pause-circle"></i>
                         </button>
                         <!-- botón stop -->
-                        <button id="stop" onclick="stopVideo()">
+                        <button class="mt-1 btn btn-danger" id="stop" onclick="stopVideo()">
                             Stop <i class="fas fa-stop-circle"></i>
                         </button>
                         <!-- botón avance -->
-                        <button id="avance" onclick="avanceSeconds();">
+                        <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
                             Avance 10 seconds <i class="fas fa-forward"></i>
                         </button>
                         <!-- botón retroceder -->
-                        <button id="rewind" onclick="rewindSeconds()">
+                        <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
                             Rewind 10 seconds <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón video anterior -->
-                        <button id="previousVideo" onclick="previousVideo()">
+                        <button class="mt-1 btn btn-primary" id="previousVideo" onclick="previousVideo()">
                             Previous video <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón siguiente video -->
-                        <button id="nextVideo" onclick="nextVideoOfLS()">
+                        <button class="mt-1 btn btn-primary" id="nextVideo" onclick="nextVideoOfLS()">
                             Next video <i class="fas fa-forward"></i>
                         </button>
                     </div>
