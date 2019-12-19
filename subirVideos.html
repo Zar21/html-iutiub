@@ -243,98 +243,100 @@
             </div>
         </nav>
         <!-- Contenido de la página -->
-        <div id="content">
-
-            <p>Subir Multimedia</p>
+        <div id="content" class="container-fluid text-center">
             <!-- fieldset que agrupara todo ell formulario de información -->
-            <fieldset class="subir-multimedia">
-                <!-- leyenda del fieldset -->
-                <legend>Subir multimedia</legend>
-                <!-- formulario donde se introducirán los datos del video -->
-                <form id="subir-multimedia" name="subir-multimedia" method="POST" enctype="multipart/form-data">
+            <form id="subir-multimedia" name="subir-multimedia" method="POST" enctype="multipart/form-data">
+                <fieldset class="border p-2 container p-5">
+                    <!-- leyenda del fieldset -->
+                    <legend class="w-auto h2 loginheader py-3">Subir multimedia</legend>
+                    <!-- formulario donde se introducirán los datos del video -->
                     <!-- aqui se introduciran el título del video -->
-                    <p><label for="subir-titulo">Título</label></p>
-                    <!-- input donde irá el título -->
-                    <input id="subir-titulo" type="text" autofocus class="input_res" />
-                    <!-- aqui se mostrarán los errores si los hubiera -->
-                    <div class="error hidden">
-                        Debes introducir un título
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="subir-titulo">Título</label>
+                        <!-- input donde irá el título -->
+                        <input id="subir-titulo" type="text" autofocus class="col-sm-10 input_res form-control" />
+                        <!-- aqui se mostrarán los errores si los hubiera -->
+                        <div class="text-danger d-none">
+                            Debes introducir un título
+                        </div>
                     </div>
                     <!-- introducción de los comentarios del video -->
-                    <p><label for="subir-comentarios">Comentarios</label></p>
-                    <!-- textarea donde se introducirán los comentarios, con 4 filas y 40 columnas -->
-                    <textarea id="subir-comentarios" rows="4" cols="40" placeholder="Escribe..."
-                        class="input_res"></textarea>
-                    <!-- aqui se mostrarán los errores si los hubiera -->
-                    <div class="error hidden">
-                        Este comentario no esta permitido
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="subir-comentarios">Comentarios</label>
+                        <!-- textarea donde se introducirán los comentarios, con 4 filas y 40 columnas -->
+                        <textarea id="subir-comentarios" placeholder="Escribe..." class="textarea col-sm-10 input_res form-control"></textarea>
+                        <!-- aqui se mostrarán los errores si los hubiera -->
+                        <div class="text-danger d-none">
+                            Este comentario no esta permitido
+                        </div>
                     </div>
                     <!-- introducción de las categorias del video -->
-                    <p>Categorías</p>
+                    <div class="form-group row">
+                        <p class="col-sm-2 col-form-label">Categorías</p>
+                        <!-- Checkboxes -->
+                        <div class="checkboxes row">
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-todos" type="checkbox" value="todos" />
+                                <label class="form-check-label" for="subir-checkbox-todos">Todos</label>
+                            </div>
 
-                    <!-- Checkboxes -->
-                    <div class="checkboxes">
-                        <div class="ckbx">
-                            <input id="subir-checkbox-todos" type="checkbox" value="todos" /><label
-                                for="subir-checkbox-todos">Todos</label>
-
-                        </div>
-
-                        <div class="ckbx">
-                            <input id="subir-checkbox-deportes" type="checkbox" value="deportes" /><label
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-deportes" type="checkbox" value="deportes" /><label class="form-check-label"
                                 for="subir-checkbox-deportes">Deportes</label>
-                        </div>
+                            </div>
 
-                        <div class="ckbx">
-                            <input id="subir-checkbox-educacion" type="checkbox" value="educación" /><label
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-educacion" type="checkbox" value="educación" /><label class="form-check-label"
                                 for="subir-checkbox-educacion">Educación</label>
-                        </div>
+                            </div>
 
-                        <div class="ckbx">
-                            <input id="subir-checkbox-humor" type="checkbox" value="humor" /><label
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-humor" type="checkbox" value="humor" />
+                                <label class="form-check-label"
                                 for="subir-checkbox-humor">Humor</label>
-                        </div>
+                            </div>
 
-                        <div class="ckbx">
-                            <input id="subir-checkbox-noticias" type="checkbox" value="noticias" /><label
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-noticias" type="checkbox" value="noticias" /><label class="form-check-label"
                                 for="subir-checkbox-noticias">Noticias</label>
-                        </div>
+                            </div>
 
-                        <div class="ckbx">
-                            <input id="subir-checkbox-tiempo" type="checkbox" value="tiempo-libre" /><label
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-tiempo" type="checkbox" value="tiempo-libre" /><label class="form-check-label"
                                 for="subir-checkbox-tiempo">Tiempo
-                                libre</label>
-                        </div>
+                                    libre</label>
+                            </div>
 
-                        <div class="ckbx">
-                            <input id="subir-checkbox-otros" type="checkbox" value="otros" /><label
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-otros" type="checkbox" value="otros" /><label class="form-check-label"
                                 for="subir-checkbox-otros">Otros</label>
-                        </div>
+                            </div>
 
-                        <div class="ckbx">
-                            <input id="subir-checkbox-aleatorio" type="checkbox" value="aleatorio" /><label
+                            <div class="ckbx col-md-6 form-check">
+                                <input class="form-check-input" id="subir-checkbox-aleatorio" type="checkbox" value="aleatorio" /><label class="form-check-label"
                                 for="subir-checkbox-aleatorio">Aleatorio</label>
+                            </div>
                         </div>
-                    </div>
-
-
-                    <!-- aqui se mostrarán los errores si los hubiera -->
-                    <div class="error hidden">
-                        Debes seleccionar una categoria
+                        <!-- aqui se mostrarán los errores si los hubiera -->
+                        <div class="text-danger d-none">
+                            Debes seleccionar una categoria
+                        </div>
                     </div>
                     <!-- introduccion del archivos -->
-                    <p><label for="subir-archivo">Fichero</label></p>
-                    <input id="subir-archivo" type="file" /><br /><br />
-                    <!-- aqui se mostrarán los errores si los hubiera -->
-                    <div class="error hidden">
-                        Debes subir el fichero
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label" for="subir-archivo">Fichero</label>
+                        <input id="subir-archivo" class="col-md-10 form-control" type="file" /><br /><br />
+                        <!-- aqui se mostrarán los errores si los hubiera -->
+                        <div class="text-danger d-none">
+                            Debes subir el fichero
+                        </div>
                     </div>
                     <!-- botón de subir archivo -->
-                    <button type="submit" value="Subir">Subir</button>
+                    <button class="btn btn-primary" type="submit" value="Subir">Subir</button>
                     <!-- boton de reset -->
-                    <button type="reset" value="Resetear">Resetear</button>
-                </form>
-            </fieldset>
+                    <button class="btn btn-primary" type="reset" value="Resetear">Resetear</button>
+                </fieldset>
+            </form>
         </div>
     </main>
     <!-- Footer, con los nombres de los autores del proyecto -->
