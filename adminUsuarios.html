@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-100">
 
 <head>
     <!-- Para que la codificación de la página sea UTF-8 -->
@@ -8,8 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>iUTiUB</title>
     <!-- Ficheros de CSS -->
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/pageLayout.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <!-- Librería para iconos -->
     <!-- La librería tiene algunos avisos de css -->
@@ -20,247 +18,315 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body>
-    <!-- Raíz de la página -->
-    <div id="root">
-        <!-- Header -->
-        <header>
-            <!-- Menú horizontal superior -->
-            <nav id="top-navbar">
-                <div class="top-navbar-title">
-                    <!-- Nombre de página -->
-                    <div id="pageTitle" class="top-navbar" onclick="location.href='index.html'">
-                        iUTiUB
-                    </div>
-                    <!-- Botón de menú para móbiles -->
-                    <div id="top-navbar-toggle" class="top-navbar-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-                <!-- Espacio vacío para separar los botones -->
-                <div class="top-navbar-empty"></div>
-                <!-- Botón de registro -->
-                <!-- icono de usuario utilizando la librería fontawesome -->
-                <div class="top-navbar" onclick="location.href='register.html'"><i class="fas fa-user-plus"></i>
-                    &nbsp;Nuevo Usuario</div>
-                <!-- Botón de iniciar sesión-->
-                <!-- icono de sesión utilizando la librería fontawesome -->
-                <div class="top-navbar" onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i>
-                    &nbsp;Iniciar Sesión</div>
-            </nav>
-        </header>
-        <!-- Menú vertical izquierdo -->
-        <main>
-            <nav id="left-navbar" class="hiding">
-                <!-- Búsqueda -->
-                <div class="left-navbar">
-                    <!-- formulario de búsqueda del navbar en la parte izquierda -->
-                    <form method="GET" action="resultadosBusquedaGenerica.html">
-                        <!-- input text donde se introducirá la cadena de texto a buscar -->
-                        <input size="15" type="search" list="busquedas" name="name" placeholder="Buscar" />
-                        <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
-                        <div class="error hidden">
-                            Error
-                        </div>
-                        <!-- sugerencias de las categorías que se pueden buscar -->
-                        <datalist id="busquedas">
-                            <option value="Todos">Todos</option>
-                            <option value="Deportes">Deportes</option>
-                            <option value="Educación">Educación</option>
-                            <option value="Humor">Humor</option>
-                            <option value="Noticias">Noticias</option>
-                            <option value="Tiempo libre">Tiempo libre</option>
-                            <option value="Otros">Otros</option>
-                            <option value="Aleatorio">Aleatorio</option>
-                        </datalist>
-                        <!-- boton que realizará la búsqueda -->
-                        <!-- icono de buscar utilizando la librería fontawesome -->
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
+<!-- Raíz de la página -->
 
-                <!-- Desplegable del menú de vídeos -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
-                    <!-- Desplegable de categorias de vídeo -->
-                    <details>
-                        <!-- icono de vídeo utilizando la librería fontawesome -->
-                        <summary><i class="bigIcon fas fa-desktop"></i> Vídeos</summary>
-                        <ul>
-                            <li><a href="videos.html">Todos</a></li>
-                            <li><a href="videos.html">Deportes</a></li>
-                            <li><a href="videos.html">Educación</a></li>
-                            <li><a href="videos.html">Humor</a></li>
-                            <li><a href="videos.html">Noticias</a></li>
-                            <li><a href="videos.html">Tiempo libre</a></li>
-                            <li><a href="videos.html">Otros</a></li>
-                            <li><a href="videos.html">Aleatorio</a></li>
-                        </ul>
-                    </details>
-                </div>
-                <!-- Desplegable del menú de audios -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
-                    <!-- Desplegable de categorias de audio -->
-                    <details>
-                        <!-- icono de audio utilizando la librería fontawesome -->
-                        <summary><i class="fas fa-volume-up bigIcon"></i> Audios</summary>
-                        <ul>
-                            <li><a href="audios.html">Todos</a></li>
-                            <li><a href="audios.html">Deportes</a></li>
-                            <li><a href="audios.html">Educación</a></li>
-                            <li><a href="audios.html">Humor</a></li>
-                            <li><a href="audios.html">Noticias</a></li>
-                            <li><a href="audios.html">Tiempo libre</a></li>
-                            <li><a href="audios.html">Otros</a></li>
-                            <li><a href="audios.html">Aleatorio</a></li>
-                        </ul>
-                    </details>
-                </div>
-                <!-- Enlace a la página de multimedia -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
-                    <!-- Desplegable de categorias de multimedia -->
-                    <details>
-                        <!-- icono multimedia utilizando la librería fontawesome -->
-                        <summary><i class="bigIcon fas fa-file-video"></i> Mi multimedia</summary>
-                        <ul>
-                            <li><a href="misVideos.html">Vídeos</a></li>
-                            <li><a href="misAudios.html">Audio</a></li>
-                        </ul>
-                    </details>
-                </div>
-                <!-- Enlace a la página de lista de reproducción -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
-                    <!-- Desplegable de las listas de reproducción -->
-                    <details>
-                        <!-- icono lista utilizando la librería fontawesome -->
-                        <summary><i class="bigIcon fas fa-list-ul"></i> Lista de reproducción</summary>
-                        <ul>
-                            <li><a href="lrVideos.html">Vídeos</a></li>
-                            <li><a href="lrAudios.html">Audio</a></li>
-                        </ul>
-                    </details>
-                </div>
-                <!-- Enlace a la página de en directo -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar" onclick="location.href='directo.html'">
-                    <!-- icono de vídeo utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-video"></i> En directo
-                </div>
-                <!-- Enlace a la página de subir vídeos -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar" onclick="location.href='subirVideos.html'">
-                    <!-- icono de subir archivo utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-upload"></i> Subir multimedia
-                </div>
-                <!-- Enlace a la página de administración -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar">
-                    <details>
-                        <!-- submenú de el panel administración -->
-                        <summary>
-                            <!-- icono de llave inglesa utilizando la librería fontawesome -->
-                            <i class="fas fa-wrench bigIcon"></i> Administración</summary>
-                        <ul>
-                            <li><a href="adminUsuarios.html">Usuarios</a></li>
-                            <li><a href="adminVideos.html">Videos</a></li>
-                            <li><a href="adminAudios.html">Audios</a></li>
-                        </ul>
-                    </details>
-                </div>
-                <!-- enlace a la página información -->
-                <!-- Clase para las opciones del menú izquierdo -->
-                <div class="left-navbar" onclick="location.href='informacion.html'">
-                    <i class="bigIcon fas fa-info"></i> Información
-                </div>
-            </nav>
-            <!-- Contenido de la página -->
-            <!-- container-fluid para que ocupe el width completo siendo responsive -->
-            <div id="content" class="container-fluid">
-                <h3>Administración de usuarios</h3>
-                <!-- %USER% es una variable en la que iría el nombre del usuario -->
-                <!-- texto en gris claro -->
-                <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
-                <form>
-                    <!-- borde con 2 unidades de padding -->
-                    <fieldset class="border p-2">
-                        <!-- width automatico -->
-                        <legend class="w-auto">Buscar</legend class="w-auto">
-                        <!-- grupo de elementos en el fromuario, en una fila, con contenido justificado -->
-                        <div class="form-group row justify-content-around">
-                            <!-- texto en gris claro que ocuppa 12 columnas -->
-                            <label for="input_res" class="text-muted col-12">Introduce parte del alias del
-                                usuario</label>
-                            <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                            <!-- boton de color gris, en una columna en tamaño escritorio, o 5 en el resto -->
-                            <button class="btn btn-secondary col-5 col-md-1" type="submit"><i class="fas fa-tag"></i>
-                                Buscar</button>
-                            <!-- 8 columnas en escritorio, 10 en otras resoluciones, elemento de foormulario -->
-                            <input id="input_res" type="search" class="col-10 col-md-8 input_res form-control"><br />
-                            <!-- texto en rojo, ocupa 12 columnas -->
-                            <div hidden class="col-12 text-danger">
+<body class="d-flex flex-column h-100">
+    <!-- Header -->
+    <!-- texto centrado -->
+    <header class="text-center">
+        <!-- navbar, expansible, oscuro, con fondo azul -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <!-- texto blanco sobre negro, sin decoracion, ocupa 6columnas, 2 en escritorios -->
+            <a class="h1 text-light text-decoration-none navbar-text col-6 col-md-2" href="index.html">iUTiUB</a>
+            <!-- ocupa 6 columnas, oculto en versiones de escritorio -->
+            <div class="col-6 d-md-none">
+                <!-- boton toggle del navbar -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLeft"
+                    aria-controls="navbarLeft" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- icon -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!-- en escritorio ocupa 6 columnas -->
+            <div class="col col-md-6"></div>
+            <!-- elementos que seran colapsados, ocupa 3 en escritorio y 1 en el resto de resoluciones -->
+            <div class="navbar-collapse col col-md-3">
+                <!-- altura completa en el navbar -->
+                <ul class="navbar-nav">
+                    <!-- Botón de registro -->
+                    <!-- icono de usuario utilizando la librería fontawesome -->
+                    <!-- item del navbar, 4 unidades de padding a los lados -->
+                    <li class="nav-item px-4">
+                        <!-- link del navbar, texto blanco sobre negro -->
+                        <a class="nav-link text-light" href="register.html"><i class="fas fa-user-plus"></i>&nbsp;Nuevo
+                            Usuario</a>
+                    </li>
+                    <!-- Botón de iniciar sesión-->
+                    <!-- icono de sesión utilizando la librería fontawesome -->
+                    <!-- item del navbar, 4 unidades de padding a los lados -->
+                    <li class="nav-item px-4">
+                        <!-- link del navbar, texto blanco sobre negro -->
+                        <a class="nav-link text-light" href="login.html"><i class="fas fa-sign-in-alt"></i>&nbsp;Iniciar
+                            Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- flex, crecera 1, se encojera 0, se ocultara en resoluciones de escritorio -->
+    <main class="flex-grow-1 flex-shrink-0 d-md-flex">
+        <!-- Menú vertical izquierdo -->
+        <!-- navbar, se expandira en versiones de escritorio, oscuro, fondo negro, se alinia los elementos al inicio -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark align-items-start">
+            <!-- elementos que colapsaran -->
+            <div class="collapse navbar-collapse" id="navbarLeft">
+                <ul class="navbar-nav mr-auto d-md-flex flex-md-column">
+                    <!-- Búsqueda -->
+                    <!-- item del navbar -->
+                    <li class="nav-item">
+                        <!-- formulario de búsqueda -->
+                        <form method="GET" action="resultadosBusquedaGenerica.html">
+                            <!-- contenedor -->
+                            <div class="container">
+                                <!-- input text donde se introducirá la cadena de texto a buscar -->
+                                <!-- elemento de formulario, ocupa 8 columnas, 2 unidades de margen a la derecha -->
+                                <input size="15" type="search" list="busquedas" name="name"
+                                    class="form-control mr-2 col-8" placeholder="Buscar" />
+                                <!-- boton que realizará la búsqueda -->
+                                <!-- icono de buscar utilizando la librería fontawesome -->
+                                <!-- boton azul que ocupa 3 columnas -->
+                                <button type="submit" class="btn btn-primary col-3"><i
+                                        class="fas fa-search"></i></button>
+                            </div>
+                            <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
+                            <!-- texto rojo, oculto -->
+                            <div class="text-danger d-none">
                                 Error
                             </div>
+                            <!-- sugerencias de las categorías que se pueden buscar -->
+                            <datalist id="busquedas">
+                                <option value="Todos">Todos</option>
+                                <option value="Deportes">Deportes</option>
+                                <option value="Educación">Educación</option>
+                                <option value="Humor">Humor</option>
+                                <option value="Noticias">Noticias</option>
+                                <option value="Tiempo libre">Tiempo libre</option>
+                                <option value="Otros">Otros</option>
+                                <option value="Aleatorio">Aleatorio</option>
+                            </datalist>
+                        </form>
+                    </li>
+                    <!-- Desplegable del menú de vídeos -->
+                    <!-- Desplegable de categorias de vídeo -->
+                    <!-- dropdown, elemento del navbar -->
+                    <li class="nav-item dropdown">
+                        <!-- icono de vídeo utilizando la librería fontawesome -->
+                        <!-- una fila, link del navbar, toggle del dropdown -->
+                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-desktop"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Vídeos</span>
+                        </a>
+                        <!-- MISMAS CLASSES EN TODOS LOS DEPSLEGABLES -->
+                        <!-- desplegable -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <!-- elemento dentro del desplegable -->
+                            <a class="dropdown-item" href="videos.html">Todos</a>
+                            <a class="dropdown-item" href="videos.html">Deportes</a>
+                            <a class="dropdown-item" href="videos.html">Educación</a>
+                            <a class="dropdown-item" href="videos.html">Humor</a>
+                            <a class="dropdown-item" href="videos.html">Noticias</a>
+                            <a class="dropdown-item" href="videos.html">Tiempo libre</a>
+                            <a class="dropdown-item" href="videos.html">Otros</a>
+                            <a class="dropdown-item" href="videos.html">Aleatorio</a>
                         </div>
-                    </fieldset>
-                </form>
-                <!-- en una fila, con contenido justificado -->
-                <div class="row justify-content-around">
-                    <!-- tabla q rayas que ocupa 8 columnas -->
-                    <table class="col-8 table table-striped">
-                        <!--Cabezera de la tabla -->
-                        <thead>
-                            <!-- contenido con flex, es una fila -->
-                            <tr class="d-flex row">
-                                <!-- en escritorio ocupara 4 columnas -->
-                                <th class="col-md-4">Nombre</th>
-                                <!-- en escritorio ocupara 4 columnas -->
-                                <th class="col-md-4">Correo</th>
-                                <!-- en escritorio ocupara 2 columnas -->
-                                <th class="col-md-2">Contraseña</th>
-                                <!-- en escritorio ocupara 2 columnas -->
-                                <th class="col-md-2">Tipo</th>
-                            </tr>
-                        </thead>
-                        <!-- Cuerpo de la tabla -->
-                        <!-- MISMAS CLASSES QUE EN EL THEAD -->
-                        <tbody>
-                            <tr class="d-flex row">
-                                <td class="col-md-4">hildickethan</td>
-                                <td class="col-md-4">hildickethan@gmail.com</td>
-                                <td class="col-md-2">hildickethan</td>
-                                <td class="col-md-2">Administrador</td>
-                            </tr>
-                            <tr class="d-flex row">
-                                <td class="col-md-4">jordillopis00</td>
-                                <td class="col-md-4">jordillopis00@gmail.com</td>
-                                <td class="col-md-2">jordillopis00</td>
-                                <td class="col-md-2">Administrador</td>
-                            </tr>
-                            <tr class="d-flex row">
-                                <td class="col-md-4">ivanperezfita</td>
-                                <td class="col-md-4">ivanperezfita@gmail.com</td>
-                                <td class="col-md-2">ivanperezfita</td>
-                                <td class="col-md-2">Administrador</td>
-                            </tr>
-                            <tr class="d-flex row">
-                                <td class="col-md-4">raulojeda10g</td>
-                                <td class="col-md-4">raulojeda10g@gmail.com</td>
-                                <td class="col-md-2">raulojeda10g</td>
-                                <td class="col-md-2">Administrador</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    </li>
+                    <!-- Desplegable del menú de audios -->
+                    <!-- Desplegable de categorias de audio -->
+                    <!-- item del navbar, es desplegable -->
+                    <li class="nav-item dropdown">
+                        <!-- icono de audio utilizando la librería fontawesome -->
+                        <!-- una fila, link del navbar, toggle del dropdown -->
+                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-volume-up"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Audios</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="audios.html">Todos</a>
+                            <a class="dropdown-item" href="audios.html">Deportes</a>
+                            <a class="dropdown-item" href="audios.html">Educación</a>
+                            <a class="dropdown-item" href="audios.html">Humor</a>
+                            <a class="dropdown-item" href="audios.html">Noticias</a>
+                            <a class="dropdown-item" href="audios.html">Tiempo libre</a>
+                            <a class="dropdown-item" href="audios.html">Otros</a>
+                            <a class="dropdown-item" href="audios.html">Aleatorio</a>
+                        </div>
+                    </li>
+                    <!-- Enlace a la página de multimedia -->
+                    <!-- Desplegable de categorias de multimedia -->
+                    <li class="nav-item dropdown">
+                        <!-- icono multimedia utilizando la librería fontawesome -->
+                        <!-- una fila, link del navbar, toggle del dropdown -->
+                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-file-video"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Mi multimedia</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <a class="dropdown-item" href="misVideos.html">Vídeos</a>
+                            <a class="dropdown-item" href="misAudios.html">Audios</a>
+                        </div>
+                    </li>
+                    <!-- Enlace a la página de lista de reproducción -->
+                    <!-- Desplegable de las listas de reproducción -->
+                    <li class="nav-item dropdown">
+                        <!-- icono lista utilizando la librería fontawesome -->
+                        <!-- una fila, link del navbar, toggle del dropdown -->
+                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-list-ul"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Lista de reproducción</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <a class="dropdown-item" href="lrVideos.html">Vídeos</a>
+                            <a class="dropdown-item" href="lrAudios.html">Audios</a>
+                        </div>
+                    </li>
+                    <!-- Enlace a la página de en directo -->
+                    <li class="nav-item">
+                        <!-- icono de vídeo utilizando la librería fontawesome -->
+                        <a class="row nav-link" href="directo.html">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-video"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Directo</span>
+                        </a>
+                    </li>
+                    <!-- Enlace a la página de subir vídeos -->
+                    <li class="nav-item">
+                        <!-- icono de subir archivo utilizando la librería fontawesome -->
+                        <a class="row nav-link" href="subirVideos.html">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-upload"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Subir multimedia</span>
+                        </a>
+                    </li>
+                    <!-- Enlace a la página de administración -->
+                    <!-- Desplegable del panel de administración -->
+                    <li class="nav-item dropdown">
+                        <!-- icono lista utilizando la librería fontawesome -->
+                        <!-- una fila, link del navbar, toggle del dropdown -->
+                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-wrench"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Administración</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                            <a class="dropdown-item" href="adminUsuarios.html">Usuarios</a>
+                            <a class="dropdown-item" href="adminVideos.html">Videos</a>
+                            <a class="dropdown-item" href="adminAudios.html">Audios</a>
+                        </div>
+                    </li>
+                    <!-- Enlace a la página de información -->
+                    <li class="nav-item">
+                        <!-- icono de subir archivo utilizando la librería fontawesome -->
+                        <a class="row nav-link" href="informacion.html">
+                            <!-- ocupa 2 cols, texto centrado, h2 -->
+                            <i class="col-2 text-center h2 fas fa-info"></i>
+                            <!-- ocupa 10 cols -->
+                            <span class="col-10">Información</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </main>
-        <!-- Footer, con los nombres de los autores del proyecto -->
-        <footer>
-            <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
-        </footer>
-    </div>
+        </nav>
+        <!-- Contenido de la página -->
+        <!-- container-fluid para que ocupe el width completo siendo responsive -->
+        <div id="content" class="container-fluid">
+            <h3>Administración de usuarios</h3>
+            <!-- %USER% es una variable en la que iría el nombre del usuario -->
+            <!-- texto en gris claro -->
+            <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
+            <form>
+                <!-- borde con 2 unidades de padding -->
+                <fieldset class="border p-2">
+                    <!-- width automatico -->
+                    <legend class="w-auto">Buscar</legend class="w-auto">
+                    <!-- grupo de elementos en el fromuario, en una fila, con contenido justificado -->
+                    <div class="form-group row justify-content-around">
+                        <!-- texto en gris claro que ocuppa 12 columnas -->
+                        <label for="input_res" class="text-muted col-12">Introduce parte del alias del
+                            usuario</label>
+                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                        <!-- boton de color gris, en una columna en tamaño escritorio, o 5 en el resto -->
+                        <button class="btn btn-secondary col-5 col-md-1" type="submit"><i class="fas fa-tag"></i>
+                            Buscar</button>
+                        <!-- 8 columnas en escritorio, 10 en otras resoluciones, elemento de foormulario -->
+                        <input id="input_res" type="search" class="col-10 col-md-8 input_res form-control"><br />
+                        <!-- texto en rojo, ocupa 12 columnas -->
+                        <div hidden class="col-12 text-danger">
+                            Error
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- en una fila, con contenido justificado -->
+            <div class="row justify-content-around">
+                <!-- tabla q rayas que ocupa 8 columnas -->
+                <table class="col-8 table table-striped">
+                    <!--Cabezera de la tabla -->
+                    <thead>
+                        <!-- contenido con flex, es una fila -->
+                        <tr class="d-flex row">
+                            <!-- en escritorio ocupara 4 columnas -->
+                            <th class="col-md-4">Nombre</th>
+                            <!-- en escritorio ocupara 4 columnas -->
+                            <th class="col-md-4">Correo</th>
+                            <!-- en escritorio ocupara 2 columnas -->
+                            <th class="col-md-2">Contraseña</th>
+                            <!-- en escritorio ocupara 2 columnas -->
+                            <th class="col-md-2">Tipo</th>
+                        </tr>
+                    </thead>
+                    <!-- Cuerpo de la tabla -->
+                    <!-- MISMAS CLASSES QUE EN EL THEAD -->
+                    <tbody>
+                        <tr class="d-flex row">
+                            <td class="col-md-4">hildickethan</td>
+                            <td class="col-md-4">hildickethan@gmail.com</td>
+                            <td class="col-md-2">hildickethan</td>
+                            <td class="col-md-2">Administrador</td>
+                        </tr>
+                        <tr class="d-flex row">
+                            <td class="col-md-4">jordillopis00</td>
+                            <td class="col-md-4">jordillopis00@gmail.com</td>
+                            <td class="col-md-2">jordillopis00</td>
+                            <td class="col-md-2">Administrador</td>
+                        </tr>
+                        <tr class="d-flex row">
+                            <td class="col-md-4">ivanperezfita</td>
+                            <td class="col-md-4">ivanperezfita@gmail.com</td>
+                            <td class="col-md-2">ivanperezfita</td>
+                            <td class="col-md-2">Administrador</td>
+                        </tr>
+                        <tr class="d-flex row">
+                            <td class="col-md-4">raulojeda10g</td>
+                            <td class="col-md-4">raulojeda10g@gmail.com</td>
+                            <td class="col-md-2">raulojeda10g</td>
+                            <td class="col-md-2">Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!-- Footer, con los nombres de los autores del proyecto -->
+    <!-- fondo gris oscuro, texto blanco sobre negro, 3 unidades de padding, no se encoje por flex  -->
+    <footer class="bg-dark text-light p-3 flex-shrink-0">
+        <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
+    </footer>
     <script src="js/layout.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
