@@ -177,20 +177,29 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
+            <!-- container-fluid para que ocupe el width completo siendo responsive -->
             <div id="content" class="container-fluid">
                 <h3>Administración de vídeos</h3>
                 <!-- %USER% es una variable en la que iría el nombre del usuario -->
+                <!-- texto gris claro,enfasis en azul -->
                 <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
                 <form>
+                    <!-- borde con 2 unidades de padding -->
                     <fieldset class="border p-2">
+                        <!-- width automatico -->
                         <legend class="w-auto">Buscar</legend class="w-auto">
+                        <!-- grupo de elementos en formulario, es una fila, contenido jusificado -->
                         <div class="form-group row justify-content-around">
+                            <!-- texto gris claro, ocupa 12 columnas -->
                             <label for="input_res" class="text-muted col-12">Introduce parte del alias del
                                 usuario</label>
                             <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                            <!-- boton gris, ocupa 5 columnas en todas las resoluciones menos en escritorio que ocupa 1 -->
                             <button class="btn btn-secondary col-5 col-md-1" type="submit"><i class="fas fa-tag"></i>
                                 Buscar</button>
+                            <!--elemento de formulario, ocula 8 columnas en escritorio y 8 en el resto  -->
                             <input id="input_res" type="search" class="col-10 col-md-8 input_res form-control"><br />
+                            <!-- ocupa 12 columnas, teto en rojo -->
                             <div hidden class="col-12 text-danger">
                                 Error
                             </div>
@@ -199,42 +208,51 @@
                 </form>
 
 
+                <!-- una fila, contenido justificado -->
                 <div class="row justify-content-around">
+                    <!-- tabla rayado, ocupa 8 coumnas -->
                     <table class="col-8 table table-striped">
                         <!--Cabezera de la tabla -->
                         <thead>
-                            <tr  class="d-flex row">
+                            <!-- flex, en una fila -->
+                            <tr class="d-flex row">
+                                <!-- en escritorio ocupara 4 columnas -->
                                 <th class="col-md-4">Usuario</th>
+                                <!-- en escritorio ocupara 2 columnas -->
                                 <th class="col-md-2">Nombre</th>
+                                <!-- en escritorio ocupara 2 columnas -->
                                 <th class="col-md-2">Título</th>
+                                <!-- en escritorio ocupara 2 columnas -->
                                 <th class="col-md-2">Comentarios</th>
+                                <!-- en escritorio ocupara 2 columnas -->
                                 <th class="col-md-2">Categoría</th>
                             </tr>
                         </thead>
                         <!-- Cuerpo de la tabla -->
+                        <!-- MISMAS CLASSES QUE EN EL THEAD -->
                         <tbody>
-                            <tr  class="d-flex row">
+                            <tr class="d-flex row">
                                 <td class="col-md-4">hildickethan</td>
                                 <td class="col-md-2">Tutorial.mp4</td>
                                 <td class="col-md-2">Tutorial arreglar PC</td>
                                 <td class="col-md-2">Buen video</td>
                                 <td class="col-md-2">Educación</td>
                             </tr>
-                            <tr  class="d-flex row">
+                            <tr class="d-flex row">
                                 <td class="col-md-4">jordillopis00</td>
                                 <td class="col-md-2">BlackNinja.mp4</td>
                                 <td class="col-md-2">Black Ninja</td>
                                 <td class="col-md-2">Divertido</td>
                                 <td class="col-md-2">Humor</td>
                             </tr>
-                            <tr  class="d-flex row">
+                            <tr class="d-flex row">
                                 <td class="col-md-4">ivanperezfita</td>
                                 <td class="col-md-2">BlackNinja2.mp4</td>
                                 <td class="col-md-2">Black Ninja 2</td>
                                 <td class="col-md-2">Increíble</td>
                                 <td class="col-md-2">Humor</td>
                             </tr>
-                            <tr  class="d-flex row">
+                            <tr class="d-flex row">
                                 <td class="col-md-4">raulojeda10g</td>
                                 <td class="col-md-2">skateOntinyent.mp4</td>
                                 <td class="col-md-2">Raül Ojeda skate en Ontinyent</td>

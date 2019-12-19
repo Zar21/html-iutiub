@@ -24,18 +24,18 @@ X audios.html (comentat)
 X misAudios.html (comentat)
 X misVideos.html (comentat)
 X resultadosBusquedaGenerica.html (comentat)
-X videos.html
-X audioDetails.html
-X videoDetails.html
-X lrAudios.html
-X lrVideos.html
-X directo.html
+X videos.html (comentat)
+X audioDetails.html (comentat)
+X videoDetails.html (comentat)
+X lrAudios.html (comentat)
+X lrVideos.html (comentat)
+X directo.html (comentat)
 
 Pàgines que ha de fer Raül:
-X adminAudios.html
-X adminUsuarios.html
-X adminVideos.html
+X adminAudios.html (comentat)
+X adminUsuarios.html (comentat)
+X adminVideos.html (comentat)
 index.html
-X informacion.html
-X login.html
-X register.html
+X informacion.html (comentat)
+X login.html (comentat)
+X register.html (comentat)

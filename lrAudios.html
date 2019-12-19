@@ -177,8 +177,10 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
+            <!-- container-fluid para que ocupe el width completo siendo responsive -->
             <div id="content" class="container-fluid">
                     <h2>Bienvenido a <a>iUTiUB</a></h2>
+                     <!-- centra el contingut -->
                     <div class="text-center">
                     <p>Estás viendo <span class="blue">la sección de 'Audios'</span></p>
                     <p>Has seleccionado <span class="blue">audios de %categoria%</span> ordeandos por <span
@@ -189,32 +191,47 @@
                         Your browser does not support the audio element.
                     </audio>
                     <p>The Speed of Sound</p>
+                    <!-- fas fa-xxxx para los iconos de los botones utilizando la libreria fontawesome -->
                     <div class="audio-buttons">
                         <!-- botón play -->
+                        <!-- btn para hacer un boton y btn-success pera hacerlo verde -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->                         
                         <button class="mt-1 btn btn-success" id="play" onclick="playAudio();">
                             Play <i class="fas fa-play-circle"></i>
                         </button>
                         <!--Pausar audio-->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->  
                         <button class="mt-1 btn btn-danger" id="pause" onclick="pauseAudio();">
                             Pause <i class="fas fa-pause-circle"></i>
                         </button>
                         <!--Parar audio-->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->  
                         <button class="mt-1 btn btn-danger" id="stop" onclick="stopAudio()">
                             Stop <i class="fas fa-stop-circle"></i>
                         </button>
                         <!--Avanzar 10 segundos-->
+                        <!-- btn para hacer un boton y btn-primary pera hacerlo azul -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->  
                         <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
                             Avance 10 seconds <i class="fas fa-forward"></i>
                         </button>
                         <!--Retroceder 10 segundos-->
+                        <!-- btn para hacer un boton y btn-primary pera hacerlo azul -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->  
                         <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
                             Rewind 10 seconds <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón audio anterior -->
+                        <!-- btn para hacer un boton y btn-primary pera hacerlo azul -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->  
                         <button class="mt-1 btn btn-primary" id="previousVideo" onclick="previousAudio()">
                             Previous audio <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón siguiente audio -->
+                        <!-- btn para hacer un boton y btn-primary pera hacerlo azul -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->  
                         <button class="mt-1 btn btn-primary" id="nextVideo" onclick="audioEnded()">
                             Next audio <i class="fas fa-forward"></i>
                         </button>

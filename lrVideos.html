@@ -177,45 +177,62 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
+            <!-- container-fluid para que ocupe el width completo siendo responsive -->
             <div id="content" class="container-fluid">
-                    <h2>Bienvenido a <a>iUTiUB</a></h2>
-                    <div class="text-center">
+                <h2>Bienvenido a <a>iUTiUB</a></h2>
+                <!-- centra el contingut -->
+                <div class="text-center">
                     <p>Estás viendo <span class="blue">la sección de 'Videos'</span></p>
                     <p>Has seleccionado <span class="blue">audios de %categoria%</span> ordeandos por <span
-                            class="blue">los
-                            más recientes</span></p>
+                            class="blue">los más recientes</span></p>
+                    <!-- w-100 estableze el width a 100% -->
                     <video class="w-100" controls="controls" id="play-video">
                         <!-- La etiqueta video exige tener un src inicial, aunque en LS no tenga ningun video, aun asi, el video y los controles estaran ocultos si no hay videos en la lista(LS) -->
                         <source id="videosource" src="multimedia/movie_clip1.mp4" type="video/mp4" />
                         Your browser does not support the video element.
                     </video>
                     <p>The Speed of Sound</p>
+                    <!-- fas fa-xxxx para los iconos de los botones utilizando la libreria fontawesome -->
                     <div class="video-buttons">
                         <!-- botón play -->
+                        <!-- btn para hacer un boton y btn-success pera hacerlo verde -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba --> 
                         <button class="mt-1 btn btn-success" id="play" onclick="playVideo();">
                             Play <i class="fas fa-play-circle"></i>
                         </button>
                         <!-- botón pause -->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
                         <button class="mt-1 btn btn-danger" id="pause" onclick="pauseVideo();">
                             Pause <i class="fas fa-pause-circle"></i>
                         </button>
                         <!-- botón stop -->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
                         <button class="mt-1 btn btn-danger" id="stop" onclick="stopVideo()">
                             Stop <i class="fas fa-stop-circle"></i>
                         </button>
                         <!-- botón avance -->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
                         <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
                             Avance 10 seconds <i class="fas fa-forward"></i>
                         </button>
                         <!-- botón retroceder -->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
                         <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
                             Rewind 10 seconds <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón video anterior -->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
                         <button class="mt-1 btn btn-primary" id="previousVideo" onclick="previousVideo()">
                             Previous video <i class="fas fa-backward"></i>
                         </button>
                         <!-- botón siguiente video -->
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
                         <button class="mt-1 btn btn-primary" id="nextVideo" onclick="nextVideoOfLS()">
                             Next video <i class="fas fa-forward"></i>
                         </button>

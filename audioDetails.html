@@ -177,38 +177,67 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
+            <!-- container-fluid para que ocupe el width completo siendo responsive -->
             <div id="content" class="container-fluid">
                 <h2>Bienvenido a <a>iUTiUB</a></h2>
+                <!-- centra el contingut -->
                 <div class="text-center">
-                    <img alt="Audio thumbnail" >
+                    <img alt="Audio thumbnail">
                     <p>The Speed of Sound</p>
                     <audio controls="controls" id="play-audio">
-                            <source id="audiosource" src="multimedia/audio/audio_clip1.mp3" type="audio/mp3" />
-                            Your browser does not support the audio element. 
-                        </audio>
+                        <source id="audiosource" src="multimedia/audio/audio_clip1.mp3" type="audio/mp3" />
+                        Your browser does not support the audio element.
+                    </audio>
+                    <!-- fas fa-play-xxxxx para poner los iconos de los botons con fontawesome -->
                     <div class="audio-buttons">
                         <!--Enceder audio-->
+                        <!-- btn para hacer un boton y btn-success pera hacerlo verde -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
                         <button class="mt-1 btn btn-success" id="play" onclick="playAudio();">
-                                Play <i class="fas fa-play-circle"></i>
-                            </button>
+                            Play <i class="fas fa-play-circle"></i>
+                        </button>
                         <!--Pausar audio-->
-                            <button class="mt-1 btn btn-danger" id="pause" onclick="pauseAudio();">
-                                Pause <i class="fas fa-pause-circle"></i>
-                            </button>
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
+                        <button class="mt-1 btn btn-danger" id="pause" onclick="pauseAudio();">
+                            Pause <i class="fas fa-pause-circle"></i>
+                        </button>
                         <!--Parar audio-->
-                            <button class="mt-1 btn btn-danger" id="stop" onclick="stopAudio()">
-                                Stop <i class="fas fa-stop-circle"></i>
-                            </button> 
+                        <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
+                        <button class="mt-1 btn btn-danger" id="stop" onclick="stopAudio()">
+                            Stop <i class="fas fa-stop-circle"></i>
+                        </button>
                         <!--Avanzar 10 segundos-->
-                            <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
-                                Avance 10 seconds <i class="fas fa-forward"></i>
-                            </button>
+                        <!-- btn para hacer un boton y btn-primary pera hacerlo azul -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
+                        <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
+                            Avance 10 seconds <i class="fas fa-forward"></i>
+                        </button>
                         <!--Retroceder 10 segundos-->
-                            <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
-                                Rewind 10 seconds <i class="fas fa-backward"></i>
-                            </button>
+                        <!-- btn para hacer un boton y btn-primary pera hacerlo azul -->
+                        <!-- mt-1 para poner 1 unidad de margen arriba -->
+                        <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
+                            Rewind 10 seconds <i class="fas fa-backward"></i>
+                        </button>
                     </div>
-                    <div class="mt-3 card bg-secondary text-white"><div class="card-body text-center"><small class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lorem condimentum quam finibus consectetur et ac mauris. Donec non lorem eget risus laoreet rhoncus. Praesent gravida odio non nibh rutrum, quis convallis sem sagittis. Vestibulum cursus aliquet vulputate. Donec porttitor nibh efficitur nunc hendrerit, vel egestas quam volutpat. Curabitur molestie aliquam laoreet. Sed maximus et nulla in hendrerit. Vivamus vel sapien ac eros iaculis imperdiet in ac mauris. Etiam ac magna sapien. Ut massa risus, rutrum vulputate felis sit amet, consequat bibendum orci. Duis egestas a ex nec cursus. Etiam dapibus bibendum metus et posuere. </small></div></div>
+                    <!-- mt-3 para poner 3 unidades de margen arriba -->
+                    <!-- bg-secondary para poner el fondo gris -->
+                    <!-- text-white para poner el color de texto a blanco -->
+                    <!-- card para especifcar que va a tener formato carta/tarjeta -->
+                    <div class="mt-3 card bg-secondary text-white">
+                        <!-- card-body para para el cuerpo de la seccion con el texto centrado con text-center -->
+                        <div class="card-body text-center">
+                            <!-- especifcamos el texto con card-text -->
+                            <small class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+                                lorem condimentum quam finibus consectetur et ac mauris. Donec non lorem eget risus
+                                laoreet rhoncus. Praesent gravida odio non nibh rutrum, quis convallis sem sagittis.
+                                Vestibulum cursus aliquet vulputate. Donec porttitor nibh efficitur nunc hendrerit, vel
+                                egestas quam volutpat. Curabitur molestie aliquam laoreet. Sed maximus et nulla in
+                                hendrerit. Vivamus vel sapien ac eros iaculis imperdiet in ac mauris. Etiam ac magna
+                                sapien. Ut massa risus, rutrum vulputate felis sit amet, consequat bibendum orci. Duis
+                                egestas a ex nec cursus. Etiam dapibus bibendum metus et posuere. </small></div>
+                    </div>
                 </div>
             </div>
         </main>

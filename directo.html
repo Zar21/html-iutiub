@@ -177,71 +177,110 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
+            <!-- container-fluid para que ocupe el width completo siendo responsive -->
+            <!-- text-center centra el contingut -->
             <div id="content" class="container-fluid text-center">
+                <!-- fas fa-xxxx para los iconos de los botones utilizando la libreria fontawesome -->
                 <p><span class="blue">Video en directo</span></p>
                 <p>%USER%, bienvenido a <span class="blue">iUTiUB</span></p>
                 <audio src="./multimedia/audio/movieCountdown.mp3" id="movieCountdown"></audio>
+                <!-- w-100 para el width a 100% -->
                 <canvas class="w-100" width="1200" height="800" id="countDown"></canvas>
                 <video class="w-100" controls="controls" id="play-video">
                     <source id="videosource" src="./multimedia/video/movie_clip1.mp4" type="video/mp4" />
                     Your browser does not support the video element.
                 </video>
                 <br>
+                <!-- btn para hacer un boton y btn-success pera hacerlo verde -->
+                <!-- mt-1 para poner 1 unidad de margen arriba -->
                 <button class="mt-1 btn btn-success" id="play" onclick="startCountdown();">
                     Play <i class="fas fa-play-circle"></i>
                 </button>
                 <!-- botón pause -->
+                <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                <!-- mt-1 para poner 1 unidad de margen arriba -->
                 <button class="mt-1 btn btn-danger" id="pause" onclick="pauseVideo();">
                     Pause <i class="fas fa-pause-circle"></i>
                 </button>
                 <!-- botón stop -->
+                <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+                <!-- mt-1 para poner 1 unidad de margen arriba -->
                 <button class="mt-1 btn btn-danger" id="stop" onclick="stopVideo()">
                     Stop <i class="fas fa-stop-circle"></i>
                 </button>
 
+                <!-- mt-3 para poner 3 unidades de margen arriba -->
+                <!-- card para formato carta/tarjeta -->
                 <div class="mt-3 card liketable">
+                    <!-- la cabecera de la sección -->
                     <div class="card-header header headertable">
                         <b card-title>Buscando emisión en directo</b>
                     </div>
+                    <!-- card-bbody para el cuerpo de la seccion -->
+                    <!-- row para que sea una fila -->
                     <div class="card-body row">
+                        <!-- col-md-6 para hacer 6 columnas en formato escritorio -->
                         <div class="col-md-6">
+                            <!-- mt-3 para poner 3 unidades de margen arriba -->
                             <div class="mt-3 card">
+                                <!-- la cabecera de la sección -->
+                                <!-- bg-primary para el fondo de color azul -->
+                                <!-- texto en blanco -->
                                 <div class="card-header bg-primary text-white header">
                                     <p class="h5">Noticias iUTiUB</p>
                                 </div>
+                                <!-- texto de la seccion -->
+                                <!-- padding de 5 unidades -->
                                 <p class="card-text p-5">Deporte iUTiUB</p class="">
                             </div>
                         </div>
                         <div class="col-md-6">
+                            <!-- mt-3 para poner 3 unidades de margen arriba -->
                             <div class="mt-3 card">
+                                <!-- la cabecera de la sección -->
+                                <!-- bg-primary para el fondo de color azul -->
+                                <!-- texto en blanco -->
                                 <div class="card-header text-white bg-primary header">
                                     <p class="h5"> Toda la actualidad del momento a las 14:30. </p>
                                 </div>
+                                <!-- texto de la seccion -->
+                                <!-- padding de 5 unidades -->
                                 <p class="card-text p-5">Partido de fútbol a las 17:30.
                                     Real Madrid CF - Valencia CF</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                        <div class="mt-3 card">
-                            <div class="card-header text-white bg-primary header">
-                                <p class="h5">Noticias iUTiUB</p>
+                            <!-- mt-3 para poner 3 unidades de margen arriba -->
+                            <div class="mt-3 card">
+                                <!-- la cabecera de la sección -->
+                                <!-- bg-primary para el fondo de color azul -->
+                                <!-- texto en blanco -->
+                                <div class="card-header text-white bg-primary header">
+                                    <p class="h5">Noticias iUTiUB</p>
+                                </div>
+                                <!-- texto de la seccion -->
+                                <!-- padding de 5 unidades -->
+                                <p class="card-text p-5">Deporte iUTiUB</p>
                             </div>
-                            <p class="card-text p-5">Deporte iUTiUB</p>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mt-3  card">
-                            <div class="card-header text-white bg-primary header">
-                                <p class="h5"> Toda la actualidad del momento a las 21:30.</p>
-                            </div>
-                            <p class="card-text p-5">Partido de Basket a las 22:30.
+                        <div class="col-md-6">
+                            <!-- mt-3 para poner 3 unidades de margen arriba -->
+                            <div class="mt-3  card">
+                                <!-- la cabecera de la sección -->
+                                <!-- bg-primary para el fondo de color azul -->
+                                <!-- texto en blanco -->
+                                <div class="card-header text-white bg-primary header">
+                                    <p class="h5"> Toda la actualidad del momento a las 21:30.</p>
+                                </div>
+                                <!-- texto de la seccion -->
+                                <!-- padding de 5 unidades -->
+                                <p class="card-text p-5">Partido de Basket a las 22:30.
 
-                                Real Madrid - Valencia Basket</p>
+                                    Real Madrid - Valencia Basket</p>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
-
             </div>
         </main>
         <!-- Footer, con los nombres de los autores del proyecto -->

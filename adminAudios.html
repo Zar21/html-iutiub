@@ -177,20 +177,31 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
+            <!-- container-fluid para que ocupe el width completo siendo responsive -->
             <div id="content" class="container-fluid">
                 <h3>Administración de audios</h3>
                 <!-- %USER% es una variable en la que iría el nombre del usuario -->
+                <!-- texto en gris claro -->
+                <!-- enfasis es texto en azul -->
                 <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
                 <form>
+                    <!-- border con padding de 2 unidades -->
                     <fieldset class="border p-2">
+                        <!-- width automatico -->
                         <legend class="w-auto">Buscar</legend class="w-auto">
+                        <!-- grupo en el formulario, es una fila, i justifica el contenido -->
                         <div class="form-group row justify-content-around">
+                            <!-- texto en gris claro, ocupa 12 columnas -->
                             <label for="input_res" class="text-muted col-12">Introduce parte del alias del
                                 usuario</label>
                             <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                            <!-- una columna en tamaño 767px -->
+                            <!-- 5 columnas en otras resoluciones -->
                             <button class="btn btn-secondary col-5 col-md-1" type="submit"><i class="fas fa-tag"></i>
                                 Buscar</button>
+                            <!-- 8 columnas en tamaño escritorio, 10 columnas en otras resoluciones, elemento del formulario -->
                             <input id="input_res" type="search" class="col-10 col-md-8 input_res form-control"><br />
+                            <!-- ocupa 12 columnas, texto en rojo -->
                             <div hidden class="col-12 text-danger">
                                 Error
                             </div>
@@ -198,19 +209,28 @@
                     </fieldset>
                 </form>
 
+                <!-- es una fila, con el contenido justificado -->
                 <div class="row justify-content-around">
+                    <!-- tabla que ocupa 8 columnas, a rayas -->
                     <table class="col-8 table table-striped">
                         <!--Cabezera de la tabla -->
                         <thead>
+                            <!-- fila utilizando flex -->
                             <tr class="d-flex row">
+                                <!-- en tamaño escritorio ocupa 4 columnas -->
                                 <th class="col-md-4" scope="col">Usuario</th>
+                                <!-- en tamaño escritorio ocupa 2 columnas -->
                                 <th class="col-md-2" scope="col">Nombre</th>
+                                <!-- en tamaño escritorio ocupa 2 columnas -->
                                 <th class="col-md-2" scope="col">Título</th>
+                                <!-- en tamaño escritorio ocupa 2 columnas -->
                                 <th class="col-md-2" scope="col">Comentarios</th>
+                                <!-- en tamaño escritorio ocupa 2 columnas -->
                                 <th class="col-md-2" scope="col">Categoría</th>
                             </tr>
                         </thead>
                         <!-- Cuerpo de la tabla -->
+                        <!-- MISMAS CLASES QUE EN EL THEAD -->
                         <tbody>
                             <tr class="d-flex row">
                                 <td class="col-md-4" scope="row">hildickethan</td>
