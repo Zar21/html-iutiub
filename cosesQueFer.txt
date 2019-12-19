@@ -35,8 +35,8 @@ Pàgines que ha de fer Raül:
 X adminAudios.html (comentat)
 X adminUsuarios.html (comentat)
 X adminVideos.html (comentat)
-X index.html
+X index.html (comentat)
 X informacion.html (comentat)
 X login.html (comentat)
 X register.html (comentat)
-subirVideos.html
+X subirVideos.html
