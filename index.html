@@ -16,6 +16,44 @@
     <!-- Añadir favicon a la página -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+    /*Cargar imagenes del sprite*/
+    .bg {
+        /* CSS general para todos los sprites */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bg-multimedia {
+        /* Sprite multimedia */
+        width: 330px;
+        height: 194px;
+        background: url('multimedia/img/css_sprites.png') -10px -10px;
+        background-size: 500px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .bg-audio {
+        /* Sprite audio */
+        width: 310px;
+        height: 162px;
+        background: url('multimedia/img/css_sprites.png') -10px -405px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .bg-video {
+        /* Sprite video */
+        width: 300px;
+        height: 300px;
+        background: url('multimedia/img/css_sprites.png') -656px -10px;
+        margin: 0 auto;
+        position: relative;
+    }
+    </style>
 </head>
 
 <!-- Raíz de la página -->
@@ -243,53 +281,49 @@
         </nav>
         <!-- Contenido de la página -->
         <div id="content" class="container-fluid">
-            <h3>Bienvenido a <span class="blue">iUTiUB</span></h3>
-            <h3>Te presentamos las características del nuevo <span class="blue">iUTiUB</span></h3>
+            <h1>Bienvenido a <span class="text-primary">iUTiUB</span></h1>
+            <h2 class="text-muted">Te presentamos las características del nuevo <span class="text-primary">iUTiUB</span></h2>
             <!-- Sprites -->
+            <div class="features row justify-content-around">
+                
+                <h3 class="col-md-6 my-4 regularWeight">
+                    <!-- icono de buscar utilizando la librería fontawesome -->
+                    <i class="h2 fas fa-search"></i> Encuentra rápidamente los contenidos que desees
+                </h3>
+
+                
+                <h3 class="col-md-6 my-4 ">
+                    <!-- icono de pantalla utilizando la librería fontawesome -->
+                    <i class="h2 fas fa-desktop"></i> Disfruta de los mejores contenidos de vídeo bajo demanda
+                </h3>
+
+                <h3 class="col-md-6 my-4 ">
+                    <!-- icono de torre utilizando la librería fontawesome -->
+                    <i class="h2 fas fa-broadcast-tower"></i> Disfruta de vídeo en directo
+                </h3>
+
+                <h3 class="col-md-6 my-4 ">
+                    <!-- icono de subir utilizando la librería fontawesome -->
+                    <i class="h2 fas fa-file-upload"></i> Puedes subir achivos de áudio y vídeo y compartirlo
+                    con
+                    el resto del múndo
+                </h3>
+
+                <h3 class="col-md-6 my-4 ">
+                    <!-- icono de archivo de vídeo utilizando la librería fontawesome -->
+                    <i class="h2 fas fa-file-video"></i> Usted encontrará sus propios vídeos y audios en sus
+                    pestañas correspondientes a la izquierda de la página
+                </h3>
+                <h3 class="col-md-6 my-4 ">
+                    <!-- icono de vídeo utilizando la librería fontawesome -->
+                    <i class="h2 fas fa-video"></i> Encuentre sus vídeos y audios favoritos por categoría
+                </h3>
+            </div>
             <div class="bg">
                 <div class="bg-video"></div>
                 <div class="bg-audio"></div>
+                <div class="bg-multimedia"></div>
             </div>
-            <div class="features">
-                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                <h4 class="regularWeight">
-                    <!-- icono de buscar utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-search"></i> Encuentra rápidamente los contenidos que desees
-                </h4>
-
-                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                <h4 class="regularWeight">
-                    <!-- icono de pantalla utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-desktop"></i> Disfruta de los mejores contenidos de vídeo bajo demanda
-                </h4>
-
-                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                <h4 class="regularWeight">
-                    <!-- icono de torre utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-broadcast-tower"></i> Disfruta de vídeo en directo
-                </h4>
-
-                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                <h4 class="regularWeight">
-                    <!-- icono de subir utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-file-upload"></i> Puedes subir achivos de áudio y vídeo y compartirlo
-                    con
-                    el resto del múndo
-                </h4>
-
-                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                <h4 class="regularWeight">
-                    <!-- icono de archivo de vídeo utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-file-video"></i> Usted encontrará sus propios vídeos y audios en sus
-                    pestañas correspondientes a la izquierda de la página
-                </h4>
-                <!-- Clase regularWeight para quitar la negrita que tiene el h4 -->
-                <h4 class="regularWeight">
-                    <!-- icono de vídeo utilizando la librería fontawesome -->
-                    <i class="bigIcon fas fa-video"></i> Encuentre sus vídeos y audios favoritos por categoría
-                </h4>
-            </div>
-
         </div>
     </main>
     <!-- Footer, con los nombres de los autores del proyecto -->
