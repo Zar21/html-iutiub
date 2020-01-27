@@ -17,6 +17,8 @@
     <!-- Añadir favicon a la página -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -178,60 +180,61 @@
             <!-- Contenido de la página -->
             <div id="content">
                 <h3>Administración de usuarios</h3>
-                        <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
-                        <fieldset>
-                                <legend>Buscar</legend>
-                                <form>
-                                    <p>Introduce parte del alias del usuario</p>
-                                    <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                    <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search" class="input_res"><br/>
-                                    <div class="error hidden">
-                                        Error
-                                    </div>
-                                </form>
-                            </fieldset>
-                            <table class="datatable">
-                                    <!--Cabezera de la tabla -->
-                                    <thead>
-                                        <tr>
-                                            <!-- El título de la tabla debe ocupar 5 columnas-->
-                                            <th colspan="4">Mantenimiento de usuarios</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                            <th>Contraseña</th>
-                                            <th>Tipo</th>
-                                        </tr>
-                                    </thead>
-                                    <!-- Cuerpo de la tabla -->
-                                    <tbody>
-                                        <tr>
-                                            <td>hildickethan</td>
-                                            <td>hildickethan@gmail.com</td>
-                                            <td>hildickethan</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                        <tr>
-                                            <td>jordillopis00</td>
-                                            <td>jordillopis00@gmail.com</td>
-                                            <td>jordillopis00</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ivanperezfita</td>
-                                            <td>ivanperezfita@gmail.com</td>
-                                            <td>ivanperezfita</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                        <tr>
-                                            <td>raulojeda10g</td>
-                                            <td>raulojeda10g@gmail.com</td>
-                                            <td>raulojeda10g</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
+                <fieldset>
+                    <legend>Buscar</legend>
+                    <form>
+                        <p>Introduce parte del alias del usuario</p>
+                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                        <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search"
+                            class="input_res"><br />
+                        <div class="error hidden">
+                            Error
+                        </div>
+                    </form>
+                </fieldset>
+                <table class="datatable">
+                    <!--Cabezera de la tabla -->
+                    <thead>
+                        <tr>
+                            <!-- El título de la tabla debe ocupar 5 columnas-->
+                            <th colspan="4">Mantenimiento de usuarios</th>
+                        </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Contraseña</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <!-- Cuerpo de la tabla -->
+                    <tbody>
+                        <tr>
+                            <td>hildickethan</td>
+                            <td>hildickethan@gmail.com</td>
+                            <td>hildickethan</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td>jordillopis00</td>
+                            <td>jordillopis00@gmail.com</td>
+                            <td>jordillopis00</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td>ivanperezfita</td>
+                            <td>ivanperezfita@gmail.com</td>
+                            <td>ivanperezfita</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td>raulojeda10g</td>
+                            <td>raulojeda10g@gmail.com</td>
+                            <td>raulojeda10g</td>
+                            <td>Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
         </main>

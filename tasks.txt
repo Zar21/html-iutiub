@@ -4,7 +4,7 @@
 - En resolucions majors de 768px i menors de 1200px es veuran tres vídeos en cada búsqueda. El menú lateral apareixerà.
 - En resolucions majors de 1200px es veuran 6 vídeos en cada búsqueda. El menú lateral apareixerà.
 
-X -1 Layout interior de vídeos y audios  responsive flexbox I
-  - 2 Layout barra lateral i superior en totes les pàgines, responsive R
-X - 3 Layout interior de totes les demés pàgines + register + login, responsive J
-  - 4 Comenta tot el codi i el valida E
+Jordi: Jquery 2,3,4,8,9
+Raül: Jquery 5,6,7 https://youtu.be/-unwP79QbYs?t=152
+Ethan: Jquery 10
+Ivan: Javascript 2,3,4,8,9

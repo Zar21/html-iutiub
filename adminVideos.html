@@ -17,6 +17,8 @@
     <!-- Añadir favicon a la página -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -176,83 +178,83 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
-                    <div id="content">
-                        <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
-                        <h3>Administración de vídeos</h3>
-                        <!-- %USER% es una variable en la que iría el nombre del usuario -->
-                        <!-- La clase blue cambia el color del texto al del tema de la página -->
-                        <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
+            <div id="content">
+                <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
+                <h3>Administración de vídeos</h3>
+                <!-- %USER% es una variable en la que iría el nombre del usuario -->
+                <!-- La clase blue cambia el color del texto al del tema de la página -->
+                <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
 
-                        <fieldset>
-                            <legend>Buscar</legend>
-                            <form>
-                                <p>Introduce parte del alias del usuario</p>
-                                <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input
-                                    type="search" class="input_res"><br />
-                                <div class="error hidden">
-                                    Error
-                                </div>
-                            </form>
-                        </fieldset>
+                <fieldset>
+                    <legend>Buscar</legend>
+                    <form>
+                        <p>Introduce parte del alias del usuario</p>
+                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                        <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search"
+                            class="input_res"><br />
+                        <div class="error hidden">
+                            Error
+                        </div>
+                    </form>
+                </fieldset>
 
 
-                        <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
-                        <table class="datatable">
-                            <!--Cabezera de la tabla -->
-                            <thead>
-                                <tr>
-                                    <th colspan="5">Mantenimiento de vídeos</th>
-                                </tr>
-                                <tr>
-                                    <th>Usuario</th>
-                                    <th>Nombre</th>
-                                    <th>Título</th>
-                                    <th>Comentarios</th>
-                                    <th>Categoría</th>
-                                </tr>
-                            </thead>
-                            <!-- Cuerpo de la tabla -->
-                            <tbody>
-                                <tr>
-                                    <td>hildickethan</td>
-                                    <td>Tutorial.mp4</td>
-                                    <td>Tutorial arreglar PC</td>
-                                    <td>Buen video</td>
-                                    <td>Educación</td>
-                                </tr>
-                                <tr>
-                                    <td>jordillopis00</td>
-                                    <td>BlackNinja.mp4</td>
-                                    <td>Black Ninja</td>
-                                    <td>Divertido</td>
-                                    <td>Humor</td>
-                                </tr>
-                                <tr>
-                                    <td>ivanperezfita</td>
-                                    <td>BlackNinja2.mp4</td>
-                                    <td>Black Ninja 2</td>
-                                    <td>Increíble</td>
-                                    <td>Humor</td>
-                                </tr>
-                                <tr>
-                                    <td>raulojeda10g</td>
-                                    <td>skateOntinyent.mp4</td>
-                                    <td>Raül Ojeda skate en Ontinyent</td>
-                                    <td>No está mal</td>
-                                    <td>Deportes</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!-- Fin del contenido principal -->
-                    </div>
-                </main>
-                <!-- Footer, con los nombres de los autores del proyecto -->
-                <footer>
-                    <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
-                </footer>
+                <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
+                <table class="datatable">
+                    <!--Cabezera de la tabla -->
+                    <thead>
+                        <tr>
+                            <th colspan="5">Mantenimiento de vídeos</th>
+                        </tr>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Nombre</th>
+                            <th>Título</th>
+                            <th>Comentarios</th>
+                            <th>Categoría</th>
+                        </tr>
+                    </thead>
+                    <!-- Cuerpo de la tabla -->
+                    <tbody>
+                        <tr>
+                            <td>hildickethan</td>
+                            <td>Tutorial.mp4</td>
+                            <td>Tutorial arreglar PC</td>
+                            <td>Buen video</td>
+                            <td>Educación</td>
+                        </tr>
+                        <tr>
+                            <td>jordillopis00</td>
+                            <td>BlackNinja.mp4</td>
+                            <td>Black Ninja</td>
+                            <td>Divertido</td>
+                            <td>Humor</td>
+                        </tr>
+                        <tr>
+                            <td>ivanperezfita</td>
+                            <td>BlackNinja2.mp4</td>
+                            <td>Black Ninja 2</td>
+                            <td>Increíble</td>
+                            <td>Humor</td>
+                        </tr>
+                        <tr>
+                            <td>raulojeda10g</td>
+                            <td>skateOntinyent.mp4</td>
+                            <td>Raül Ojeda skate en Ontinyent</td>
+                            <td>No está mal</td>
+                            <td>Deportes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Fin del contenido principal -->
             </div>
-            <script src="js/layout.js"></script>
-        </body>
-        
-        </html>
+        </main>
+        <!-- Footer, con los nombres de los autores del proyecto -->
+        <footer>
+            <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
+        </footer>
+    </div>
+    <script src="js/layout.js"></script>
+</body>
+
+</html>
