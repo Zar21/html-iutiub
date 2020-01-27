@@ -1,9 +1,3 @@
-(Per a totes les pàgines on apareguen videos\àudios):
-- En resolucions menors de 768px es veuran dos vídeos en cada búsqueda
-- El menú lateral desapareixerà i apareixerà una capsa que al polsar en ella farà que es despleguen els menús de manera horitzontal
-- En resolucions majors de 768px i menors de 1200px es veuran tres vídeos en cada búsqueda. El menú lateral apareixerà.
-- En resolucions majors de 1200px es veuran 6 vídeos en cada búsqueda. El menú lateral apareixerà.
-
 Jordi: Jquery 2,3,4,8,9
 Raül: Jquery 5,6,7 https://youtu.be/-unwP79QbYs?t=152
 Ethan: Jquery 10
