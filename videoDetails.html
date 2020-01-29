@@ -185,6 +185,8 @@
                         <source id="videosource" src="./multimedia/video/movie_clip1.mp4" type="video/mp4" />
                         Your browser does not support the video element.
                     </video>
+                    <h2 id="videoName">Video name</h2>
+                    <span><span id="videoViews">1</span> reproducciones</span>
                     <div class="video-buttons">
                         <!-- botón play -->
                         <button id="play" onclick="startCountdown();">
@@ -207,7 +209,7 @@
                             Rewind 10 seconds <i class="fas fa-backward"></i>
                         </button>
                     </div>
-                    <div class="greydiv left"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <div class="greydiv left" id="videoDescription"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Sed et lorem condimentum quam finibus consectetur et ac mauris. Donec non lorem eget
                             risus laoreet rhoncus. Praesent gravida odio non nibh rutrum, quis convallis sem
                             sagittis. Vestibulum cursus aliquet vulputate. Donec porttitor nibh efficitur nunc
@@ -229,6 +231,8 @@
     <script src="js/layout.js"></script>
     <script src="js/video_controls.js"></script>
     <script src="js/canvasCountdown.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/videoController.js"></script>
 </body>
 
 </html>

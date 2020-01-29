@@ -9,9 +9,9 @@ if (document.getElementById("audioList")) {
     for (let i = 0; i < audios.length; i++) {
         result += `
         <div class="left" id="${audios[i].id}">
-        <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/${audios[i].image}"
+        <a href="audioDetails.html?id=${audios[i].id}"><img class="thumbnails" src="multimedia/img/${audios[i].image}"
                 alt="audio thumbnail"></a><br>
-        <a href="audioDetails.html">${audios[i].text}</a><br>
+        <a href="audioDetails.html?id=${audios[i].id}">${audios[i].text}</a><br>
         <small><span style="color:grey">${audios[i].num_rep} Reproducciones</span> Hace 14 dias</small>
         <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
     </div>
@@ -27,9 +27,9 @@ else if (document.getElementById("videoList")) {
     for (let i = 0; i < videos.length; i++) {
         result += `
         <div class="left" id="${videos[i].id}">
-            <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/${videos[i].image}"
+            <a href="videoDetails.html?id=${videos[i].id}"><img class="thumbnails" src="multimedia/img/${videos[i].image}"
             alt="video thumbnail"></a><br>
-            <a href="videoDetails.html">${videos[i].text}</a><br>
+            <a href="videoDetails.html?id=${videos[i].id}">${videos[i].text}</a><br>
             <small><span style="color:grey">${videos[i].num_rep} Reproducciones</span> Hace 14 dias</small>
             <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
         </div>
@@ -42,9 +42,9 @@ else {
         if (m.type == "video") {
             result += `
             <div class="left" id="${m.id}">
-            <a href="videoDetails.html"><img class="thumbnails" src="multimedia/img/${m.image}"
+            <a href="videoDetails.html?id=${m.id}"><img class="thumbnails" src="multimedia/img/${m.image}"
             alt="video thumbnail"></a><br>
-            <a href="videoDetails.html">${m.text}</a><br>
+            <a href="videoDetails.html?id=${m.id}">${m.text}</a><br>
             <small><span style="color:grey">${m.num_rep} Reproducciones</span> Hace 14 dias</small>
             <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonVideo"></a>
         </div>
@@ -53,9 +53,9 @@ else {
         else {
             result += `
             <div class="left" id="${m.id}">
-        <a href="audioDetails.html"><img class="thumbnails" src="multimedia/img/${m.image}"
+        <a href="audioDetails.html?id=${m.id}"><img class="thumbnails" src="multimedia/img/${m.image}"
                 alt="audio thumbnail"></a><br>
-        <a href="audioDetails.html">${m.text}</a><br>
+        <a href="audioDetails.html?id=${m.id}">${m.text}</a><br>
         <small><span style="color:grey">${m.num_rep} Reproducciones</span> Hace 14 dias</small>
         <a style="padding: 10px 30px; cursor: pointer;" class="playlistButtonAudio"></a>
     </div>
