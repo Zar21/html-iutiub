@@ -185,13 +185,15 @@
                 <!-- La clase blue cambia el color del texto al del tema de la página -->
                 <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
 
-                <fieldset>
-                    <legend>Buscar</legend>
+                <fieldset class="adminForm">
+                    <legend></legend>
                     <form>
-                        <p>Introduce parte del alias del usuario</p>
+                        <div class="inputs">
+
+                        </div>
                         <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                        <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search"
-                            class="input_res"><br />
+                        <button class="action" type="button"></button>
+                        <button type="button" class="cancelForm"><i class="fas fa-times"></i></button><br />
                         <div class="error hidden">
                             Error
                         </div>
@@ -204,9 +206,7 @@
                     <!--Cabezera de la tabla -->
                     <thead>
                         <tr>
-                            <th colspan="5">Mantenimiento de vídeos</th>
-                        </tr>
-                        <tr>
+                            <th>Acciones</th>
                             <th>Usuario</th>
                             <th>Nombre</th>
                             <th>Título</th>
@@ -217,6 +217,10 @@
                     <!-- Cuerpo de la tabla -->
                     <tbody>
                         <tr>
+                            <td>
+                                <button class="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button class="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
                             <td>hildickethan</td>
                             <td>Tutorial.mp4</td>
                             <td>Tutorial arreglar PC</td>
@@ -224,6 +228,10 @@
                             <td>Educación</td>
                         </tr>
                         <tr>
+                            <td>
+                                <button class="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button class="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
                             <td>jordillopis00</td>
                             <td>BlackNinja.mp4</td>
                             <td>Black Ninja</td>
@@ -231,6 +239,10 @@
                             <td>Humor</td>
                         </tr>
                         <tr>
+                            <td>
+                                <button class="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button class="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
                             <td>ivanperezfita</td>
                             <td>BlackNinja2.mp4</td>
                             <td>Black Ninja 2</td>
@@ -238,6 +250,10 @@
                             <td>Humor</td>
                         </tr>
                         <tr>
+                            <td>
+                                <button class="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button class="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
                             <td>raulojeda10g</td>
                             <td>skateOntinyent.mp4</td>
                             <td>Raül Ojeda skate en Ontinyent</td>
@@ -245,6 +261,13 @@
                             <td>Deportes</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <button class="addForm"><i class="fas fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <!-- Fin del contenido principal -->
             </div>
@@ -255,6 +278,7 @@
         </footer>
     </div>
     <script src="js/layout.js"></script>
+    <script src="js/jquery/admin.js"></script>
 </body>
 
 </html>

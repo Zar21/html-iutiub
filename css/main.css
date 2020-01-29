@@ -412,3 +412,15 @@ details li a {
 .row{
     flex: 50%;
 }
+
+.add {
+    text-align: center;
+}
+
+.adminForm {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}

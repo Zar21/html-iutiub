@@ -14,24 +14,23 @@ $.urlParam = function(name){
 
 
 // carga al principio
-$(document).ready(function(){  
+$(document).ready(function(){
     // usa la función creada para recoger el parámetro 'id'
     const id = $.urlParam('id');
 
-    // obtiene el video correcto del JSON 
+    // obtiene el audio correcto del JSON 
     // el JSON está declarado en el fichero list.js que se carga simultáneamente
+    let audio = media.multimedia.filter(elemento => elemento.id == id);
+    audio = audio[0];
 
-    let video = media.multimedia.filter(elemento => elemento.id == id);
-    video = video[0];
-
-    // si no hay video con el id indicado o no se ha pasado id (se tendira que hacer manualmente)
+    // si no hay audio con el id indicado o no se ha pasado id (se tendira que hacer manualmente)
     // salen textos de muestra en su lugar
-    if (video) {
-        // cambia el contenido del nombre del video al correcto
-        $('#videoName').html(video.text);
-        // cambia el contenido de la descripción del video al correcto
-        $('#videoDescription').html(video.description);
-        // cambia las reproducciones del video al número correcto
-        $('#videoViews').html(video.num_rep);
+    if (audio) {
+        // cambia el contenido del nombre del audio al correcto
+        $('#audioName').html(audio.text);
+        // cambia el contenido de la descripción del audio al correcto
+        $('#audioDescription').html(audio.description);
+        // cambia las reproducciones del audio al número correcto
+        $('#audioViews').html(audio.num_rep);
     }
 });

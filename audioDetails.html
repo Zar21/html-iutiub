@@ -184,11 +184,12 @@
                 <div class="center-container">
                     <h2>Bienvenido a <a>iUTiUB</a></h2>
                     <img alt="Audio thumbnail" style="padding: 2em; width:80%; height:auto;" src="multimedia/img/audio-thumbnail.jpg">
-                    <p>The Speed of Sound</p>
                     <audio controls="controls" id="play-audio">
                             <source id="audiosource" src="multimedia/audio/audio_clip1.mp3" type="audio/mp3" />
                             Your browser does not support the audio element. 
                         </audio>
+                    <h2 id="audioName">Audio name</h2>
+                    <span><span id="audioViews">1</span> reproducciones</span>
                     <div class="audio-buttons">
                         <!--Enceder audio-->
                         <button id="play" onclick="playAudio();">
@@ -211,7 +212,7 @@
                                 Rewind 10 seconds <i class="fas fa-backward"></i>
                             </button>
                     </div>
-                    <div class="greydiv left"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lorem condimentum quam finibus consectetur et ac mauris. Donec non lorem eget risus laoreet rhoncus. Praesent gravida odio non nibh rutrum, quis convallis sem sagittis. Vestibulum cursus aliquet vulputate. Donec porttitor nibh efficitur nunc hendrerit, vel egestas quam volutpat. Curabitur molestie aliquam laoreet. Sed maximus et nulla in hendrerit. Vivamus vel sapien ac eros iaculis imperdiet in ac mauris. Etiam ac magna sapien. Ut massa risus, rutrum vulputate felis sit amet, consequat bibendum orci. Duis egestas a ex nec cursus. Etiam dapibus bibendum metus et posuere. </small></div>
+                    <div class="greydiv left" id="audioDescription"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et lorem condimentum quam finibus consectetur et ac mauris. Donec non lorem eget risus laoreet rhoncus. Praesent gravida odio non nibh rutrum, quis convallis sem sagittis. Vestibulum cursus aliquet vulputate. Donec porttitor nibh efficitur nunc hendrerit, vel egestas quam volutpat. Curabitur molestie aliquam laoreet. Sed maximus et nulla in hendrerit. Vivamus vel sapien ac eros iaculis imperdiet in ac mauris. Etiam ac magna sapien. Ut massa risus, rutrum vulputate felis sit amet, consequat bibendum orci. Duis egestas a ex nec cursus. Etiam dapibus bibendum metus et posuere. </small></div>
                 </div>
             </div>
         </main>
@@ -222,6 +223,8 @@
     </div>
     <script src="js/audio.js"></script>
     <script src="js/layout.js"></script>
+    <script src="js/jquery/list.js"></script>
+    <script src="js/jquery/audioController.js"></script>
 </body>
 
 </html>
