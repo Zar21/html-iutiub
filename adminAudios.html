@@ -176,82 +176,105 @@
                 </div>
             </nav>
             <!-- Contenido de la página -->
-                    <div id="content">
-                        <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
-                        <h3>Administración de audios</h3>
-                        <!-- %USER% es una variable en la que iría el nombre del usuario -->
-                        <!-- La clase blue cambia el color del texto al del tema de la página -->
-                        <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
+            <div id="content">
+                <!-- La clase left añade el estilo text-align: left al td porque la clase padre tenia un text-align center y se habría alineado hacia el centro -->
+                <h3>Administración de audios</h3>
+                <!-- %USER% es una variable en la que iría el nombre del usuario -->
+                <!-- La clase blue cambia el color del texto al del tema de la página -->
+                <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
 
-                        <fieldset>
-                            <legend>Buscar</legend>
-                            <form>
-                                <p>Introduce parte del alias del usuario</p>
-                                <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                <button type="submit"><i class="fas fa-tag"></i> Buscar</button><input
-                                    type="search" class="input_res"><br />
-                                <div class="error hidden">
-                                    Error
-                                </div>
-                            </form>
-                        </fieldset>
+                <fieldset class="adminForm hidden">
+                    <legend></legend>
+                    <form>
+                        <div class="inputs">
 
-                        <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
-                        <table class="datatable">
-                            <!--Cabezera de la tabla -->
-                            <thead>
-                                <tr>
-                                    <!-- El título de la tabla debe ocupar 5 columnas-->
-                                    <th colspan="5">Mantenimiento de audios</th>
-                                </tr>
-                                <tr>
-                                    <th>Usuario</th>
-                                    <th>Nombre</th>
-                                    <th>Título</th>
-                                    <th>Comentarios</th>
-                                    <th>Categoría</th>
-                                </tr>
-                            </thead>
-                            <!-- Cuerpo de la tabla -->
-                            <tbody>
-                                <tr>
-                                    <td>hildickethan</td>
-                                    <td>podcast.mp3</td>
-                                    <td>Podcast hablando de PCs</td>
-                                    <td>Entretenido</td>
-                                    <td>Educación</td>
-                                </tr>
-                                <tr>
-                                    <td>jordillopis00</td>
-                                    <td>BNPodcast.mp3</td>
-                                    <td>Preguntas y Respuestas</td>
-                                    <td>Divertido</td>
-                                    <td>Humor</td>
-                                </tr>
-                                <tr>
-                                    <td>ivanperezfita</td>
-                                    <td>BNPodcast2.mp3</td>
-                                    <td>Respondiendo a fans</td>
-                                    <td>Increíble</td>
-                                    <td>Humor</td>
-                                </tr>
-                                <tr>
-                                    <td>raulojeda10g</td>
-                                    <td>paradise.mp3</td>
-                                    <td>Raül Ojeda cantando Paradise </td>
-                                    <td>Estrepitoso!</td>
-                                    <td>Otros</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </main>
-                <!-- Footer, con los nombres de los autores del proyecto -->
-                <footer>
-                    <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
-                </footer>
+                        </div>
+                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                        <button class="action" type="button"></button>
+                        <button type="button" data-action="hideForm"><i class="fas fa-times"></i></button><br />
+                        <div class="error hidden">
+                            Error
+                        </div>
+                    </form>
+                </fieldset>
+
+                <!-- La clase datatable sirve para establecer el color del background del thead a gris y el color a negro -->
+                <table class="datatable">
+                    <!--Cabezera de la tabla -->
+                    <thead>
+                        <tr>
+                            <th>Acciones</th>
+                            <th>Usuario</th>
+                            <th>Nombre</th>
+                            <th>Título</th>
+                            <th>Comentarios</th>
+                            <th>Categoría</th>
+                        </tr>
+                    </thead>
+                    <!-- Cuerpo de la tabla -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>hildickethan</td>
+                            <td>podcast.mp3</td>
+                            <td>Podcast hablando de PCs</td>
+                            <td>Entretenido</td>
+                            <td>Educación</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>jordillopis00</td>
+                            <td>BNPodcast.mp3</td>
+                            <td>Preguntas y Respuestas</td>
+                            <td>Divertido</td>
+                            <td>Humor</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>ivanperezfita</td>
+                            <td>BNPodcast2.mp3</td>
+                            <td>Respondiendo a fans</td>
+                            <td>Increíble</td>
+                            <td>Humor</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>raulojeda10g</td>
+                            <td>paradise.mp3</td>
+                            <td>Raül Ojeda cantando Paradise </td>
+                            <td>Estrepitoso!</td>
+                            <td>Otros</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <button data-action="addForm"><i class="fas fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-            <script src="js/layout.js"></script>
-        </body>
-        
-        </html>
+        </main>
+        <!-- Footer, con los nombres de los autores del proyecto -->
+        <footer>
+            <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
+        </footer>
+    </div>
+    <script src="js/layout.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

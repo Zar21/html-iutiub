@@ -178,61 +178,82 @@
             <!-- Contenido de la página -->
             <div id="content">
                 <h3>Administración de usuarios</h3>
-                        <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
-                        <fieldset>
-                                <legend>Buscar</legend>
-                                <form>
-                                    <p>Introduce parte del alias del usuario</p>
-                                    <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
-                                    <button type="submit"><i class="fas fa-tag "></i> Buscar</button><input type="search" class="input_res"><br/>
-                                    <div class="error hidden">
-                                        Error
-                                    </div>
-                                </form>
-                            </fieldset>
-                            <table class="datatable">
-                                    <!--Cabezera de la tabla -->
-                                    <thead>
-                                        <tr>
-                                            <!-- El título de la tabla debe ocupar 5 columnas-->
-                                            <th colspan="4">Mantenimiento de usuarios</th>
-                                        </tr>
-                                        <tr>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                            <th>Contraseña</th>
-                                            <th>Tipo</th>
-                                        </tr>
-                                    </thead>
-                                    <!-- Cuerpo de la tabla -->
-                                    <tbody>
-                                        <tr>
-                                            <td>hildickethan</td>
-                                            <td>hildickethan@gmail.com</td>
-                                            <td>hildickethan</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                        <tr>
-                                            <td>jordillopis00</td>
-                                            <td>jordillopis00@gmail.com</td>
-                                            <td>jordillopis00</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ivanperezfita</td>
-                                            <td>ivanperezfita@gmail.com</td>
-                                            <td>ivanperezfita</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                        <tr>
-                                            <td>raulojeda10g</td>
-                                            <td>raulojeda10g@gmail.com</td>
-                                            <td>raulojeda10g</td>
-                                            <td>Administrador</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
+                <h3>%USER%, bienvenido a <span class="blue">iUTiUB</span></h3>
+                <fieldset class="adminForm hidden">
+                    <legend></legend>
+                    <form>
+                        <div class="inputs">
+                        </div>
+                        <!-- La clase fa-tag carga la etiqueta de font-awesome, es un formulario de búsqueda por alias de usuario -->
+                        <button class="action" type="button"></button>
+                        <button type="button" data-action="hideForm"><i class="fas fa-times"></i></button><br />
+                        <div class="error hidden">
+                            Error
+                        </div>
+                    </form>
+                </fieldset>
+                <table class="datatable">
+                    <!--Cabezera de la tabla -->
+                    <thead>
+                        <tr>
+                            <th>Acciones</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Contraseña</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <!-- Cuerpo de la tabla -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>hildickethan</td>
+                            <td>hildickethan@gmail.com</td>
+                            <td>hildickethan</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>jordillopis00</td>
+                            <td>jordillopis00@gmail.com</td>
+                            <td>jordillopis00</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>ivanperezfita</td>
+                            <td>ivanperezfita@gmail.com</td>
+                            <td>ivanperezfita</td>
+                            <td>Administrador</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button data-action="modifyRow"><i class="fas fa-pen"></i></button>
+                                <button data-action="deleteRow"><i class="fas fa-trash"></i></button>
+                            </td>
+                            <td>raulojeda10g</td>
+                            <td>raulojeda10g@gmail.com</td>
+                            <td>raulojeda10g</td>
+                            <td>Administrador</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <button data-action="addForm"><i class="fas fa-plus"></i></button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </main>
         <!-- Footer, con los nombres de los autores del proyecto -->
@@ -241,6 +262,7 @@
         </footer>
     </div>
     <script src="js/layout.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 
 </html>
