@@ -1,4 +1,6 @@
-// creamos una función para recoger parámetros de la URL
+/**
+ * creamos una función para recoger parámetros de la URL
+*/
 $.urlParam = function(name){
     // comprobamos una expresión regular contra la url actual
     let results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
