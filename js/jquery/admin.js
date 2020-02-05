@@ -19,17 +19,32 @@ $(document).ready(function(){
         $('.datatable').show();
     }
 
+    function checkInputs() {
+        var correct = true;
+        $('.adminForm .inputs input').each(function(i){
+            if ($(this).val() == '' || $(this).val() == null) {
+                correct = false;
+                return false;
+            }
+        });
+        return correct;
+    }
+
     /**
      * Añade una nueva fila a la tabla con nueva información
      */
     function addToTable() {
-        var tr = $('<tr></tr>'); //Crea elemento tr
-        $('<td><button class="modifyRow"><i class="fas fa-pen"></i></button> <button class="deleteRow"><i class="fas fa-trash"></i></button></td>').appendTo(tr); //Añade botones al primer td para modificar y borrar
-        $('.adminForm .inputs input').each(function(i){ //Por cada elmento del formulario
-            $('<td></td>').text($(this).val()).appendTo(tr); //Añade el valor introducido al td correspondiente
-        });
-        tr.appendTo($('.datatable tbody')); //Añade el tr al final de la tabla
-        hideForm();
+        if (checkInputs()) {
+            var tr = $('<tr></tr>'); //Crea elemento tr
+            $('<td><button class="modifyRow"><i class="fas fa-pen"></i></button> <button class="deleteRow"><i class="fas fa-trash"></i></button></td>').appendTo(tr); //Añade botones al primer td para modificar y borrar
+            $('.adminForm .inputs input').each(function(i){ //Por cada elmento del formulario
+                $('<td></td>').text($(this).val()).appendTo(tr); //Añade el valor introducido al td correspondiente
+            });
+            tr.appendTo($('.datatable tbody')); //Añade el tr al final de la tabla
+            hideForm();
+        } else {
+            $(".adminForm .error").show();
+        }
     }
 
     /**
@@ -38,19 +53,24 @@ $(document).ready(function(){
      * @param {object} event contiene el índice de la fila que se va a modificar
      */
     function modifyTable(event) {
-        var tableIndex = event.data;
-        var trs = $('.datatable tbody tr'); //Obtiene los trs de la tabla
-        var tr = $(trs[tableIndex]).children(); //Obtiene todos los tds del tr especificado en el tableIndex
-        $('.adminForm .inputs input').each(function(i){ //Los inputs tienen el mismo índice que los elementos del formulario generado
-            $(tr[i + 1]).text($(this).val()); //Así que introducimos el valor de los inputs en los campos de la tabla
-        });
-        hideForm();
+        if (checkInputs()) {
+            var tableIndex = event.data;
+            var trs = $('.datatable tbody tr'); //Obtiene los trs de la tabla
+            var tr = $(trs[tableIndex]).children(); //Obtiene todos los tds del tr especificado en el tableIndex
+            $('.adminForm .inputs input').each(function(i){ //Los inputs tienen el mismo índice que los elementos del formulario generado
+                $(tr[i + 1]).text($(this).val()); //Así que introducimos el valor de los inputs en los campos de la tabla
+            });
+            hideForm();
+        } else {
+            $(".adminForm .error").show();
+        }
     }
 
     /**
      * Añade un formulario a la página basándose en los campos de la tabla a modificar, vale para usuarios, vídeos y audios
      */
     function addForm() {
+        $(".adminForm .error").hide();
         $('.adminForm .inputs').empty(); //Vacía los campos del formulario ya que se van a añadir nuevos campos
         $('.adminForm legend').html('Añadir'); //Se muestra que la acción que se está realizando es la de añadir en el legend del fieldset
         $('.adminForm .action').html('<i class="fas fa-plus"></i>'); //Se cambia el botón de la acción a un + para indicar que se va a añadir
@@ -78,6 +98,7 @@ $(document).ready(function(){
      * Rellena los campos del formulario con los datos de la fila seleccionada
      */
     function modifyRow() {
+        $(".adminForm .error").hide();
         children = $(this).parent().parent().children();
         $('.adminForm .inputs').empty(); //Vacía los campos del formulario ya que se van a añadir nuevos campos
         $('.adminForm legend').html('Modificar'); //Se muestra que la acción que se está realizando es la de modificar en el legend del fieldset
