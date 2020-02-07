@@ -19,15 +19,18 @@ $(document).ready(function(){
         $('.datatable').show();
     }
 
+    /**
+     * Comprueba que todos los campos del input tengan contenido para no poner campos vacíos
+     */
     function checkInputs() {
-        var correct = true;
-        $('.adminForm .inputs input').each(function(i){
-            if ($(this).val() == '' || $(this).val() == null) {
-                correct = false;
+        var correct = true; //Establece el interruptor de comprovación a true
+        $('.adminForm .inputs input').each(function(i) { // Por cada input
+            if ($(this).val() == '' || $(this).val() == null) { //Comprovar si el valor está vacío o es nulo
+                correct = false; //Establece interruptor a false
                 return false;
             }
         });
-        return correct;
+        return correct; //Devuelve si todos los inputs no estan vacíos
     }
 
     /**
@@ -40,10 +43,10 @@ $(document).ready(function(){
             $('.adminForm .inputs input').each(function(i){ //Por cada elmento del formulario
                 $('<td></td>').text($(this).val()).appendTo(tr); //Añade el valor introducido al td correspondiente
             });
-            tr.appendTo($('.datatable tbody')); //Añade el tr al final de la tabla
+            tr.appendTo($('.datatable tbody')); // Añade el tr al final de la tabla
             hideForm();
         } else {
-            $(".adminForm .error").show();
+            $(".adminForm .error").show(); // Error
         }
     }
 
@@ -70,7 +73,7 @@ $(document).ready(function(){
      * Añade un formulario a la página basándose en los campos de la tabla a modificar, vale para usuarios, vídeos y audios
      */
     function addForm() {
-        $(".adminForm .error").hide();
+        $(".adminForm .error").hide(); //Esconde el mensaje de error por si estuviera mostrándose
         $('.adminForm .inputs').empty(); //Vacía los campos del formulario ya que se van a añadir nuevos campos
         $('.adminForm legend').html('Añadir'); //Se muestra que la acción que se está realizando es la de añadir en el legend del fieldset
         $('.adminForm .action').html('<i class="fas fa-plus"></i>'); //Se cambia el botón de la acción a un + para indicar que se va a añadir
@@ -98,7 +101,7 @@ $(document).ready(function(){
      * Rellena los campos del formulario con los datos de la fila seleccionada
      */
     function modifyRow() {
-        $(".adminForm .error").hide();
+        $(".adminForm .error").hide(); //Esconde el mensaje de error por si estuviera mostrándose
         children = $(this).parent().parent().children();
         $('.adminForm .inputs').empty(); //Vacía los campos del formulario ya que se van a añadir nuevos campos
         $('.adminForm legend').html('Modificar'); //Se muestra que la acción que se está realizando es la de modificar en el legend del fieldset
