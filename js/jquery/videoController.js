@@ -26,11 +26,11 @@ $(document).ready(function(){
 
     let video = media.multimedia.filter(elemento => elemento.id == id);
     video = video[0];
+    let src = baseURL+video.media;
 
     // si no hay video con el id indicado o no se ha pasado id (se tendira que hacer manualmente)
     // salen textos de muestra en su lugar
     if (video) {
-
         // añadimos el video creando un source nuevo
         $('#play-video').append(
             $('<source></source>').attr({ src : src, type: 'video/mp4', id: 'videosource' })
