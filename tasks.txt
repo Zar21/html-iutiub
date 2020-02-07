@@ -1,4 +1,0 @@
-Jordi: Jquery 2,3,4,8,9
-Raül: Jquery 5,6,7 https://youtu.be/-unwP79QbYs?t=152
-Ethan: Jquery 10
-Ivan: Javascript 2,3,4,8,9
