@@ -14,6 +14,7 @@ urlParam = function(name){
 
 // usa la función creada para recoger el parámetro 'id'
 const id = urlParam('id');
+const baseURL = './multimedia/audio/';
 
 // obtiene el audio correcto del JSON 
 // el JSON está declarado en el fichero list.js que se carga simultáneamente
@@ -23,6 +24,12 @@ audio = audio[0];
 // si no hay audio con el id indicado o no se ha pasado id (se tendira que hacer manualmente)
 // salen textos de muestra en su lugar
 if (audio) {
+    let audioPlayer = document.getElementById('play-audio');
+    let source = document.createElement('source');
+    let src = baseURL+audio.media;
+
+    source.setAttribute('src', src);
+    audioPlayer.appendChild(source);
     // cambia el contenido del nombre del audio al correctoç
     document.getElementById('audioName').innerHTML = audio.text;
     // cambia el contenido de la descripción del audio al correcto
