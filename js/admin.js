@@ -37,6 +37,7 @@ function hideForm() {
  * Añade un formulario a la página basándose en los campos de la tabla a modificar, vale para usuarios, vídeos y audios
  */
 function addForm() {
+    checkError()
     document.querySelector(".adminForm .inputs").innerHTML = ""; //Limpia los inputs del formulario para dejarlo vacio
     document.querySelector(".adminForm legend").innerHTML = "Añadir"; //Cambia la leyenda a Añadir
     document.querySelector(".adminForm .action").innerHTML = "<i class='fas fa-plus'></i>"; //Se añade el icono +
@@ -61,6 +62,7 @@ function addForm() {
  * @param {object} element contiene el botton que ha sido pulsado
  */
 function modifyRow(element) {
+    checkError()
     let children = Array.from(element.parentElement.parentElement.getElementsByTagName("TD")) //Selecciona todos los td de la linea y los guarda en una array
     document.querySelector(".adminForm .inputs").innerHTML = ""; //Limpia los inputs del formulario para dejarlo vacio
     document.querySelector(".adminForm legend").innerHTML = "Modificar"; //Cambia la leyenda a Modificar
@@ -107,8 +109,13 @@ function addToTable() {
         td.innerHTML = element.value //Añade el valor introducido al td correspondiente
         tr.appendChild(td)
     });
-    document.querySelector('.datatable tbody').appendChild(tr);
-    hideForm();
+    if (checkInputs()) {
+        document.querySelector('.datatable tbody').appendChild(tr);
+        hideForm();
+    }
+    else { //Se muestra el mensaje de error
+        document.querySelector(".adminForm .error").classList.remove("hidden")
+    }
 }
 
 /**
@@ -121,9 +128,34 @@ function modifyTable(element) {
     let trs = Array.from(document.querySelectorAll('.datatable tbody tr')); //Obtiene los trs de la tabla
     let tr = Array.from(trs[tableIndex].getElementsByTagName("TD")); //Obtiene todos los tds del tr especificado en el tableIndex
     let count = 0;
-    document.querySelectorAll('.adminForm .inputs input').forEach(element => { //Introducimos los nuevos valores en la tabla
-      count++
-      tr[count].innerHTML = element.value;
+    if (checkInputs()){
+        document.querySelectorAll('.adminForm .inputs input').forEach(element => { //Introducimos los nuevos valores en la tabla
+        count++
+        tr[count].innerHTML = element.value;
+        });
+        hideForm();
+    }  
+    else { //Se muestra el mensaje de error
+        document.querySelector(".adminForm .error").classList.remove("hidden")
+    }
+}
+/**
+ * Oculta un error
+ */
+function checkError() {
+    if (!document.querySelector(".adminForm .error.hidden")) { //En caso de haber algun mensaje de error lo vuelve a ocultar
+        document.querySelector(".adminForm .error").classList.add("hidden")
+    }
+}
+
+/**
+ * Comprueba si todos los campos del formulario tienen algun valor
+ */
+function checkInputs() {
+    validate = true; //Variable para validar que todos los campos esten rellenos
+    document.querySelectorAll('.adminForm .inputs input').forEach(element => { 
+        if (element.value == "" || element.value == null || element.value == undefined)
+            validate = false; //en caso de haber algun campo son valor la variable pasa a ser falsa    
     });
-    hideForm();
+    return validate;
 }
