@@ -6,7 +6,8 @@ const media = {
             "image": "poster.jpg",
             "text": "Tutorial basico para descargar chrome",
             "num_rep": 25,
-            "description": "La forma mas facil de descargar chrome en 2020 mediante mega"
+            "description": "La forma mas facil de descargar chrome en 2020 mediante mega",
+            "media": "movie_clip1.mp4"
         },
         {
             "id": "movie_clip2",
