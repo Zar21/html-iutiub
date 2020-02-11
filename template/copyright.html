@@ -72,37 +72,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<div class="signup">
 											<form>
-												<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
-											</form>
-											<div class="continue-button">
-												<a href="#small-dialog3" class="hvr-shutter-out-horizontal play-icon popup-with-zoom-anim">CONTINUE</a>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>	
-									<div id="small-dialog3" class="mfp-hide">
-										<h3>Create Account</h3> 
-										<div class="social-sits">
-											<div class="facebook-button">
-												<a href="#">Connect with Facebook</a>
-											</div>
-											<div class="chrome-button">
-												<a href="#">Connect with Google</a>
-											</div>
-											<div class="button-bottom">
-												<p>Already have an account? <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Login</a></p>
-											</div>
-										</div>
-										<div class="signup">
-											<form>
-												<input type="text" class="email" placeholder="Email" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Enter a valid email"/>
-												<input type="password" placeholder="Password" required="required" pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
-												<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
+												<div class="form-group row">
+													<!-- etiqueta del form, ocupa 2 en dispositvs medianos -->
+													<label class="col-sm-2 col-form-label" for="registerName">Nombre:</label>
+													<!-- ocupa 10 columnas en medianos, elemento de formulario -->
+													<input id="registerName" type="text" required class="col-sm-10 input_res form-control" placeholder="Introduce tu nombre..." />
+													<!--La clase de error muestra el texto en color rojo y se usa de manera generica en todos los errores de la web-->
+													<!--La clase hidden oculta el elemento ya que el error solo se debe de mostrar en caso de que el campo no sea correcto-->
+													<div hidden class="error hidden">
+														<!--Muestra el contenido si existe algun error-->
+														El nombre no es correcto
+													</div>
+												</div>
+												<br>
+												<!--Campo de texto donde hay que introducir el correo de la nueva cuenta de usuario-->
+												 <!-- grupo de elementos de formulario, ocupa una fila -->
+												<div class="form-group row">
+													<!-- etiqueta del form, ocupa 2 en dispositvs medianos -->
+													<label class="col-sm-2 col-form-label" for="registerEmail">Correo:</label>
+													<!-- ocupa 10 columnas en medianos, elemento de formulario -->
+													<input id="registerEmail" type="email" required class="col-sm-10 form-control input_res" placeholder="Correo Electronico" />
+													<div hidden class="error hidden">
+														El correo no es correcto
+													</div>
+												</div>
+												<br>
+												<!-- MISMAS CLASSES QUE EN EL ANTERIOR GRUPO -->
+												<!--Campo de texto donde hay que introducir la contraseña de la nueva cuenta de usuario-->
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label" for="registerPassword">Contraseña:</label>
+													<input id="registerPassword" type="password" pattern=".{6,}" title="Mínimo 6 caracteres" required class="col-sm-10 form-control input_res" placeholder="Contraseña" />
+													<div hidden class="error hidden">
+														La contraseña no es correcta
+													</div>
+												</div>
+												<br>
+												<!--Campo de texto donde hay que repetir la contraseña introducida anteriormente-->
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label" for="registerRepeatPassword">Repite la contraseña:</label>
+													<input id="registerRepeatPassword" pattern=".{6,}" title="Mínimo 6 caracteres" class="col-sm-10 form-control input_res" type="password" required placeholder="Repite Contraseña" />
+													<div hidden class="error hidden">
+														La contraseña no coincide
+													</div>
+												</div>
+												<br>
+												<div class="form-group row">
+													<p class="col-sm-2 col-form-label">Selecciona el tipo de usuario</p>
+													<select class="col-sm-10 form-control">
+														<option>Publicador</option>
+														<option>Espectador</option>
+														<option>Administrador</option>
+													</select>
+													<div class="error">
+													</div>
+												</div>
+												<br>
 												<input type="submit"  value="Sign Up"/>
 											</form>
 										</div>
 										<div class="clearfix"> </div>
-									</div>	
+									</div>
 									<div id="small-dialog7" class="mfp-hide">
 										<h3>Create Account</h3> 
 										<div class="social-sits">

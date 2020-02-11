@@ -72,37 +72,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<div class="signup">
 											<form>
-												<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
-											</form>
-											<div class="continue-button">
-												<a href="#small-dialog3" class="hvr-shutter-out-horizontal play-icon popup-with-zoom-anim">CONTINUE</a>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>	
-									<div id="small-dialog3" class="mfp-hide">
-										<h3>Create Account</h3> 
-										<div class="social-sits">
-											<div class="facebook-button">
-												<a href="#">Connect with Facebook</a>
-											</div>
-											<div class="chrome-button">
-												<a href="#">Connect with Google</a>
-											</div>
-											<div class="button-bottom">
-												<p>Already have an account? <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Login</a></p>
-											</div>
-										</div>
-										<div class="signup">
-											<form>
-												<input type="text" class="email" placeholder="Email" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" title="Enter a valid email"/>
-												<input type="password" placeholder="Password" required="required" pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
-												<input type="text" class="email" placeholder="Mobile Number" maxlength="10" pattern="[1-9]{1}\d{9}" title="Enter a valid mobile number" />
+												<div class="form-group row">
+													<!-- etiqueta del form, ocupa 2 en dispositvs medianos -->
+													<label class="col-sm-2 col-form-label" for="registerName">Nombre:</label>
+													<!-- ocupa 10 columnas en medianos, elemento de formulario -->
+													<input id="registerName" type="text" required class="col-sm-10 input_res form-control" placeholder="Introduce tu nombre..." />
+													<!--La clase de error muestra el texto en color rojo y se usa de manera generica en todos los errores de la web-->
+													<!--La clase hidden oculta el elemento ya que el error solo se debe de mostrar en caso de que el campo no sea correcto-->
+													<div hidden class="error hidden">
+														<!--Muestra el contenido si existe algun error-->
+														El nombre no es correcto
+													</div>
+												</div>
+												<br>
+												<!--Campo de texto donde hay que introducir el correo de la nueva cuenta de usuario-->
+												 <!-- grupo de elementos de formulario, ocupa una fila -->
+												<div class="form-group row">
+													<!-- etiqueta del form, ocupa 2 en dispositvs medianos -->
+													<label class="col-sm-2 col-form-label" for="registerEmail">Correo:</label>
+													<!-- ocupa 10 columnas en medianos, elemento de formulario -->
+													<input id="registerEmail" type="email" required class="col-sm-10 form-control input_res" placeholder="Correo Electronico" />
+													<div hidden class="error hidden">
+														El correo no es correcto
+													</div>
+												</div>
+												<br>
+												<!-- MISMAS CLASSES QUE EN EL ANTERIOR GRUPO -->
+												<!--Campo de texto donde hay que introducir la contraseña de la nueva cuenta de usuario-->
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label" for="registerPassword">Contraseña:</label>
+													<input id="registerPassword" type="password" pattern=".{6,}" title="Mínimo 6 caracteres" required class="col-sm-10 form-control input_res" placeholder="Contraseña" />
+													<div hidden class="error hidden">
+														La contraseña no es correcta
+													</div>
+												</div>
+												<br>
+												<!--Campo de texto donde hay que repetir la contraseña introducida anteriormente-->
+												<div class="form-group row">
+													<label class="col-sm-2 col-form-label" for="registerRepeatPassword">Repite la contraseña:</label>
+													<input id="registerRepeatPassword" pattern=".{6,}" title="Mínimo 6 caracteres" class="col-sm-10 form-control input_res" type="password" required placeholder="Repite Contraseña" />
+													<div hidden class="error hidden">
+														La contraseña no coincide
+													</div>
+												</div>
+												<br>
+												<div class="form-group row">
+													<p class="col-sm-2 col-form-label">Selecciona el tipo de usuario</p>
+													<select class="col-sm-10 form-control">
+														<option>Publicador</option>
+														<option>Espectador</option>
+														<option>Administrador</option>
+													</select>
+													<div class="error">
+													</div>
+												</div>
+												<br>
 												<input type="submit"  value="Sign Up"/>
 											</form>
 										</div>
 										<div class="clearfix"> </div>
-									</div>	
+									</div>
 									<div id="small-dialog7" class="mfp-hide">
 										<h3>Create Account</h3> 
 										<div class="social-sits">
@@ -230,6 +259,85 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="upload">
 			<!-- container -->
 			<div class="container">
+				<!-- fieldset que agrupara todo ell formulario de información -->
+				<form id="subir-multimedia" name="subir-multimedia" method="POST" enctype="multipart/form-data">
+					<fieldset class="border p-2 container p-5">
+						<!-- leyenda del fieldset -->
+						<legend class="w-auto h2 loginheader py-3">Subir multimedia</legend>
+						<!-- formulario donde se introducirán los datos del video -->
+						<!-- aqui se introduciran el título del video -->
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label" for="subir-titulo">Título</label>
+							<!-- input donde irá el título -->
+							<input id="subir-titulo" type="text" autofocus class="col-sm-10 input_res form-control" />
+							<!-- aqui se mostrarán los errores si los hubiera -->
+							<div class="text-danger d-none hidden">
+								Debes introducir un título
+							</div>
+						</div>
+						<!-- introducción de los comentarios del video -->
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label" for="subir-comentarios">Comentarios</label>
+							<!-- textarea donde se introducirán los comentarios, con 4 filas y 40 columnas -->
+							<textarea id="subir-comentarios" placeholder="Escribe..." class="textarea col-sm-10 input_res form-control"></textarea>
+							<!-- aqui se mostrarán los errores si los hubiera -->
+							<div class="text-danger d-none hidden">
+								Este comentario no esta permitido
+							</div>
+						</div>
+						<!-- introducción de las categorias del video -->
+						<div class="form-group row">
+							<p class="col-sm-2 col-md-12 col-form-label">Categorías</p>
+							<!-- Checkboxes -->
+							<div class="checkboxes row">
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-todos" type="checkbox" value="todos" />
+									<label class="form-check-label" for="subir-checkbox-todos">Todos</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-deportes" type="checkbox" value="deportes" /><label class="form-check-label"
+									for="subir-checkbox-deportes">Deportes</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-educacion" type="checkbox" value="educación" /><label class="form-check-label"
+									for="subir-checkbox-educacion">Educación</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-humor" type="checkbox" value="humor" />
+									<label class="form-check-label"
+									for="subir-checkbox-humor">Humor</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-noticias" type="checkbox" value="noticias" /><label class="form-check-label"
+									for="subir-checkbox-noticias">Noticias</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-tiempo" type="checkbox" value="tiempo-libre" /><label class="form-check-label"
+									for="subir-checkbox-tiempo">Tiempo
+										libre</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-otros" type="checkbox" value="otros" /><label class="form-check-label"
+									for="subir-checkbox-otros">Otros</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-aleatorio" type="checkbox" value="aleatorio" /><label class="form-check-label"
+									for="subir-checkbox-aleatorio">Aleatorio</label>
+								</div>
+							</div>
+							<!-- aqui se mostrarán los errores si los hubiera -->
+							<div class="text-danger d-none hidden">
+								Debes seleccionar una categoria
+							</div>
+						</div>
+					</fieldset>
 				<div class="upload-grids">
 					<div class="upload-right">
 						<div class="upload-file">
@@ -244,52 +352,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<p>Drag and drop files</p>
 						</div>
 					</div>
-					<div class="upload-right-bottom-grids">
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Help and Suggestions</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Import videos</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-4 upload-right-bottom-left">
-							<h4>Live streaming</h4>
-							<div class="upload-right-top-list">
-								<ul>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Fusce egestas tincidunt massa</a></li>
-									<li><a href="#">Pellentesque vehicula quis tellus</a></li>
-									<li><a href="#">Etiam gravida feugiat tortor eget eleifend</a></li>
-									<li><a href="#">Etiam iaculis facilisis metus a viverra</a></li>
-									<li><a href="#">Fusce sed enim non orci molestie</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
 					</div>
-				</div>
+					<!-- botón de subir archivo -->
+					<button class="btn btn-primary" type="submit" value="Subir">Subir</button>
+					<!-- boton de reset -->
+					<button class="btn btn-primary" type="reset" value="Resetear">Resetear</button>
+				</form>
 			</div>
 			<!-- //container -->
 		</div>
