@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>My Play a Entertainment Category Flat Bootstrap Responsive Website Template | Privacy :: w3layouts</title>
+<title>My Play a Entertainment Category Flat Bootstrap Responsive Website Template | Upload :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="My Play Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><h1><img src="images/logo.png" alt="" /></h1></a>
+          <a class="navbar-brand" href="index.html"><h1 class="text-primary">iUTiUB</h1></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
@@ -255,250 +255,116 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"> </div>
       </div>
     </nav>
-        <div class="col-sm-3 col-md-2 sidebar">
-			<div class="top-navigation">
-				<div class="t-menu">MENU</div>
-				<div class="t-img">
-					<img src="images/lines.png" alt="" />
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-				<div class="drop-navigation drop-navigation">
-				  <ul class="nav nav-sidebar">
-					<li><a href="index.html" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-					<li><a href="shows.html" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>TV Shows</a></li>
-					<li><a href="history.html" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>History</a></li>
-					<li><a href="#" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>Movies<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
-						<ul class="cl-effect-2">
-							<li><a href="movies.html">English</a></li>                                             
-							<li><a href="movies.html">Chinese</a></li>
-							<li><a href="movies.html">Hindi</a></li> 
-						</ul>
-						<!-- script-for-menu -->
-						<script>
-							$( "li a.menu1" ).click(function() {
-							$( "ul.cl-effect-2" ).slideToggle( 300, function() {
-							// Animation complete.
-							});
-							});
-						</script>
-					<li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>Sports<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
-						<ul class="cl-effect-1">
-							<li><a href="sports.html">Football</a></li>                                             
-							<li><a href="sports.html">Cricket</a></li>
-							<li><a href="sports.html">Tennis</a></li> 
-							<li><a href="sports.html">Shattil</a></li>  
-						</ul>
-						<!-- script-for-menu -->
-						<script>
-							$( "li a.menu" ).click(function() {
-							$( "ul.cl-effect-1" ).slideToggle( 300, function() {
-							// Animation complete.
-							});
-							});
-						</script>
-					<li><a href="movies.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>Songs</a></li>
-					<li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>News</a></li>
-				  </ul>
-				  <!-- script-for-menu -->
-						<script>
-							$( ".top-navigation" ).click(function() {
-							$( ".drop-navigation" ).slideToggle( 300, function() {
-							// Animation complete.
-							});
-							});
-						</script>
-					<div class="side-bottom">
-						<div class="side-bottom-icons">
-							<ul class="nav2">
-								<li><a href="#" class="facebook"> </a></li>
-								<li><a href="#" class="facebook twitter"> </a></li>
-								<li><a href="#" class="facebook chrome"> </a></li>
-								<li><a href="#" class="facebook dribbble"> </a></li>
-							</ul>
+		<!-- upload -->
+		<div class="upload">
+			<!-- container -->
+			<div class="container">
+				<!-- fieldset que agrupara todo ell formulario de información -->
+				<form id="subir-multimedia" name="subir-multimedia" method="POST" enctype="multipart/form-data">
+					<fieldset class="border p-2 container p-5">
+						<!-- leyenda del fieldset -->
+						<legend class="w-auto h2 loginheader py-3">Subir multimedia</legend>
+						<!-- formulario donde se introducirán los datos del video -->
+						<!-- aqui se introduciran el título del video -->
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label" for="subir-titulo">Título</label>
+							<!-- input donde irá el título -->
+							<input id="subir-titulo" type="text" autofocus class="col-sm-10 input_res form-control" />
+							<!-- aqui se mostrarán los errores si los hubiera -->
+							<div class="text-danger d-none hidden">
+								Debes introducir un título
+							</div>
 						</div>
-						<div class="copyright">
-							<p>Copyright © 2015 My Play. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+						<!-- introducción de los comentarios del video -->
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label" for="subir-comentarios">Comentarios</label>
+							<!-- textarea donde se introducirán los comentarios, con 4 filas y 40 columnas -->
+							<textarea id="subir-comentarios" placeholder="Escribe..." class="textarea col-sm-10 input_res form-control"></textarea>
+							<!-- aqui se mostrarán los errores si los hubiera -->
+							<div class="text-danger d-none hidden">
+								Este comentario no esta permitido
+							</div>
 						</div>
-					</div>
-				</div>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<div class="show-top-grids">
-				<div class="main-grids news-main-grids">
-					<div class="recommended-info">
-						<h3>Data Security and Privacy Policy	</h3>
-						<p class="history-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus efficitur, eros 
-							sed suscipit porttitor, diam felis tempus odio, eget sollicitudin purus sem sit amet dolor. Integer euismod 
-							non mauris commodo rutrum. Nulla risus felis, rhoncus vel est sed, consequat efficitur ante. Phasellus mi 
-							sapien, accumsan vitae lobortis vitae, laoreet dapibus metus. Pellentesque id ipsum vel nibh imperdiet 
-							imperdiet ac ac mauris. Suspendisse ac leo augue. Nullam venenatis massa ut pulvinar scelerisque. Duis vel 
-							vehicula urna. Quisque semper vitae lectus a feugiat. Sed dignissim egestas nunc, nec suscipit mauris 
-							interdum lobortis.
-						</p>
-						<div class="terms-info">
-							<div class="terms-info-grid">
-								<h3>1. Personal information</h3>
-								<p>Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-									volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-									feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-								</p>
-								<ol>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-								</ol>
+						<!-- introducción de las categorias del video -->
+						<div class="form-group row">
+							<p class="col-sm-2 col-md-12 col-form-label">Categorías</p>
+							<!-- Checkboxes -->
+							<div class="checkboxes row">
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-todos" type="checkbox" value="todos" />
+									<label class="form-check-label" for="subir-checkbox-todos">Todos</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-deportes" type="checkbox" value="deportes" /><label class="form-check-label"
+									for="subir-checkbox-deportes">Deportes</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-educacion" type="checkbox" value="educación" /><label class="form-check-label"
+									for="subir-checkbox-educacion">Educación</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-humor" type="checkbox" value="humor" />
+									<label class="form-check-label"
+									for="subir-checkbox-humor">Humor</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-noticias" type="checkbox" value="noticias" /><label class="form-check-label"
+									for="subir-checkbox-noticias">Noticias</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-tiempo" type="checkbox" value="tiempo-libre" /><label class="form-check-label"
+									for="subir-checkbox-tiempo">Tiempo
+										libre</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-otros" type="checkbox" value="otros" /><label class="form-check-label"
+									for="subir-checkbox-otros">Otros</label>
+								</div>
+	
+								<div class="ckbx col-md-6 form-check">
+									<input class="form-check-input" id="subir-checkbox-aleatorio" type="checkbox" value="aleatorio" /><label class="form-check-label"
+									for="subir-checkbox-aleatorio">Aleatorio</label>
+								</div>
 							</div>
-							<div class="terms-info-grid">
-								<h3>2. Other information</h3>
-								<p>Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-									volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-									feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.Mauris 
-									cursus rhoncus feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum 
-									sit amet. Curabitur vel neque vel sapien pulvinar placerat. Cras eget leo id risus vestibulum 
-									dapibus. Class aptent taciti sociosqu 
-								</p>
-								<ol>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-								</ol>
+							<!-- aqui se mostrarán los errores si los hubiera -->
+							<div class="text-danger d-none hidden">
+								Debes seleccionar una categoria
 							</div>
-							<div class="terms-info-grid">
-								<h3>3. Use of information</h3>
-								<p>Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-									volutpat rhoncus, lectus sem tincidunt mauris, Mauris cursus rhoncus feugiat. Proin quis 
-									nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet. Curabitur vel neque vel 
-									sapien pulvinar placerat. Cras eget leo id risus vestibulum dapibus. Class aptent taciti sociosqu eu 
-									pretium neque urna nec lorem. Mauris cursus rhoncus Nulla eleifend velit neque, id cursus erat interdum sit amet.
-								</p>
-								<ol>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-								</ol>
+						</div>
+					</fieldset>
+				<div class="upload-grids">
+					<div class="upload-right">
+						<div class="upload-file">
+							<div class="services-icon">
+								<span class="glyphicon glyphicon-open" aria-hidden="true"></span>
 							</div>
-							<div class="terms-info-grid">
-								<h3>4. Cookies</h3>
-								<p>Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-									volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-									feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.lectus 
-									sem tincidunt mauris, Mauris cursus rhoncus feugiat.
-								</p>
-								<ol>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-								</ol>
-							</div>
-							<div class="terms-info-grid">
-								<h3>5. Vivamus pharetra ante convallis</h3>
-								<p>Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-									volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-									feugiat. Proin quis nisl augue. Nulla eleifend velit neque, Vivamus pharetra, ante convallis aliquam sodales, 
-									arcu dolor consectetur eros, a consequat nisl risus sit amet nuncVivamus pharetra, ante convallis aliquam sodales, 
-									arcu dolor consectetur eros, a consequat nisl risus sit amet nuncVivamus pharetra, ante convallis aliquam sodales, 
-									arcu dolor consectetur eros, a consequat nisl risus sit amet nuncid cursus erat interdum sit amet.
-								</p>
-							</div>
-							<div class="terms-info-grid">
-								<h3>6. Security</h3>
-								<ol>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-									<li><p class="terms-info-text">Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-											volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-											feugiat. Proin quis nisl augue. Nulla eleifend velit neque, id cursus erat interdum sit amet.
-										</p>
-									</li>
-								</ol>
-							</div>
-							<div class="terms-info-grid">
-								<h3>7. Access and alteration</h3>
-								<p>Pellentesque consequat ligula dui, in aliquam libero pellentesque sit amet. Ut viverra, urna vitae 
-									volutpat rhoncus, lectus sem tincidunt mauris, eu pretium neque urna nec lorem. Mauris cursus rhoncus 
-									feugiat. Proin quis nisl augue. Vivamus pharetra, ante convallis aliquam sodales, arcu dolor consectetur 
-									eros, a consequat nisl risus sit amet nuncNulla eleifend velit neque, id cursus erat interdum sit amet.
-								</p>
-							</div>
+							<input type="file" value="Choose file..">
+						</div>
+						<div class="upload-info">
+							<h5>Select files to upload</h5>
+							<span>or</span>
+							<p>Drag and drop files</p>
 						</div>
 					</div>
-				</div>
+					</div>
+					<!-- botón de subir archivo -->
+					<button class="btn btn-primary" type="submit" value="Subir">Subir</button>
+					<!-- boton de reset -->
+					<button class="btn btn-primary" type="reset" value="Resetear">Resetear</button>
+				</form>
 			</div>
+			<!-- //container -->
+		</div>
+		<!-- //upload -->
 			<!-- footer -->
 			<div class="footer">
-				<div class="footer-grids">
+				<div class="container">
 					<div class="footer-top">
 						<div class="footer-top-nav">
 							<ul>
@@ -517,6 +383,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="#small-dialog4" class="play-icon popup-with-zoom-anim">Send feedback</a></li>
 								<li><a href="privacy.html">Policy & Safety </a></li>
 								<li><a href="try.html">Try something new!</a></li>
+								<li><p>Copyright © 2015 My Play. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p></li>
 							</ul>
 						</div>
 					</div>
@@ -844,7 +711,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<!-- //footer -->
-		</div>
 		<div class="clearfix"> </div>
 	<div class="drop-menu">
 		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">

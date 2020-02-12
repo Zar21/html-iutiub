@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="index.html">
-					<h1><img src="images/logo.png" alt="" /></h1>
+					<h1 class="text-primary">iUTiUB</h1>
 				</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
@@ -321,17 +321,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						Videos
 						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
 					</a>
+					<ul class="cl-effect-2">
+						<li><a href="videos.html">Todos</a></li>
+						<li><a href="videos.html">Deportes</a></li>
+						<li><a href="videos.html">Educación</a></li>
+						<li><a href="videos.html">Humor</a></li>
+						<li><a href="videos.html">Noticias</a></li>
+						<li><a href="videos.html">Tiempo libre</a></li>
+						<li><a href="videos.html">Otros</a></li>
+						<li><a href="videos.html">Aleatorio</a></li>
+					</ul>
 				</li>
-				<ul class="cl-effect-2">
-					<li><a href="videos.html">Todos</a></li>
-					<li><a href="videos.html">Deportes</a></li>
-					<li><a href="videos.html">Educación</a></li>
-					<li><a href="videos.html">Humor</a></li>
-					<li><a href="videos.html">Noticias</a></li>
-					<li><a href="videos.html">Tiempo libre</a></li>
-					<li><a href="videos.html">Otros</a></li>
-					<li><a href="videos.html">Aleatorio</a></li>
-				</ul>
 				<!-- script-for-menu -->
 				<script>
 					$("li a.menu1").click(function () {
@@ -351,17 +351,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						Audios
 						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
 					</a>
+					<ul class="cl-effect-2_audios">
+						<li><a href="audios.html">Todos</a></li>
+						<li><a href="audios.html">Deportes</a></li>
+						<li><a href="audios.html">Educación</a></li>
+						<li><a href="audios.html">Humor</a></li>
+						<li><a href="audios.html">Noticias</a></li>
+						<li><a href="audios.html">Tiempo libre</a></li>
+						<li><a href="audios.html">Otros</a></li>
+						<li><a href="audios.html">Aleatorio</a></li>
+					</ul>
 				</li>
-				<ul class="cl-effect-2_audios">
-					<li><a href="audios.html">Todos</a></li>
-					<li><a href="audios.html">Deportes</a></li>
-					<li><a href="audios.html">Educación</a></li>
-					<li><a href="audios.html">Humor</a></li>
-					<li><a href="audios.html">Noticias</a></li>
-					<li><a href="audios.html">Tiempo libre</a></li>
-					<li><a href="audios.html">Otros</a></li>
-					<li><a href="audios.html">Aleatorio</a></li>
-				</ul>
 				<!-- script-for-menu -->
 				<script>
 					$("ul.cl-effect-2_audios").slideToggle(0) // close on start
@@ -380,17 +380,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="#" class="menu_multim">
 						<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
 						Mi multimedia
+						<!-- icono fletxa de desplegar -->
 						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
 					</a>
+					<!-- menu desplegable -->
+					<ul class="cl-effect-1_multim">
+						<li><a href="misVideos.html">Videos</a></li>
+						<li><a href="misAudios.html">Audios</a></li>
+					</ul>
 				</li>
-				<ul class="cl-effect-1_multim">
-					<li><a href="misVideos.html">Videos</a></li>
-					<li><a href="misAudios.html">Audios</a></li>
-				</ul>
-				<!-- script-for-menu -->
+
+				<!-- script para controlar el comportamiento de los desplegables-->
 				<script>
 					$("ul.cl-effect-1_multim").slideToggle(0) // close on start
 					$("li a.menu_multim").click(function () {
+						// al pulsar en el menu alterna entre plegado y desplegado
 						$("ul.cl-effect-1_multim").slideToggle(300, function () {
 							// Animation complete.
 						});
@@ -406,15 +410,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="#" class="menu">
 						<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
 						Lista de reproducción
-						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+						<!-- icono fletxa de desplegar -->
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+					</a>
+					<!-- menu desplegable -->
+					<ul class="cl-effect-1">
+						<li><a href="lrVideos.html">Videos</a></li>
+						<li><a href="lrAudios.html">Audios</a></li>
+					</ul>
 				</li>
-				<ul class="cl-effect-1">
-					<li><a href="lrVideos.html">Videos</a></li>
-					<li><a href="lrAudios.html">Audios</a></li>
-				</ul>
-				<!-- script-for-menu -->
+
+				<!-- script para controlar el comportamiento de los desplegables-->
 				<script>
 					$("li a.menu").click(function () {
+						// al pulsar en el menu alterna entre plegado y desplegado
 						$("ul.cl-effect-1").slideToggle(300, function () {
 							// Animation complete.
 						});
@@ -434,8 +443,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>
 
 
-
-
 				<!-- TAB SUBIR MULTIMEDIA -->
 				<li>
 					<a href="subirVideos.html">
@@ -445,43 +452,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</a>
 				</li>
 
-
-
-
 				<!-- TAB ADMINISTRACIÓN -->
 				<li>
 					<a href="#" class="menu_admin">
 						<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
 						Administración
+						<!-- icono fletxa de desplegar -->
 						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
 					</a>
+					<!-- menu desplegable -->
+					<ul class="cl-effect-1_admin">
+						<li><a href="adminUsuarios.html">Usuarios</a></li>
+						<li><a href="adminVideos.html">Videos</a></li>
+						<li><a href="adminAudios.html">Audios</a></li>
+					</ul>
 				</li>
-				<ul class="cl-effect-1_admin">
-					<li><a href="adminUsuarios.html">Usuarios</a></li>
-					<li><a href="adminVideos.html">Videos</a></li>
-					<li><a href="adminAudios.html">Audios</a></li>
-				</ul>
-				<!-- script-for-menu -->
+				
+				<!-- script para controlar el comportamiento de los desplegables-->
 				<script>
 					$("ul.cl-effect-1_admin").slideToggle(0) // close on start
 					$("li a.menu_admin").click(function () {
+						// al pulsar en el menu alterna entre plegado y desplegado
 						$("ul.cl-effect-1_admin").slideToggle(300, function () {
 							// Animation complete.
 						});
 					});
 				</script>
 
-
-
-
-
 				<!-- TAB INFORMACIÓN -->
 				<li>
-					<a href="about.html" >
+					<a href="about.html">
 						<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-							Información
-						</a>
-					</li>
+						Información
+					</a>
+				</li>
 			</ul>
 			<!-- script-for-menu -->
 			<script>
@@ -518,57 +522,78 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 		<div class="main-grids">
-			<h1>Bienvenido a <span class="text-primary">iUTiUB</span></h1>
-			<h2 class="text-muted">Te presentamos las características del nuevo <span class="text-primary">iUTiUB</span>
-			</h2>
-			<!-- Sprites -->
-			<div class="row features row justify-content-around">
-
-				<h3 class="col-md-6 my-4 regularWeight">
-					<!-- icono de buscar utilizando la librería fontawesome -->
-					<i class="h2"></i> Encuentra rápidamente los contenidos que desees
-				</h3>
-
-
-				<h3 class="col-md-6 my-4 ">
-					<!-- icono de pantalla utilizando la librería fontawesome -->
-					<i class="h2"></i> Disfruta de los mejores contenidos de vídeo bajo demanda
-				</h3>
-
-				<h3 class="col-md-6 my-4 ">
-					<!-- icono de torre utilizando la librería fontawesome -->
-					<i class="h2"></i> Disfruta de vídeo en directo
-				</h3>
-
-				<h3 class="col-md-6 my-4 ">
-					<!-- icono de subir utilizando la librería fontawesome -->
-					<i class="h2"></i> Puedes subir achivos de áudio y vídeo y compartirlo
-					con
-					el resto del múndo
-				</h3>
-
-				<h3 class="col-md-6 my-4 ">
-					<!-- icono de archivo de vídeo utilizando la librería fontawesome -->
-					<i class="h2"></i> Usted encontrará sus propios vídeos y audios en sus
-					pestañas correspondientes a la izquierda de la página
-				</h3>
-				<h3 class="col-md-6 my-4 ">
-					<!-- icono de vídeo utilizando la librería fontawesome -->
-					<i class="h2"></i> Encuentre sus vídeos y audios favoritos por categoría
-				</h3>
-				<!-- Imagenes en sprite -->
-				<div class="col-md-12 bg row">
-					<div class="col-md-4">
-						<div class="bg-video"></div>
-					</div>
-					<div class="col-md-4">
-						<div class="bg-audio"></div>
-					</div>
-					<div class="col-md-4">
-						<div class="bg-video"></div>
-					</div>
-				</div>
-			</div>
+			<h3>Administración de usuarios</h3>
+            <!-- %USER% es una variable en la que iría el nombre del usuario -->
+            <!-- texto en gris claro -->
+            <h3 class="text-muted">%USER%, bienvenido a <span class="text-primary">iUTiUB</span></h3>
+            <form>
+                <!-- zona de busqueda -->
+                <fieldset class="search-field">
+                    <legend>Buscar</legend>
+                    <div>
+                        <!-- texto en gris claro -->
+                        <label for="input_res">Introduce parte del alias del
+                            usuario</label>
+                        <!-- boton de color gris -->
+                        <button class="btn btn-secondary" type="submit">
+                            Buscar</button>
+                        <!-- 8 columnas en escritorio, 10 en otras resoluciones, elemento de foormulario -->
+                        <input id="input_res" type="search" class="col-10 col-md-8 input_res form-control"><br />
+                        <!-- texto en rojo, ocupa 12 columnas -->
+                        <div hidden class="col-12 text-danger">
+                            Error
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- zona de la tabla de datos -->
+            <div>
+                <!-- tabla a rayas -->
+                <table class="table table-striped">
+                    <!--Cabezera de la tabla -->
+                    <thead>
+                        <!-- fila -->
+                        <tr class="row">
+                            <!-- en escritorio ocupara 4 columnas -->
+                            <th class="col-md-4 text-break">Nombre</th>
+                            <!-- en escritorio ocupara 4 columnas -->
+                            <th class="col-md-4 text-break">Correo</th>
+                            <!-- en escritorio ocupara 2 columnas -->
+                            <th class="col-md-2 text-break">Contraseña</th>
+                            <!-- en escritorio ocupara 2 columnas -->
+                            <th class="col-md-2 text-break">Tipo</th>
+                        </tr>
+                    </thead>
+                    <!-- Cuerpo de la tabla -->
+                    <!-- MISMAS CLASSES QUE EN EL THEAD -->
+                    <tbody>
+                        <tr class="row">
+                            <td class="col-md-4 text-break">hildickethan</td>
+                            <td class="col-md-4 text-break">hildickethan@gmail.com</td>
+                            <td class="col-md-2 text-break">hildickethan</td>
+                            <td class="col-md-2 text-break">Administrador</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-md-4 text-break">jordillopis00</td>
+                            <td class="col-md-4 text-break">jordillopis00@gmail.com</td>
+                            <td class="col-md-2 text-break">jordillopis00</td>
+                            <td class="col-md-2 text-break">Administrador</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-md-4 text-break">ivanperezfita</td>
+                            <td class="col-md-4 text-break">ivanperezfita@gmail.com</td>
+                            <td class="col-md-2 text-break">ivanperezfita</td>
+                            <td class="col-md-2 text-break">Administrador</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="col-md-4 text-break">raulojeda10g</td>
+                            <td class="col-md-4 text-break">raulojeda10g@gmail.com</td>
+                            <td class="col-md-2 text-break">raulojeda10g</td>
+                            <td class="col-md-2 text-break">Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 		</div>
 		<!-- footer -->
 		<div class="footer">

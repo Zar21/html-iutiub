@@ -167,7 +167,8 @@ ul.nav.nav-sidebar li a {
 }
 
 .main-grids {
-	padding: 0 0 1em 1em;
+    padding: 0 0 1em 1em;
+    min-height: 80vh;
 }
 
 .sidebar ul.nav-sidebar li a:hover {
@@ -222,7 +223,7 @@ ul.cl-effect-1, ul.cl-effect-2 {
 	text-decoration: none;
 }
 
-.glyphicon-film, .glyphicon-picture, .glyphicon-list, .glyphicon-facetime-video, .glyphicon-cloud-upload, .glyphicon-wrench, .glyphicon-info-sign {
+.glyphicon-film,.glyphicon-picture, .glyphicon-list, .glyphicon-facetime-video, .glyphicon-cloud-upload, .glyphicon-wrench, .glyphicon-info-sign {
 	margin: 0 2em 0 0;
 	font-size: 16px;
 }
@@ -3181,4 +3182,17 @@ span.glyphicon.glyphicon-user {
 	background: url('../images/css_sprites.png') -656px -10px;
 	margin: 0 auto;
 	position: relative;
+}
+
+.main-grids .row.features.justify-content-around {
+    margin-right: 0;
+}
+
+.index-glyph {
+	margin-right: 0;
+	font-size: 30px;
+}
+
+.text-light {
+	color: white;
 }
