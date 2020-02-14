@@ -1,323 +1,487 @@
-<!DOCTYPE html>
-<html lang="es" class="h-100">
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="es">
 
 <head>
-    <!-- Para que la codificación de la página sea UTF-8 -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>iUTiUB</title>
-    <!-- Ficheros de CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <!-- Librería para iconos -->
-    <!-- La librería tiene algunos avisos de css -->
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <!-- Añadir favicon a la página -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<title>iUTiUB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="My Play Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script> addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); } </script>
+	<!-- bootstrap -->
+	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all" />
+	<!-- //bootstrap -->
+	<link href="css/dashboard.css" rel="stylesheet">
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' media="all" />
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!--start-smoth-scrolling-->
+	<!-- fonts -->
+	<link
+		href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+		rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<!-- //fonts -->
 </head>
 
-<!-- Raíz de la página -->
+<body>
 
-<body class="d-flex flex-column h-100">
-    <!-- Header -->
-    <!-- texto centrado -->
-    <header class="text-center">
-        <!-- navbar, expansible, oscuro, con fondo azul -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-            <!-- texto blanco sobre negro, sin decoracion, ocupa 6columnas, 2 en escritorios -->
-            <a class="h1 text-light text-decoration-none navbar-text col-6 col-md-2" href="index.html">iUTiUB</a>
-            <!-- ocupa 6 columnas, oculto en versiones de escritorio -->
-            <div class="col-6 d-md-none">
-                <!-- boton toggle del navbar -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLeft"
-                    aria-controls="navbarLeft" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- icon -->
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <!-- en escritorio ocupa 6 columnas -->
-            <div class="col col-md-6"></div>
-            <!-- elementos que seran colapsados, ocupa 3 en escritorio y 1 en el resto de resoluciones -->
-            <div class="navbar-collapse col col-md-3">
-                <!-- altura completa en el navbar -->
-                <ul class="navbar-nav">
-                    <!-- Botón de registro -->
-                    <!-- icono de usuario utilizando la librería fontawesome -->
-                    <!-- item del navbar, 4 unidades de padding a los lados -->
-                    <li class="nav-item px-4">
-                        <!-- link del navbar, texto blanco sobre negro -->
-                        <a class="nav-link text-light" href="register.html"><i class="fas fa-user-plus"></i>&nbsp;Nuevo
-                            Usuario</a>
-                    </li>
-                    <!-- Botón de iniciar sesión-->
-                    <!-- icono de sesión utilizando la librería fontawesome -->
-                    <!-- item del navbar, 4 unidades de padding a los lados -->
-                    <li class="nav-item px-4">
-                        <!-- link del navbar, texto blanco sobre negro -->
-                        <a class="nav-link text-light" href="login.html"><i class="fas fa-sign-in-alt"></i>&nbsp;Iniciar
-                            Sesión</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- flex, crecera 1, se encojera 0, se ocultara en resoluciones de escritorio -->
-    <main class="flex-grow-1 flex-shrink-0 d-md-flex">
-        <!-- Menú vertical izquierdo -->
-        <!-- navbar, se expandira en versiones de escritorio, oscuro, fondo negro, se alinia los elementos al inicio -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark align-items-start">
-            <!-- elementos que colapsaran -->
-            <div class="collapse navbar-collapse" id="navbarLeft">
-                <ul class="navbar-nav mr-auto d-md-flex flex-md-column">
-                    <!-- Búsqueda -->
-                    <!-- item del navbar -->
-                    <li class="nav-item">
-                        <!-- formulario de búsqueda -->
-                        <form method="GET" action="resultadosBusquedaGenerica.html">
-                            <!-- contenedor -->
-                            <div class="container">
-                                <!-- input text donde se introducirá la cadena de texto a buscar -->
-                                <!-- elemento de formulario, ocupa 8 columnas, 2 unidades de margen a la derecha -->
-                                <input size="15" type="search" list="busquedas" name="name"
-                                    class="form-control mr-2 col-8" placeholder="Buscar" />
-                                <!-- boton que realizará la búsqueda -->
-                                <!-- icono de buscar utilizando la librería fontawesome -->
-                                <!-- boton azul que ocupa 3 columnas -->
-                                <button type="submit" class="btn btn-primary col-3"><i
-                                        class="fas fa-search"></i></button>
-                            </div>
-                            <!-- aquí es donde se mostrarian los errores en caso de haberlos -->
-                            <!-- texto rojo, oculto -->
-                            <div class="text-danger d-none">
-                                Error
-                            </div>
-                            <!-- sugerencias de las categorías que se pueden buscar -->
-                            <datalist id="busquedas">
-                                <option value="Todos">Todos</option>
-                                <option value="Deportes">Deportes</option>
-                                <option value="Educación">Educación</option>
-                                <option value="Humor">Humor</option>
-                                <option value="Noticias">Noticias</option>
-                                <option value="Tiempo libre">Tiempo libre</option>
-                                <option value="Otros">Otros</option>
-                                <option value="Aleatorio">Aleatorio</option>
-                            </datalist>
-                        </form>
-                    </li>
-                    <!-- Desplegable del menú de vídeos -->
-                    <!-- Desplegable de categorias de vídeo -->
-                    <!-- dropdown, elemento del navbar -->
-                    <li class="nav-item dropdown">
-                        <!-- icono de vídeo utilizando la librería fontawesome -->
-                        <!-- una fila, link del navbar, toggle del dropdown -->
-                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-desktop"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Vídeos</span>
-                        </a>
-                        <!-- MISMAS CLASSES EN TODOS LOS DEPSLEGABLES -->
-                        <!-- desplegable -->
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            <!-- elemento dentro del desplegable -->
-                            <a class="dropdown-item" href="videos.html">Todos</a>
-                            <a class="dropdown-item" href="videos.html">Deportes</a>
-                            <a class="dropdown-item" href="videos.html">Educación</a>
-                            <a class="dropdown-item" href="videos.html">Humor</a>
-                            <a class="dropdown-item" href="videos.html">Noticias</a>
-                            <a class="dropdown-item" href="videos.html">Tiempo libre</a>
-                            <a class="dropdown-item" href="videos.html">Otros</a>
-                            <a class="dropdown-item" href="videos.html">Aleatorio</a>
-                        </div>
-                    </li>
-                    <!-- Desplegable del menú de audios -->
-                    <!-- Desplegable de categorias de audio -->
-                    <!-- item del navbar, es desplegable -->
-                    <li class="nav-item dropdown">
-                        <!-- icono de audio utilizando la librería fontawesome -->
-                        <!-- una fila, link del navbar, toggle del dropdown -->
-                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-volume-up"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Audios</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <a class="dropdown-item" href="audios.html">Todos</a>
-                            <a class="dropdown-item" href="audios.html">Deportes</a>
-                            <a class="dropdown-item" href="audios.html">Educación</a>
-                            <a class="dropdown-item" href="audios.html">Humor</a>
-                            <a class="dropdown-item" href="audios.html">Noticias</a>
-                            <a class="dropdown-item" href="audios.html">Tiempo libre</a>
-                            <a class="dropdown-item" href="audios.html">Otros</a>
-                            <a class="dropdown-item" href="audios.html">Aleatorio</a>
-                        </div>
-                    </li>
-                    <!-- Enlace a la página de multimedia -->
-                    <!-- Desplegable de categorias de multimedia -->
-                    <li class="nav-item dropdown">
-                        <!-- icono multimedia utilizando la librería fontawesome -->
-                        <!-- una fila, link del navbar, toggle del dropdown -->
-                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-file-video"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Mi multimedia</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                            <a class="dropdown-item" href="misVideos.html">Vídeos</a>
-                            <a class="dropdown-item" href="misAudios.html">Audios</a>
-                        </div>
-                    </li>
-                    <!-- Enlace a la página de lista de reproducción -->
-                    <!-- Desplegable de las listas de reproducción -->
-                    <li class="nav-item dropdown">
-                        <!-- icono lista utilizando la librería fontawesome -->
-                        <!-- una fila, link del navbar, toggle del dropdown -->
-                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-list-ul"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Lista de reproducción</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                            <a class="dropdown-item" href="lrVideos.html">Vídeos</a>
-                            <a class="dropdown-item" href="lrAudios.html">Audios</a>
-                        </div>
-                    </li>
-                    <!-- Enlace a la página de en directo -->
-                    <li class="nav-item">
-                        <!-- icono de vídeo utilizando la librería fontawesome -->
-                        <a class="row nav-link" href="directo.html">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-video"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Directo</span>
-                        </a>
-                    </li>
-                    <!-- Enlace a la página de subir vídeos -->
-                    <li class="nav-item">
-                        <!-- icono de subir archivo utilizando la librería fontawesome -->
-                        <a class="row nav-link" href="subirVideos.html">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-upload"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Subir multimedia</span>
-                        </a>
-                    </li>
-                    <!-- Enlace a la página de administración -->
-                    <!-- Desplegable del panel de administración -->
-                    <li class="nav-item dropdown">
-                        <!-- icono lista utilizando la librería fontawesome -->
-                        <!-- una fila, link del navbar, toggle del dropdown -->
-                        <a class="row nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-wrench"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Administración</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                            <a class="dropdown-item" href="adminUsuarios.html">Usuarios</a>
-                            <a class="dropdown-item" href="adminVideos.html">Videos</a>
-                            <a class="dropdown-item" href="adminAudios.html">Audios</a>
-                        </div>
-                    </li>
-                    <!-- Enlace a la página de información -->
-                    <li class="nav-item">
-                        <!-- icono de subir archivo utilizando la librería fontawesome -->
-                        <a class="row nav-link" href="informacion.html">
-                            <!-- ocupa 2 cols, texto centrado, h2 -->
-                            <i class="col-2 text-center h2 fas fa-info"></i>
-                            <!-- ocupa 10 cols -->
-                            <span class="col-10">Información</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Contenido de la página -->
-        <!-- container-fluid para que ocupe el width completo siendo responsive -->
-        <div id="content" class="container-fluid">
-            <h2>Bienvenido a <a>iUTiUB</a></h2>
-            <!-- centra el contingut -->
-            <div class="text-center">
-                <audio src="./multimedia/audio/movieCountdown.mp3" id="movieCountdown"></audio>
-                <canvas class='w-100' width="1200" height="800" id="countDown"></canvas>
-                <video class="w-100" controls="controls" id="play-video">
-                    <source id="videosource" src="./multimedia/video/movie_clip1.mp4" type="video/mp4" />
-                    Your browser does not support the video element.
-                </video>
-                <div class="video-buttons">
-                    <!-- botón play -->
-                    <!-- btn para hacer un boton y btn-success pera hacerlo verde -->
-                    <!-- mt-1 para poner 1 unidad de margen arriba -->
-                    <button class="mt-1 btn btn-success" id="play" onclick="startCountdown();">
-                        Play <i class="fas fa-play-circle"></i>
-                    </button>
-                    <!-- botón pause -->
-                    <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
-                    <!-- mt-1 para poner 1 unidad de margen arriba -->
-                    <button class="mt-1 btn btn-danger" id="pause" onclick="pauseVideo();">
-                        Pause <i class="fas fa-pause-circle"></i>
-                    </button>
-                    <!-- botón stop -->
-                    <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
-                    <!-- mt-1 para poner 1 unidad de margen arriba -->
-                    <button class="mt-1 btn btn-danger" id="stop" onclick="stopVideo()">
-                        Stop <i class="fas fa-stop-circle"></i>
-                    </button>
-                    <!-- botón avance -->
-                    <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
-                    <!-- mt-1 para poner 1 unidad de margen arriba -->
-                    <button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
-                        Avance 10 seconds <i class="fas fa-forward"></i>
-                    </button>
-                    <!-- botón retroceder -->
-                    <!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
-                    <!-- mt-1 para poner 1 unidad de margen arriba -->
-                    <button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
-                        Rewind 10 seconds <i class="fas fa-backward"></i>
-                    </button>
-                </div>
-                <!-- mt-3 para poner 3 unidades de margen arriba -->
-                <!-- bg-secondary para poner el fondo gris -->
-                <!-- text-white para poner el color de texto a blanco -->
-                <!-- card para especifcar que va a tener formato carta/tarjeta -->
-                <div class="mt-3 card bg-secondary text-white">
-                    <!-- card-body para para el cuerpo de la seccion con el texto centrado con text-center -->
-                    <div class="card-body text-center">
-                        <!-- especifcamos el texto con card-text -->
-                        <small class="card-text">Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit.
-                            Sed et lorem condimentum quam finibus consectetur et ac mauris. Donec non lorem eget
-                            risus laoreet rhoncus. Praesent gravida odio non nibh rutrum, quis convallis sem
-                            sagittis. Vestibulum cursus aliquet vulputate. Donec porttitor nibh efficitur nunc
-                            hendrerit, vel egestas quam volutpat. Curabitur molestie aliquam laoreet. Sed
-                            maximus et nulla in hendrerit. Vivamus vel sapien ac eros iaculis imperdiet in ac
-                            mauris. Etiam ac magna sapien. Ut massa risus, rutrum vulputate felis sit amet,
-                            consequat bibendum orci. Duis egestas a ex nec cursus. Etiam dapibus bibendum metus
-                            et posuere. </small></div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- Footer, con los nombres de los autores del proyecto -->
-    <!-- fondo gris oscuro, texto blanco sobre negro, 3 unidades de padding, no se encoje por flex  -->
-    <footer class="bg-dark text-light p-3 flex-shrink-0">
-        <div>Diseñado por Ethan, Raül, Iván y Jordi</div>
-    </footer>
-    <script src="js/layout.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- botón de navbar -->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- nombre de la página arriba a la izquierda -->
+				<a class="navbar-brand" href="index.html">
+					<span class="h1 text-primary">iUTiUB</span>
+				</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<!-- barra de búsqueda -->
+				<div class="top-search">
+					<form class="navbar-form navbar-right" action="resultadosBusquedaGenerica.html">
+						<input type="text" class="form-control" placeholder="Search...">
+						<input type="submit" value=" ">
+					</form>
+				</div>
+				<div class="header-top-right">
+					<div class="signin">
+						<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Sign Up</a>
+						<!-- pop-up-box -->
+						<script src="js/modernizr.custom.min.js"></script>
+						<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+						<script src="js/jquery.magnific-popup.js"></script>
+						<!--//pop-up-box -->
+						<div id="small-dialog2" class="mfp-hide">
+							<h3>Create Account</h3>
+							<div class="social-sits">
+								<div class="facebook-button">
+									<a href="#">Connect with Facebook</a>
+								</div>
+								<div class="chrome-button">
+									<a href="#">Connect with Google</a>
+								</div>
+								<div class="button-bottom">
+									<p>Already have an account? <a href="#small-dialog"
+											class="play-icon popup-with-zoom-anim">Login</a></p>
+								</div>
+							</div>
+							<!-- FORMULARIO DE REGISTRO -->
+							<div class="signup">
+								<form>
+									<div class="form-group row">
+										<!-- etiqueta del form, ocupa 2 en dispositvs medianos -->
+										<label class="col-sm-2 col-form-label" for="registerName">Nombre:</label>
+										<!-- ocupa 10 columnas en medianos, elemento de formulario -->
+										<input id="registerName" type="text" required
+											class="col-sm-10 input_res form-control"
+											placeholder="Introduce tu nombre..." />
+										<!--La clase de error muestra el texto en color rojo y se usa de manera generica en todos los errores de la web-->
+										<!--La clase hidden oculta el elemento ya que el error solo se debe de mostrar en caso de que el campo no sea correcto-->
+										<div hidden class="error hidden">
+											<!--Muestra el contenido si existe algun error-->
+											El nombre no es correcto
+										</div>
+									</div>
+									<br>
+									<!--Campo de texto donde hay que introducir el correo de la nueva cuenta de usuario-->
+									<!-- grupo de elementos de formulario, ocupa una fila -->
+									<div class="form-group row">
+										<!-- etiqueta del form, ocupa 2 en dispositvs medianos -->
+										<label class="col-sm-2 col-form-label" for="registerEmail">Correo:</label>
+										<!-- ocupa 10 columnas en medianos, elemento de formulario -->
+										<input id="registerEmail" type="email" required
+											class="col-sm-10 form-control input_res" placeholder="Correo Electronico" />
+										<div hidden class="error hidden">
+											El correo no es correcto
+										</div>
+									</div>
+									<br>
+									<!-- MISMAS CLASSES QUE EN EL ANTERIOR GRUPO -->
+									<!--Campo de texto donde hay que introducir la contraseña de la nueva cuenta de usuario-->
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label"
+											for="registerPassword">Contraseña:</label>
+										<input id="registerPassword" type="password" pattern=".{6,}"
+											title="Mínimo 6 caracteres" required
+											class="col-sm-10 form-control input_res" placeholder="Contraseña" />
+										<div hidden class="error hidden">
+											La contraseña no es correcta
+										</div>
+									</div>
+									<br>
+									<!--Campo de texto donde hay que repetir la contraseña introducida anteriormente-->
+									<div class="form-group row">
+										<label class="col-sm-2 col-form-label" for="registerRepeatPassword">Repite la
+											contraseña:</label>
+										<input id="registerRepeatPassword" pattern=".{6,}" title="Mínimo 6 caracteres"
+											class="col-sm-10 form-control input_res" type="password" required
+											placeholder="Repite Contraseña" />
+										<div hidden class="error hidden">
+											La contraseña no coincide
+										</div>
+									</div>
+									<br>
+									<!-- Select para el tipo de usuario -->
+									<div class="form-group row">
+										<p class="col-sm-2 col-form-label">Selecciona el tipo de usuario</p>
+										<select class="col-sm-10 form-control">
+											<option>Publicador</option>
+											<option>Espectador</option>
+											<option>Administrador</option>
+										</select>
+										<div class="error">
+										</div>
+									</div>
+									<br>
+									<input type="submit" value="Sign Up" />
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+
+						<script>
+							$(document).ready(function () {
+								$('.popup-with-zoom-anim').magnificPopup({
+									type: 'inline',
+									fixedContentPos: false,
+									fixedBgPos: true,
+									overflowY: 'auto',
+									closeBtnInside: true,
+									preloader: false,
+									midClick: true,
+									removalDelay: 300,
+									mainClass: 'my-mfp-zoom-in'
+								});
+
+							});
+						</script>
+					</div>
+					<!-- FORMULARIO DE LOGIN -->
+					<div class="signin">
+						<a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a>
+						<div id="small-dialog" class="mfp-hide">
+							<h3>Login</h3>
+							<div class="social-sits">
+								<div class="facebook-button">
+									<a href="#">Connect with Facebook</a>
+								</div>
+								<div class="chrome-button">
+									<a href="#">Connect with Google</a>
+								</div>
+								<div class="button-bottom">
+									<p>New account? <a href="#small-dialog2"
+											class="play-icon popup-with-zoom-anim">Signup</a></p>
+								</div>
+							</div>
+							<div class="signup">
+								<form>
+									<input type="text" class="email" placeholder="Enter email / mobile"
+										required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" />
+									<input type="password" placeholder="Password" required="required" pattern=".{6,}"
+										title="Minimum 6 characters required" autocomplete="off" />
+									<input type="submit" value="LOGIN" />
+								</form>
+								<div class="forgot">
+									<a href="#">Forgot password ?</a>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</nav>
+
+	<!-- barra lateral -->
+	<div class="col-sm-3 col-md-2 sidebar">
+		<div class="top-navigation">
+			<div class="t-menu">MENU</div>
+			<div class="t-img">
+				<img src="images/lines.png" alt="" />
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- vertical navbar -->
+		<div class="drop-navigation drop-navigation">
+
+			<ul class="nav nav-sidebar">
+
+				<!-- TAB INICIO  -->
+				<li>
+					<a href="index.html" class="home-icon">
+						<!-- Icono de casa -->
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+						Inicio
+					</a>
+
+				</li>
+
+
+				<!-- TAB VIDEOS -->
+				<li>
+					<a href="#" class="menu1">
+						<!-- icono video -->
+						<span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+						Videos
+						<!-- icono fletxa de desplegar -->
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+					</a>
+					<!-- menu desplegable -->
+					<ul class="cl-effect-2">
+						<li><a href="videos.html">Todos</a></li>
+						<li><a href="videos.html">Deportes</a></li>
+						<li><a href="videos.html">Educación</a></li>
+						<li><a href="videos.html">Humor</a></li>
+						<li><a href="videos.html">Noticias</a></li>
+						<li><a href="videos.html">Tiempo libre</a></li>
+						<li><a href="videos.html">Otros</a></li>
+						<li><a href="videos.html">Aleatorio</a></li>
+					</ul>
+				</li>
+
+				<!-- script para controlar el comportamiento de los desplegables-->
+				<script>
+					$("li a.menu1").click(function () {
+						// al pulsar en el menu alterna entre plegado y desplegado
+						$("ul.cl-effect-2").slideToggle(300, function () {
+							// Animation complete.
+						});
+					});
+				</script>
+
+
+
+
+				<!-- TAB AUDIOS -->
+				<li>
+					<a href="#" class="cl-effect-1_audio">
+						<span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+						Audios
+						<!-- icono fletxa de desplegar -->
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+					</a>
+					<!-- menu desplegable -->
+					<ul class="cl-effect-2_audios">
+						<li><a href="audios.html">Todos</a></li>
+						<li><a href="audios.html">Deportes</a></li>
+						<li><a href="audios.html">Educación</a></li>
+						<li><a href="audios.html">Humor</a></li>
+						<li><a href="audios.html">Noticias</a></li>
+						<li><a href="audios.html">Tiempo libre</a></li>
+						<li><a href="audios.html">Otros</a></li>
+						<li><a href="audios.html">Aleatorio</a></li>
+					</ul>
+				</li>
+
+				<!-- script para controlar el comportamiento de los desplegables-->
+				<script>
+					$("ul.cl-effect-2_audios").slideToggle(0) // close on start
+					$("li a.cl-effect-1_audio").click(function () {
+						// al pulsar en el menu alterna entre plegado y desplegado
+						$("ul.cl-effect-2_audios").slideToggle(300, function () {
+							// Animation complete.
+						});
+					});
+				</script>
+
+
+
+
+				<!-- TAB MI MULTIMEDIA -->
+				<li>
+					<a href="#" class="menu_multim">
+						<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+						Mi multimedia
+						<!-- icono fletxa de desplegar -->
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+					</a>
+					<!-- menu desplegable -->
+					<ul class="cl-effect-1_multim">
+						<li><a href="misVideos.html">Videos</a></li>
+						<li><a href="misAudios.html">Audios</a></li>
+					</ul>
+				</li>
+
+				<!-- script para controlar el comportamiento de los desplegables-->
+				<script>
+					$("ul.cl-effect-1_multim").slideToggle(0) // close on start
+					$("li a.menu_multim").click(function () {
+						// al pulsar en el menu alterna entre plegado y desplegado
+						$("ul.cl-effect-1_multim").slideToggle(300, function () {
+							// Animation complete.
+						});
+					});
+				</script>
+
+
+
+
+
+				
+
+
+
+
+
+				<!-- TAB DIRECTO -->
+				<li>
+					<a href="directo.html">
+						<span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+						Directo
+					</a>
+				</li>
+
+
+				<!-- TAB SUBIR MULTIMEDIA -->
+				<li>
+					<a href="subirVideos.html">
+						<span class="glyphicon glyphicon-cloud-upload" aria-hidden="true">
+						</span>
+						Subir Multimedia
+					</a>
+				</li>
+
+				<!-- TAB ADMINISTRACIÓN -->
+				<li>
+					<a href="#" class="menu_admin">
+						<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+						Administración
+						<!-- icono fletxa de desplegar -->
+						<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+					</a>
+					<!-- menu desplegable -->
+					<ul class="cl-effect-1_admin">
+						<li><a href="adminUsuarios.html">Usuarios</a></li>
+						<li><a href="adminVideos.html">Videos</a></li>
+						<li><a href="adminAudios.html">Audios</a></li>
+					</ul>
+				</li>
+				
+				<!-- script para controlar el comportamiento de los desplegables-->
+				<script>
+					$("ul.cl-effect-1_admin").slideToggle(0) // close on start
+					$("li a.menu_admin").click(function () {
+						// al pulsar en el menu alterna entre plegado y desplegado
+						$("ul.cl-effect-1_admin").slideToggle(300, function () {
+							// Animation complete.
+						});
+					});
+				</script>
+
+				<!-- TAB INFORMACIÓN -->
+				<li>
+					<a href="about.html">
+						<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+						Información
+					</a>
+				</li>
+			</ul>
+			<!-- script para controlar el comportamiento de los desplegables-->
+			<script>
+				$(".top-navigation").click(function () {
+					// al pulsar en el menu alterna entre plegado y desplegado
+					$(".drop-navigation").slideToggle(300, function () {
+						// Animation complete.
+					});
+				});
+			</script>
+
+			<div class="side-bottom">
+				<div class="copyright">
+					<p>Copyright © 2015 My Play. All Rights Reserved | Design by <a
+							href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- CONTENIDO DE LA PÁGINA -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 text-center main">
+			<div>
+				<div>
+					<audio src="./multimedia/audio/movieCountdown.mp3" id="movieCountdown"></audio> <!-- Fuente del audio de la cuenta atrás del canvas-->
+					<canvas width="1200" height="800" id="countDown" style="width: 70%"></canvas> <!-- Cuenta atrás -->
+					<video class="videoWidth" controls="controls" id="play-video"> <!-- Vídeo a mostrar -->
+						<source id="videosource" src="./multimedia/video/movie_clip1.mp4" type="video/mp4" />
+						Your browser does not support the video element.
+					</video>
+					<h3>Video title</h3> <!-- Título del vídeo -->
+					<div class="video-buttons">
+						<!-- botón play -->
+						<!-- btn para hacer un boton y btn-success pera hacerlo verde -->
+						<!-- mt-1 para poner 1 unidad de margen arriba -->
+						<button class="mt-1 btn btn-success" id="play" onclick="startCountdown();">
+							Play <i class="fas fa-play-circle"></i>
+						</button>
+						<!-- botón pause -->
+						<!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+						<!-- mt-1 para poner 1 unidad de margen arriba -->
+						<button class="mt-1 btn btn-danger" id="pause" onclick="pauseVideo();">
+							Pause <i class="fas fa-pause-circle"></i>
+						</button>
+						<!-- botón stop -->
+						<!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+						<!-- mt-1 para poner 1 unidad de margen arriba -->
+						<button class="mt-1 btn btn-danger" id="stop" onclick="stopVideo()">
+							Stop <i class="fas fa-stop-circle"></i>
+						</button>
+						<!-- botón avance -->
+						<!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+						<!-- mt-1 para poner 1 unidad de margen arriba -->
+						<button class="mt-1 btn btn-primary" id="avance" onclick="avanceSeconds();">
+							Avance 10 seconds <i class="fas fa-forward"></i>
+						</button>
+						<!-- botón retroceder -->
+						<!-- btn para hacer un boton y btn-danger pera hacerlo rojo -->
+						<!-- mt-1 para poner 1 unidad de margen arriba -->
+						<button class="mt-1 btn btn-primary" id="rewind" onclick="rewindSeconds()">
+							Rewind 10 seconds <i class="fas fa-backward"></i>
+						</button>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="published">
+						<div class="load_more">	<!-- Descripción del vídeo -->
+							<h4>Published on 15 June 2015</h4>
+							<p>Nullam fringilla sagittis tortor ut rhoncus. Nam vel ultricies erat, vel sodales leo. Maecenas pellentesque, est suscipit laoreet tincidunt, ipsum tortor vestibulum leo, ac dignissim diam velit id tellus. Morbi luctus velit quis semper egestas. Nam condimentum sem eget ex iaculis bibendum. Nam tortor felis, commodo faucibus sollicitudin ac, luctus a turpis. Donec congue pretium nisl, sed fringilla tellus tempus in.</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<!-- footer -->
+		<div class="footer">
+			<div class="footer-grids">
+				<div class="footer-bottom">
+					<!-- texto del footer -->
+					<h4 class="text-light">Diseñado por Ethan, Raül, Iván y Jordi</h4>
+				</div>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+	<div class="clearfix"> </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/video_controls.js"></script>
     <script src="js/canvasCountdown.js"></script>
-</body>
-
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  </body>
 </html>
