@@ -3196,3 +3196,19 @@ span.glyphicon.glyphicon-user {
 .text-light {
 	color: white;
 }
+
+.recommended-info span.glyphicon.glyphicon-user {
+    margin: 0;
+}
+
+.videoWidth {
+	width: 70%;
+}
+
+.table-container {
+	overflow: scroll;
+}
+
+.card-body.row {
+    margin: 0;
+}
